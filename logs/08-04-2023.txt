@@ -1,0 +1,5 @@
+::1()--query--tables(delete from table_user_online where time < 1680914132) (07:45:32 08/04/2023)
+::1(admin)--query--tables(delete from table_user_online where time < 1680914153) (07:45:53 08/04/2023)
+::1(admin)--query--tables(delete from table_user_online where time < 1680914159) (07:45:59 08/04/2023)
+::1(admin)--query--tables(delete from table_user_online where time < 1680914162) (07:46:02 08/04/2023)
+::1(admin)--update--news([["","id","=","1"]]) (07:46:02 08/04/2023)
