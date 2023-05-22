@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Feb 08, 2023 at 04:22 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.29
+-- Máy chủ: localhost
+-- Thời gian đã tạo: Th5 22, 2023 lúc 08:46 AM
+-- Phiên bản máy phục vụ: 10.4.21-MariaDB
+-- Phiên bản PHP: 7.4.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `masterpdo`
+-- Cơ sở dữ liệu: `vutruonggiang_226423w`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_city`
+-- Cấu trúc bảng cho bảng `table_city`
 --
 
 CREATE TABLE `table_city` (
@@ -42,7 +42,7 @@ CREATE TABLE `table_city` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_city`
+-- Đang đổ dữ liệu cho bảng `table_city`
 --
 
 INSERT INTO `table_city` (`id`, `name`, `slug`, `level`, `provinceid`, `code`, `numb`, `status`, `date_created`, `date_updated`, `countryid`) VALUES
@@ -113,7 +113,7 @@ INSERT INTO `table_city` (`id`, `name`, `slug`, `level`, `provinceid`, `code`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_color`
+-- Cấu trúc bảng cho bảng `table_color`
 --
 
 CREATE TABLE `table_color` (
@@ -134,10 +134,19 @@ CREATE TABLE `table_color` (
   `discount` double DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `table_color`
+--
+
+INSERT INTO `table_color` (`id`, `id_product`, `photo`, `namevi`, `nameen`, `color`, `type_show`, `type`, `numb`, `status`, `date_created`, `date_updated`, `regular_price`, `sale_price`, `discount`) VALUES
+(20, 0, '010-4481.png', 'Cam', '', 'FFFF0C', 0, 'san-pham', 1, 'hienthi', 1682831647, 0, 0, 0, 0),
+(21, 0, '', 'Đỏ', '', 'FF0000', 0, 'san-pham', 1, 'hienthi', 1684403783, 0, 0, 0, 0),
+(24, 53, 'vang-ghe-4626.png', 'Vàng ghê', '', '000000', 1, 'san-pham', 1, 'hienthi', 1684582530, 0, 0, 0, 0);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_comment`
+-- Cấu trúc bảng cho bảng `table_comment`
 --
 
 CREATE TABLE `table_comment` (
@@ -159,7 +168,7 @@ CREATE TABLE `table_comment` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_comment_photo`
+-- Cấu trúc bảng cho bảng `table_comment_photo`
 --
 
 CREATE TABLE `table_comment_photo` (
@@ -171,7 +180,7 @@ CREATE TABLE `table_comment_photo` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_comment_video`
+-- Cấu trúc bảng cho bảng `table_comment_video`
 --
 
 CREATE TABLE `table_comment_video` (
@@ -184,7 +193,7 @@ CREATE TABLE `table_comment_video` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_contact`
+-- Cấu trúc bảng cho bảng `table_contact`
 --
 
 CREATE TABLE `table_contact` (
@@ -206,7 +215,7 @@ CREATE TABLE `table_contact` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_counter`
+-- Cấu trúc bảng cho bảng `table_counter`
 --
 
 CREATE TABLE `table_counter` (
@@ -216,7 +225,7 @@ CREATE TABLE `table_counter` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_counter`
+-- Đang đổ dữ liệu cho bảng `table_counter`
 --
 
 INSERT INTO `table_counter` (`id`, `tm`, `ip`) VALUES
@@ -3917,12 +3926,66 @@ INSERT INTO `table_counter` (`id`, `tm`, `ip`) VALUES
 (10471, 1675418390, '::1'),
 (10472, 1675735740, '::1'),
 (10473, 1675738509, '::1'),
-(10474, 1675820625, '::1');
+(10474, 1675820625, '::1'),
+(10475, 1680623922, '::1'),
+(10476, 1680686005, '::1'),
+(10477, 1680768249, '::1'),
+(10478, 1680914732, '::1'),
+(10479, 1681141722, '::1'),
+(10480, 1681196852, '::1'),
+(10481, 1681260153, '::1'),
+(10482, 1681261083, '::1'),
+(10483, 1681717510, '::1'),
+(10484, 1681724991, '::1'),
+(10485, 1681793150, '::1'),
+(10486, 1681794751, '::1'),
+(10487, 1681795758, '::1'),
+(10488, 1681796737, '::1'),
+(10489, 1682142670, '::1'),
+(10490, 1682144640, '::1'),
+(10491, 1682145567, '::1'),
+(10492, 1682147209, '::1'),
+(10493, 1682148117, '::1'),
+(10494, 1682149229, '::1'),
+(10495, 1682151016, '::1'),
+(10496, 1682152029, '::1'),
+(10497, 1682152968, '::1'),
+(10498, 1682153981, '::1'),
+(10499, 1682155230, '::1'),
+(10500, 1682157088, '::1'),
+(10501, 1682675112, '::1'),
+(10502, 1682786432, '::1'),
+(10503, 1682787570, '::1'),
+(10504, 1682790064, '::1'),
+(10505, 1682831467, 'fe80::1'),
+(10506, 1682831467, 'fe80::1'),
+(10507, 1682831537, '::1'),
+(10508, 1683417732, '::1'),
+(10509, 1683499311, '::1'),
+(10510, 1684403733, '::1'),
+(10511, 1684511776, '::1'),
+(10512, 1684515035, '::1'),
+(10513, 1684580064, '::1'),
+(10514, 1684581263, '::1'),
+(10515, 1684582322, '::1'),
+(10516, 1684583617, '::1'),
+(10517, 1684584633, '::1'),
+(10518, 1684585953, '::1'),
+(10519, 1684588048, '::1'),
+(10520, 1684589946, '::1'),
+(10521, 1684591654, '::1'),
+(10522, 1684592574, '::1'),
+(10523, 1684645803, '::1'),
+(10524, 1684668859, '::1'),
+(10525, 1684677995, '::1'),
+(10526, 1684716627, '::1'),
+(10527, 1684717636, '::1'),
+(10528, 1684737964, '::1');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_district`
+-- Cấu trúc bảng cho bảng `table_district`
 --
 
 CREATE TABLE `table_district` (
@@ -3941,7 +4004,7 @@ CREATE TABLE `table_district` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_district`
+-- Đang đổ dữ liệu cho bảng `table_district`
 --
 
 INSERT INTO `table_district` (`id`, `id_city`, `districtid`, `provinceid`, `name`, `slug`, `code`, `level`, `numb`, `status`, `date_created`, `date_updated`) VALUES
@@ -4674,7 +4737,7 @@ INSERT INTO `table_district` (`id`, `id_city`, `districtid`, `provinceid`, `name
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_excel`
+-- Cấu trúc bảng cho bảng `table_excel`
 --
 
 CREATE TABLE `table_excel` (
@@ -4687,7 +4750,7 @@ CREATE TABLE `table_excel` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_gallery`
+-- Cấu trúc bảng cho bảng `table_gallery`
 --
 
 CREATE TABLE `table_gallery` (
@@ -4711,27 +4774,13 @@ CREATE TABLE `table_gallery` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_gallery`
+-- Đang đổ dữ liệu cho bảng `table_gallery`
 --
 
 INSERT INTO `table_gallery` (`id`, `id_parent`, `photo`, `hash`, `nameen`, `namevi`, `id_color`, `file_attach`, `link_video`, `numb`, `type`, `com`, `kind`, `val`, `status`, `date_created`, `date_updated`) VALUES
-(8, 1, 'poduct-1-1758-7088.jpeg', '', '', 'Slip On Ultraboost 20 - 2', 1, '', '', 1, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1609248406, 0),
-(9, 1, 'poduct-2-3013-4492.jpg', '', '', 'Slip On Ultraboost 20 - 3', 1, '', '', 2, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1609248407, 0),
-(10, 1, 'poduct-3-8956-6716.jpg', '', '', 'Slip On Ultraboost 20 - 4', 1, '', '', 3, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1609248407, 0),
-(11, 1, 'poduct-4-9840-6158.jpg', '', '', 'Slip On Ultraboost 20 - 5', 1, '', '', 4, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1609248407, 0),
-(12, 1, 'poduct-5-3937-6979.jpg', '', '', 'Slip On Ultraboost 20 - 6', 3, '', '', 5, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1609248407, 0),
-(13, 1, 'poduct-6-4025-8782.jpg', '', '', 'Slip On Ultraboost 20 - 7', 3, '', '', 6, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1609248407, 0),
-(14, 1, 'poduct-7-4637-9887.jpg', '', '', 'Slip On Ultraboost 20 - 8', 3, '', '', 7, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1609248407, 0),
-(15, 1, 'poduct-8-5296-7311.jpg', '', '', 'Slip On Ultraboost 20 - 9', 3, '', '', 8, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1609248407, 0),
-(16, 2, 'poduct-9-6725-1848.jpg', '', '', 'Giày Slip On Ultraboost 21 - 1', 3, '', '', 1, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1609249368, 1625550742),
-(17, 2, 'poduct-1-1318-4164.jpg', '', '', 'Giày Slip On Ultraboost 21 - 2', 3, '', '', 2, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1609249368, 1625550744),
-(18, 2, 'poduct-1-1758-5849.jpeg', '', '', 'Giày Slip On Ultraboost 21 - 3', 3, '', '', 3, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1609249368, 1625550746),
-(19, 2, 'poduct-2-3013-1627.jpg', '', '', 'Giày Slip On Ultraboost 21 - 4', 3, '', '', 4, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1609249368, 1625550751),
-(20, 2, 'poduct-3-5224-6755.jpg', '', '', 'Giày Slip On Ultraboost 21 - 5', 3, '', '', 5, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1609249368, 1625550754),
-(21, 2, 'poduct-4-6716-6857.jpg', '', '', 'Giày Slip On Ultraboost 21 - 6', 4, '', '', 6, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1609249368, 1625550755),
-(22, 2, 'poduct-5-3937-3600.jpg', '', '', 'Giày Slip On Ultraboost 21 - 7', 4, '', '', 7, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1609249368, 1625550757),
-(23, 2, 'poduct-6-8870-7717.jpg', '', '', 'Giày Slip On Ultraboost 21 - 8', 4, '', '', 8, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1609249368, 1625550758),
-(24, 2, 'poduct-8-2281-7949.jpg', '', '', 'Giày Slip On Ultraboost 21 - 9', 4, '', '', 9, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1609249368, 1625550761),
+(79, 53, '23-9981.jpeg', '', '', '', 0, '', '', 3, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684582772, 0),
+(78, 53, '22-7308.jpeg', '', '', '', 0, '', '', 2, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684582772, 0),
+(77, 53, '21-9161.jpeg', '', '', '', 0, '', '', 1, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684582772, 0),
 (28, 1, 'news-1-4178-4827.jpeg', '', '', '', 0, '', '', 2, 'tin-tuc', 'news', 'man', 'tin-tuc', '', 1609287029, 0),
 (27, 1, 'news-1-1102-4315.jpg', '', '', '', 0, '', '', 1, 'tin-tuc', 'news', 'man', 'tin-tuc', '', 1609287029, 0),
 (29, 1, 'news-3-4960-2676.jpg', '', '', '', 0, '', '', 3, 'tin-tuc', 'news', 'man', 'tin-tuc', '', 1609287029, 0),
@@ -4739,12 +4788,49 @@ INSERT INTO `table_gallery` (`id`, `id_parent`, `photo`, `hash`, `nameen`, `name
 (57, 39, 'h4-8498.jpg', '', '', '', 0, '', '', 1, 'thu-vien-anh', 'product', 'man', 'thu-vien-anh', 'hienthi', 1675393664, 0),
 (58, 39, 'h3-8832.jpg', '', '', '', 0, '', '', 2, 'thu-vien-anh', 'product', 'man', 'thu-vien-anh', 'hienthi', 1675393664, 0),
 (59, 39, 'h5-3123.jpg', '', '', '', 0, '', '', 3, 'thu-vien-anh', 'product', 'man', 'thu-vien-anh', 'hienthi', 1675393664, 0),
-(60, 39, 'h2-4217.jpg', '', '', '', 0, '', '', 4, 'thu-vien-anh', 'product', 'man', 'thu-vien-anh', 'hienthi', 1675393664, 0);
+(60, 39, 'h2-4217.jpg', '', '', '', 0, '', '', 4, 'thu-vien-anh', 'product', 'man', 'thu-vien-anh', 'hienthi', 1675393664, 0),
+(73, 52, '11-6888.jpeg', '', '', '', 0, '', '', 1, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684582304, 0),
+(74, 52, '12-7774.jpeg', '', '', '', 0, '', '', 2, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684582304, 0),
+(75, 52, '14-1337.jpeg', '', '', '', 0, '', '', 3, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684582304, 0),
+(76, 52, '13-4291.jpeg', '', '', '', 0, '', '', 4, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684582304, 0),
+(80, 53, '24-8092.jpeg', '', '', '', 0, '', '', 4, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684582773, 0),
+(81, 54, '31-6429.jpeg', '', '', '', 0, '', '', 1, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684583126, 0),
+(82, 54, '32-8631.jpeg', '', '', '', 0, '', '', 2, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684583126, 0),
+(83, 54, '33-2078.jpeg', '', '', '', 0, '', '', 3, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684583126, 0),
+(84, 54, '3-4-3760.jpeg', '', '', '', 0, '', '', 4, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684583126, 0),
+(85, 55, '11-8825.jpeg', '', '', '', 0, '', '', 1, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684583598, 0),
+(86, 55, '12-9108.jpeg', '', '', '', 0, '', '', 2, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684583598, 0),
+(87, 55, '14-5994.jpeg', '', '', '', 0, '', '', 3, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684583598, 0),
+(88, 55, '13-6069.jpeg', '', '', '', 0, '', '', 4, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684583598, 0),
+(89, 56, '21-8831.jpeg', '', '', '', 0, '', '', 1, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684583775, 0),
+(90, 56, '22-2694.jpeg', '', '', '', 0, '', '', 2, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684583776, 0),
+(91, 56, '23-4246.jpeg', '', '', '', 0, '', '', 3, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684583776, 0),
+(92, 56, '24-7985.jpeg', '', '', '', 0, '', '', 4, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684583776, 0),
+(93, 57, '31-7132.jpeg', '', '', '', 0, '', '', 1, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684583912, 0),
+(94, 57, '32-6462.jpeg', '', '', '', 0, '', '', 2, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684583912, 0),
+(95, 57, '33-4161.jpeg', '', '', '', 0, '', '', 3, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684583912, 0),
+(96, 57, '34-8683.jpeg', '', '', '', 0, '', '', 4, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684583912, 0),
+(97, 58, '1-2-6446.jpeg', '', '', '', 0, '', '', 1, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684584228, 0),
+(98, 58, '1-3-2959.jpeg', '', '', '', 0, '', '', 2, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684584229, 0),
+(99, 58, '1-4-2184.jpeg', '', '', '', 0, '', '', 3, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684584229, 0),
+(100, 58, '1-5-4418.jpeg', '', '', '', 0, '', '', 4, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684584229, 0),
+(101, 58, '1-6-7040.jpeg', '', '', '', 0, '', '', 5, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684584229, 0),
+(102, 58, '1-7-2333.jpeg', '', '', '', 0, '', '', 6, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684584229, 0),
+(103, 58, '1-78-4863.jpeg', '', '', '', 0, '', '', 7, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684584229, 0),
+(104, 0, '1-1-2694-4500.jpeg', 'aVU8dwXREk', '', '', 0, '', '', 1, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684592450, 0),
+(105, 0, '1-1-2308.jpeg', 'aVU8dwXREk', '', '', 0, '', '', 2, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684592450, 0),
+(106, 0, '1-2-6342.jpeg', 'aVU8dwXREk', '', '', 0, '', '', 3, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684592450, 0),
+(107, 0, '1-3-3682.jpeg', 'aVU8dwXREk', '', '', 0, '', '', 4, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684592450, 0),
+(108, 0, '1-4-1762.jpeg', 'aVU8dwXREk', '', '', 0, '', '', 5, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684592450, 0),
+(109, 0, '1-5-5761.jpeg', 'aVU8dwXREk', '', '', 0, '', '', 6, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684592450, 0),
+(110, 0, '1-6-3309.jpeg', 'aVU8dwXREk', '', '', 0, '', '', 7, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684592450, 0),
+(111, 0, '1-7-2307.jpeg', 'aVU8dwXREk', '', '', 0, '', '', 8, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684592450, 0),
+(112, 0, '1-78-4933.jpeg', 'aVU8dwXREk', '', '', 0, '', '', 9, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684592450, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_lang`
+-- Cấu trúc bảng cho bảng `table_lang`
 --
 
 CREATE TABLE `table_lang` (
@@ -4756,7 +4842,7 @@ CREATE TABLE `table_lang` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_lang`
+-- Đang đổ dữ liệu cho bảng `table_lang`
 --
 
 INSERT INTO `table_lang` (`id`, `lang_define`, `langvi`, `langen`, `numb`) VALUES
@@ -4940,7 +5026,7 @@ INSERT INTO `table_lang` (`id`, `lang_define`, `langvi`, `langen`, `numb`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_member`
+-- Cấu trúc bảng cho bảng `table_member`
 --
 
 CREATE TABLE `table_member` (
@@ -4965,7 +5051,7 @@ CREATE TABLE `table_member` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_news`
+-- Cấu trúc bảng cho bảng `table_news`
 --
 
 CREATE TABLE `table_news` (
@@ -4995,27 +5081,30 @@ CREATE TABLE `table_news` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_news`
+-- Đang đổ dữ liệu cho bảng `table_news`
 --
 
 INSERT INTO `table_news` (`id`, `id_list`, `id_item`, `id_cat`, `id_sub`, `photo`, `options`, `slugvi`, `slugen`, `contenten`, `contentvi`, `descen`, `descvi`, `nameen`, `namevi`, `officevi`, `officeen`, `numb`, `status`, `type`, `date_created`, `date_updated`, `view`) VALUES
-(1, 0, 0, 0, 0, 'news-1-1102-6998.jpg', '{\"p\":\"news-1-1102-6998.jpg\",\"w\":270,\"h\":200,\"m\":\"image\\/jpeg\"}', 'nike-gioi-thieu-giay-da-bong-bang-dan-doc-dao', 'nike-introduces-a-unique-taped-soccer-shoe', '&lt;p&gt;Frank Rudy was the first person to have the idea of ​​putting air cushioning in a shoe. His inspiration comes from the night set designs of spacecraft at NASA - where he works every day.&lt;/p&gt;\r\n\r\n&lt;p&gt;Immediately after the idea came up, he approached Nike\'s development department. Realizing the potential of the technology, Nike tried it out with its own shoe, Nike Tailwind, and in 1978. This product had an air cushion inside. However, this air cushion is completely hidden in the shoe.&lt;/p&gt;\r\n\r\n&lt;p&gt;This product did not get much success after its inception and was quickly forgotten. See also: Top 7 of the best shoe cushion technologies by Nike&lt;/p&gt;\r\n', '&lt;p&gt;Frank Rudy là người đầu tiên có ý tưởng đặt đệm khí vào một chiếc giày. Nguồn cảm hứng của anh đến từ những thiết kế bộ đêm của tàu vũ trụ tại NASA - nơi anh làm việc hằng ngày.&lt;/p&gt;\r\n\r\n&lt;p&gt;Ngay sau khi nảy ra ý tưởng này, anh lập tức tiếp cận với bộ phận phát triển của Nike. Nhận thấy tiềm năng của công nghệ, Nike đã thử áp dụng thử với sản phẩm giày của mình là Nike Tailwind và năm 1978.&lt;/p&gt;\r\n\r\n&lt;p&gt;Sản phẩm này có đệm khí ở bên trong. Tuy nhiên, lớp đệm khí này lại ẩn hoàn toàn trong giày. Sau khi ra đời, sản phẩm này không nhận được nhiều sự thành công cho lắm do đó nhanh chóng bị lãng quên.&lt;/p&gt;\r\n\r\n&lt;p&gt;Xem thêm: &lt;a href=&quot;https://thethao247.vn/318-top-7-cong-nghe-dem-giay-ti-do-cua-nike-d177270.html&quot; rel=&quot;dofollow&quot; target=&quot;_blank&quot;&gt;Top 7 công nghệ đệm giày tốt nhất của Nike&lt;/a&gt;&lt;/p&gt;\r\n\r\n&lt;h2&gt;1987, Nike Air Max 1, đôi giày Air Max đầu tiên ra đời&lt;/h2&gt;\r\n\r\n&lt;p&gt;&lt;a data-at-1366=&quot;https://media.thethao247.vn/origin_1366x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-at-1920=&quot;https://media.thethao247.vn/origin_1920x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-at-450=&quot;https://media.thethao247.vn/origin_450x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-at-800=&quot;https://media.thethao247.vn/origin_800x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-caption=&quot;&quot; href=&quot;https://media.thethao247.vn/origin_850x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot;&gt;&lt;img alt=&quot;&quot; data-ll-status=&quot;loading&quot; src=&quot;https://media.thethao247.vn/origin_850x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; title=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;\r\n\r\n&lt;h2&gt;Nike Air Max 1 (ảnh: sneakerfreaker.com)&lt;/h2&gt;\r\n\r\n&lt;p&gt;Tinker Hatfield - nhà thiết kế chính của Nike, được coi là cha đẻ của Air Max và là người đưa những bộ đệm này trở nên có thể nhìn thấy được.&lt;/p&gt;\r\n\r\n&lt;p&gt;Ông nảy ra ý tưởng đưa lớp đệm Air có thể nhìn thấy được quan sát những lớp kính của Trung tâm triển lãm Pompidou Centre tại Paris. Ngày sau khi trở về Mỹ ông bắt tay vào thiết kế bộ đệm với càng nhiều không khí càng tốt. Từ đây, thuật ngữ &quot;không khí tối đa&quot; Maximum Air được gọi tắt là Air Max ra đời.&lt;/p&gt;\r\n\r\n&lt;h3&gt;Năm 1987, sản phẩm Nike Air Max 1 ra đời. Với bộ đệm khí có thể nhìn thấy ở đế giày. Ngay lập tức đôi giày đem lại sự chú ý của thị trường và bán rất chạy.&lt;/h3&gt;\r\n\r\n&lt;p&gt;Trong những năm sau đó, Nike tiếp tục nỗ lực để cải tiến bộ đệm này với mục tiêu đệm càng nhiều khí càng tốt. 3 phiên bản Air Max ra đời trong thời gian này là Air Max 90 (1990), Air Max 180 (1991), Air Max 93 (1993).&lt;/p&gt;\r\n\r\n&lt;p&gt;Tuy nhiên tại thời điểm này, tất cả các mẫu đều có bộ đệm khí chỉ có thể được đặt ở phần gót giày. Điều đồng nghĩa với phần mũi và giữa bàn chân vẫn chưa được bảo vệ với đệm không khí.&lt;/p&gt;\r\n', 'The Nike Phantom GT are soccer boots created from the analysis of large amounts of data from players and unique tape technology.', 'Nike Phantom GT là đôi giày đá bóng được tạo ra từ sự phân tích một lượng lớn dữ liệu từ các cầu thủ và công nghệ băng dán độc đáo.', 'Nike introduces a unique taped soccer shoe', 'Nike giới thiệu giày đá bóng băng dán độc đáo', '', '', 1, 'noibat,hienthi', 'tin-tuc', 1609287033, 1674793881, 123),
-(2, 0, 3, 3, 0, 'news-1-4178-8729.jpeg', '{\"p\":\"news-1-4178-8729.jpeg\",\"w\":270,\"h\":200,\"m\":\"image\\/jpeg\"}', 'nike-zoom-cong-nghe-dem-giay-thanh-cong-nhat-cua-nike', 'nike-zoom-nikes-most-successful-shoe-cushioning-technology', '&lt;p&gt;Frank Rudy was the first person to have the idea of ​​putting air cushioning in a shoe. His inspiration comes from the night set designs of spacecraft at NASA - where he works every day.&lt;/p&gt;\r\n\r\n&lt;p&gt;Immediately after the idea came up, he approached Nike\'s development department. Realizing the potential of the technology, Nike tried it out with its own shoe, Nike Tailwind, and in 1978. This product had an air cushion inside. However, this air cushion is completely hidden in the shoe.&lt;/p&gt;\r\n\r\n&lt;p&gt;This product did not get much success after its inception and was quickly forgotten. See also: Top 7 of the best shoe cushion technologies by Nike&lt;/p&gt;\r\n', '&lt;p&gt;Frank Rudy là người đầu tiên có ý tưởng đặt đệm khí vào một chiếc giày. Nguồn cảm hứng của anh đến từ những thiết kế bộ đêm của tàu vũ trụ tại NASA - nơi anh làm việc hằng ngày.&lt;/p&gt;\r\n\r\n&lt;p&gt;Ngay sau khi nảy ra ý tưởng này, anh lập tức tiếp cận với bộ phận phát triển của Nike. Nhận thấy tiềm năng của công nghệ, Nike đã thử áp dụng thử với sản phẩm giày của mình là Nike Tailwind và năm 1978.&lt;/p&gt;\r\n\r\n&lt;p&gt;Sản phẩm này có đệm khí ở bên trong. Tuy nhiên, lớp đệm khí này lại ẩn hoàn toàn trong giày. Sau khi ra đời, sản phẩm này không nhận được nhiều sự thành công cho lắm do đó nhanh chóng bị lãng quên.&lt;/p&gt;\r\n\r\n&lt;p&gt;Xem thêm: &lt;a href=&quot;https://thethao247.vn/318-top-7-cong-nghe-dem-giay-ti-do-cua-nike-d177270.html&quot; rel=&quot;dofollow&quot; target=&quot;_blank&quot;&gt;Top 7 công nghệ đệm giày tốt nhất của Nike&lt;/a&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;1987, Nike Air Max 1, đôi giày Air Max đầu tiên ra đời&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;a data-at-1366=&quot;https://media.thethao247.vn/origin_1366x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-at-1920=&quot;https://media.thethao247.vn/origin_1920x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-at-450=&quot;https://media.thethao247.vn/origin_450x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-at-800=&quot;https://media.thethao247.vn/origin_800x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-caption=&quot;&quot; href=&quot;https://media.thethao247.vn/origin_850x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot;&gt;&lt;img alt=&quot;&quot; data-ll-status=&quot;loading&quot; src=&quot;https://media.thethao247.vn/origin_850x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; title=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Nike Air Max 1 (ảnh: sneakerfreaker.com)&lt;/p&gt;\r\n\r\n&lt;p&gt;Tinker Hatfield - nhà thiết kế chính của Nike, được coi là cha đẻ của Air Max và là người đưa những bộ đệm này trở nên có thể nhìn thấy được.&lt;/p&gt;\r\n\r\n&lt;p&gt;Ông nảy ra ý tưởng đưa lớp đệm Air có thể nhìn thấy được quan sát những lớp kính của Trung tâm triển lãm Pompidou Centre tại Paris. Ngày sau khi trở về Mỹ ông bắt tay vào thiết kế bộ đệm với càng nhiều không khí càng tốt. Từ đây, thuật ngữ &quot;không khí tối đa&quot; Maximum Air được gọi tắt là Air Max ra đời.&lt;/p&gt;\r\n\r\n&lt;p&gt;Năm 1987, sản phẩm Nike Air Max 1 ra đời. Với bộ đệm khí có thể nhìn thấy ở đế giày. Ngay lập tức đôi giày đem lại sự chú ý của thị trường và bán rất chạy.&lt;/p&gt;\r\n\r\n&lt;p&gt;Trong những năm sau đó, Nike tiếp tục nỗ lực để cải tiến bộ đệm này với mục tiêu đệm càng nhiều khí càng tốt. 3 phiên bản Air Max ra đời trong thời gian này là Air Max 90 (1990), Air Max 180 (1991), Air Max 93 (1993).&lt;/p&gt;\r\n\r\n&lt;p&gt;Tuy nhiên tại thời điểm này, tất cả các mẫu đều có bộ đệm khí chỉ có thể được đặt ở phần gót giày. Điều đồng nghĩa với phần mũi và giữa bàn chân vẫn chưa được bảo vệ với đệm không khí.&lt;/p&gt;\r\n', 'The Nike Phantom GT are soccer boots created from the analysis of large amounts of data from players and unique tape technology.', 'Nike Phantom GT là đôi giày đá bóng được tạo ra từ sự phân tích một lượng lớn dữ liệu từ các cầu thủ và công nghệ băng dán độc đáo.', 'Nike Zoom Nike\'s most successful shoe cushioning technology', 'Nike Zoom công nghệ đệm giày thành công nhất của Nike', NULL, NULL, 2, 'noibat,hienthi', 'tin-tuc', 1609287279, 1625552402, 24),
+(1, 0, 0, 0, 0, 'news-1-1102-6998.jpg', '{\"p\":\"news-1-1102-6998.jpg\",\"w\":270,\"h\":200,\"m\":\"image\\/jpeg\"}', 'nike-gioi-thieu-giay-da-bong-bang-dan-doc-dao', 'nike-introduces-a-unique-taped-soccer-shoe', '&lt;p&gt;Frank Rudy was the first person to have the idea of ​​putting air cushioning in a shoe. His inspiration comes from the night set designs of spacecraft at NASA - where he works every day.&lt;/p&gt;\n\n&lt;p&gt;Immediately after the idea came up, he approached Nike\'s development department. Realizing the potential of the technology, Nike tried it out with its own shoe, Nike Tailwind, and in 1978. This product had an air cushion inside. However, this air cushion is completely hidden in the shoe.&lt;/p&gt;\n\n&lt;p&gt;This product did not get much success after its inception and was quickly forgotten. See also: Top 7 of the best shoe cushion technologies by Nike&lt;/p&gt;\n', '&lt;p&gt;Frank Rudy là người đầu tiên có ý tưởng đặt đệm khí vào một chiếc giày. Nguồn cảm hứng của anh đến từ những thiết kế bộ đêm của tàu vũ trụ tại NASA - nơi anh làm việc hằng ngày.&lt;/p&gt;\r\n\r\n&lt;p&gt;Ngay sau khi nảy ra ý tưởng này, anh lập tức tiếp cận với bộ phận phát triển của Nike. Nhận thấy tiềm năng của công nghệ, Nike đã thử áp dụng thử với sản phẩm giày của mình là Nike Tailwind và năm 1978.&lt;/p&gt;\r\n\r\n&lt;p&gt;Sản phẩm này có đệm khí ở bên trong. Tuy nhiên, lớp đệm khí này lại ẩn hoàn toàn trong giày. Sau khi ra đời, sản phẩm này không nhận được nhiều sự thành công cho lắm do đó nhanh chóng bị lãng quên.&lt;/p&gt;\r\n\r\n&lt;p&gt;Xem thêm: &lt;a href=&quot;https://thethao247.vn/318-top-7-cong-nghe-dem-giay-ti-do-cua-nike-d177270.html&quot; rel=&quot;dofollow&quot; target=&quot;_blank&quot;&gt;Top 7 công nghệ đệm giày tốt nhất của Nike&lt;/a&gt;&lt;/p&gt;\r\n\r\n&lt;h2&gt;1987, Nike Air Max 1, đôi giày Air Max đầu tiên ra đời&lt;/h2&gt;\r\n\r\n&lt;p&gt;&lt;a data-at-1366=&quot;https://media.thethao247.vn/origin_1366x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-at-1920=&quot;https://media.thethao247.vn/origin_1920x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-at-450=&quot;https://media.thethao247.vn/origin_450x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-at-800=&quot;https://media.thethao247.vn/origin_800x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-caption=&quot;&quot; href=&quot;https://media.thethao247.vn/origin_850x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot;&gt;&lt;img alt=&quot;&quot; data-ll-status=&quot;loading&quot; src=&quot;https://media.thethao247.vn/origin_850x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; title=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;\r\n\r\n&lt;h2&gt;Nike Air Max 1 (ảnh: sneakerfreaker.com)&lt;/h2&gt;\r\n\r\n&lt;p&gt;Tinker Hatfield - nhà thiết kế chính của Nike, được coi là cha đẻ của Air Max và là người đưa những bộ đệm này trở nên có thể nhìn thấy được.&lt;/p&gt;\r\n\r\n&lt;p&gt;Ông nảy ra ý tưởng đưa lớp đệm Air có thể nhìn thấy được quan sát những lớp kính của Trung tâm triển lãm Pompidou Centre tại Paris. Ngày sau khi trở về Mỹ ông bắt tay vào thiết kế bộ đệm với càng nhiều không khí càng tốt. Từ đây, thuật ngữ &quot;không khí tối đa&quot; Maximum Air được gọi tắt là Air Max ra đời.&lt;/p&gt;\r\n\r\n&lt;h3&gt;Năm 1987, sản phẩm Nike Air Max 1 ra đời. Với bộ đệm khí có thể nhìn thấy ở đế giày. Ngay lập tức đôi giày đem lại sự chú ý của thị trường và bán rất chạy.&lt;/h3&gt;\r\n\r\n&lt;p&gt;Trong những năm sau đó, Nike tiếp tục nỗ lực để cải tiến bộ đệm này với mục tiêu đệm càng nhiều khí càng tốt. 3 phiên bản Air Max ra đời trong thời gian này là Air Max 90 (1990), Air Max 180 (1991), Air Max 93 (1993).&lt;/p&gt;\r\n\r\n&lt;p&gt;Tuy nhiên tại thời điểm này, tất cả các mẫu đều có bộ đệm khí chỉ có thể được đặt ở phần gót giày. Điều đồng nghĩa với phần mũi và giữa bàn chân vẫn chưa được bảo vệ với đệm không khí.&lt;/p&gt;\r\n', 'The Nike Phantom GT are soccer boots created from the analysis of large amounts of data from players and unique tape technology.', 'Nike Phantom GT là đôi giày đá bóng được tạo ra từ sự phân tích một lượng lớn dữ liệu từ các cầu thủ và công nghệ băng dán độc đáo.', 'Nike introduces a unique taped soccer shoe', 'Nike giới thiệu giày đá bóng băng dán độc đáo', '', '', 1, 'noibat,hienthi', 'tin-tuc', 1609287033, 1674793881, 124),
+(2, 0, 3, 3, 0, 'news-1-4178-8729.jpeg', '{\"p\":\"news-1-4178-8729.jpeg\",\"w\":270,\"h\":200,\"m\":\"image\\/jpeg\"}', 'nike-zoom-cong-nghe-dem-giay-thanh-cong-nhat-cua-nike', 'nike-zoom-nikes-most-successful-shoe-cushioning-technology', '&lt;p&gt;Frank Rudy was the first person to have the idea of ​​putting air cushioning in a shoe. His inspiration comes from the night set designs of spacecraft at NASA - where he works every day.&lt;/p&gt;\r\n\r\n&lt;p&gt;Immediately after the idea came up, he approached Nike\'s development department. Realizing the potential of the technology, Nike tried it out with its own shoe, Nike Tailwind, and in 1978. This product had an air cushion inside. However, this air cushion is completely hidden in the shoe.&lt;/p&gt;\r\n\r\n&lt;p&gt;This product did not get much success after its inception and was quickly forgotten. See also: Top 7 of the best shoe cushion technologies by Nike&lt;/p&gt;\r\n', '&lt;p&gt;Frank Rudy là người đầu tiên có ý tưởng đặt đệm khí vào một chiếc giày. Nguồn cảm hứng của anh đến từ những thiết kế bộ đêm của tàu vũ trụ tại NASA - nơi anh làm việc hằng ngày.&lt;/p&gt;\n\n&lt;p&gt;Ngay sau khi nảy ra ý tưởng này, anh lập tức tiếp cận với bộ phận phát triển của Nike. Nhận thấy tiềm năng của công nghệ, Nike đã thử áp dụng thử với sản phẩm giày của mình là Nike Tailwind và năm 1978.&lt;/p&gt;\n\n&lt;p&gt;Sản phẩm này có đệm khí ở bên trong. Tuy nhiên, lớp đệm khí này lại ẩn hoàn toàn trong giày. Sau khi ra đời, sản phẩm này không nhận được nhiều sự thành công cho lắm do đó nhanh chóng bị lãng quên.&lt;/p&gt;\n\n&lt;p&gt;Xem thêm: &lt;a href=&quot;https://thethao247.vn/318-top-7-cong-nghe-dem-giay-ti-do-cua-nike-d177270.html&quot; rel=&quot;dofollow&quot; target=&quot;_blank&quot;&gt;Top 7 công nghệ đệm giày tốt nhất của Nike&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;1987, Nike Air Max 1, đôi giày Air Max đầu tiên ra đời&lt;/p&gt;\n\n&lt;p&gt;&lt;a data-at-1366=&quot;https://media.thethao247.vn/origin_1366x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-at-1920=&quot;https://media.thethao247.vn/origin_1920x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-at-450=&quot;https://media.thethao247.vn/origin_450x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-at-800=&quot;https://media.thethao247.vn/origin_800x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-caption=&quot;&quot; href=&quot;https://media.thethao247.vn/origin_850x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot;&gt;&lt;img alt=&quot;&quot; data-ll-status=&quot;loading&quot; src=&quot;https://media.thethao247.vn/origin_850x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; title=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;Nike Air Max 1 (ảnh: sneakerfreaker.com)&lt;/p&gt;\n\n&lt;p&gt;Tinker Hatfield - nhà thiết kế chính của Nike, được coi là cha đẻ của Air Max và là người đưa những bộ đệm này trở nên có thể nhìn thấy được.&lt;/p&gt;\n\n&lt;p&gt;Ông nảy ra ý tưởng đưa lớp đệm Air có thể nhìn thấy được quan sát những lớp kính của Trung tâm triển lãm Pompidou Centre tại Paris. Ngày sau khi trở về Mỹ ông bắt tay vào thiết kế bộ đệm với càng nhiều không khí càng tốt. Từ đây, thuật ngữ &quot;không khí tối đa&quot; Maximum Air được gọi tắt là Air Max ra đời.&lt;/p&gt;\n\n&lt;p&gt;Năm 1987, sản phẩm Nike Air Max 1 ra đời. Với bộ đệm khí có thể nhìn thấy ở đế giày. Ngay lập tức đôi giày đem lại sự chú ý của thị trường và bán rất chạy.&lt;/p&gt;\n\n&lt;p&gt;Trong những năm sau đó, Nike tiếp tục nỗ lực để cải tiến bộ đệm này với mục tiêu đệm càng nhiều khí càng tốt. 3 phiên bản Air Max ra đời trong thời gian này là Air Max 90 (1990), Air Max 180 (1991), Air Max 93 (1993).&lt;/p&gt;\n\n&lt;p&gt;Tuy nhiên tại thời điểm này, tất cả các mẫu đều có bộ đệm khí chỉ có thể được đặt ở phần gót giày. Điều đồng nghĩa với phần mũi và giữa bàn chân vẫn chưa được bảo vệ với đệm không khí.&lt;/p&gt;\n', 'The Nike Phantom GT are soccer boots created from the analysis of large amounts of data from players and unique tape technology.', 'Nike Phantom GT là đôi giày đá bóng được tạo ra từ sự phân tích một lượng lớn dữ liệu từ các cầu thủ và công nghệ băng dán độc đáo.', 'Nike Zoom Nike\'s most successful shoe cushioning technology', 'Nike Zoom công nghệ đệm giày thành công nhất của Nike', NULL, NULL, 2, 'noibat,hienthi', 'tin-tuc', 1609287279, 1625552402, 24),
 (3, 0, 2, 1, 0, 'news-2-1467-5505.jpg', '{\"p\":\"news-2-1467-5505.jpg\",\"w\":1140,\"h\":800,\"m\":\"image\\/jpeg\"}', 'ga-khong-lo-nike-dong-cua-hang-loat-o-trung-quoc-vi-corona', 'giant-nike-mass-stores-in-china-because-of-corona', '&lt;p&gt;Frank Rudy was the first person to have the idea of ​​putting air cushioning in a shoe. His inspiration comes from the night set designs of spacecraft at NASA - where he works every day.&lt;/p&gt;\r\n\r\n&lt;p&gt;Immediately after the idea came up, he approached Nike\'s development department. Realizing the potential of the technology, Nike tried it out with its own shoe, Nike Tailwind, and in 1978. This product had an air cushion inside. However, this air cushion is completely hidden in the shoe.&lt;/p&gt;\r\n\r\n&lt;p&gt;This product did not get much success after its inception and was quickly forgotten. See also: Top 7 of the best shoe cushion technologies by Nike&lt;/p&gt;\r\n', '&lt;p&gt;Frank Rudy là người đầu tiên có ý tưởng đặt đệm khí vào một chiếc giày. Nguồn cảm hứng của anh đến từ những thiết kế bộ đêm của tàu vũ trụ tại NASA - nơi anh làm việc hằng ngày.&lt;/p&gt;\r\n\r\n&lt;p&gt;Ngay sau khi nảy ra ý tưởng này, anh lập tức tiếp cận với bộ phận phát triển của Nike. Nhận thấy tiềm năng của công nghệ, Nike đã thử áp dụng thử với sản phẩm giày của mình là Nike Tailwind và năm 1978.&lt;/p&gt;\r\n\r\n&lt;p&gt;Sản phẩm này có đệm khí ở bên trong. Tuy nhiên, lớp đệm khí này lại ẩn hoàn toàn trong giày. Sau khi ra đời, sản phẩm này không nhận được nhiều sự thành công cho lắm do đó nhanh chóng bị lãng quên.&lt;/p&gt;\r\n\r\n&lt;p&gt;Xem thêm: &lt;a href=&quot;https://thethao247.vn/318-top-7-cong-nghe-dem-giay-ti-do-cua-nike-d177270.html&quot; rel=&quot;dofollow&quot; target=&quot;_blank&quot;&gt;Top 7 công nghệ đệm giày tốt nhất của Nike&lt;/a&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;1987, Nike Air Max 1, đôi giày Air Max đầu tiên ra đời&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;a data-at-1366=&quot;https://media.thethao247.vn/origin_1366x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-at-1920=&quot;https://media.thethao247.vn/origin_1920x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-at-450=&quot;https://media.thethao247.vn/origin_450x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-at-800=&quot;https://media.thethao247.vn/origin_800x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-caption=&quot;&quot; href=&quot;https://media.thethao247.vn/origin_850x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot;&gt;&lt;img alt=&quot;&quot; data-ll-status=&quot;loading&quot; src=&quot;https://media.thethao247.vn/origin_850x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; title=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Nike Air Max 1 (ảnh: sneakerfreaker.com)&lt;/p&gt;\r\n\r\n&lt;p&gt;Tinker Hatfield - nhà thiết kế chính của Nike, được coi là cha đẻ của Air Max và là người đưa những bộ đệm này trở nên có thể nhìn thấy được.&lt;/p&gt;\r\n\r\n&lt;p&gt;Ông nảy ra ý tưởng đưa lớp đệm Air có thể nhìn thấy được quan sát những lớp kính của Trung tâm triển lãm Pompidou Centre tại Paris. Ngày sau khi trở về Mỹ ông bắt tay vào thiết kế bộ đệm với càng nhiều không khí càng tốt. Từ đây, thuật ngữ &quot;không khí tối đa&quot; Maximum Air được gọi tắt là Air Max ra đời.&lt;/p&gt;\r\n\r\n&lt;p&gt;Năm 1987, sản phẩm Nike Air Max 1 ra đời. Với bộ đệm khí có thể nhìn thấy ở đế giày. Ngay lập tức đôi giày đem lại sự chú ý của thị trường và bán rất chạy.&lt;/p&gt;\r\n\r\n&lt;p&gt;Trong những năm sau đó, Nike tiếp tục nỗ lực để cải tiến bộ đệm này với mục tiêu đệm càng nhiều khí càng tốt. 3 phiên bản Air Max ra đời trong thời gian này là Air Max 90 (1990), Air Max 180 (1991), Air Max 93 (1993).&lt;/p&gt;\r\n\r\n&lt;p&gt;Tuy nhiên tại thời điểm này, tất cả các mẫu đều có bộ đệm khí chỉ có thể được đặt ở phần gót giày. Điều đồng nghĩa với phần mũi và giữa bàn chân vẫn chưa được bảo vệ với đệm không khí.&lt;/p&gt;\r\n', 'The Nike Phantom GT are soccer boots created from the analysis of large amounts of data from players and unique tape technology.', 'Nike Phantom GT là đôi giày đá bóng được tạo ra từ sự phân tích một lượng lớn dữ liệu từ các cầu thủ và công nghệ băng dán độc đáo.', 'Giant Nike mass stores in China because of corona', 'Gã khổng lồ Nike đóng cửa hàng loạt ở Trung Quốc vì corona', NULL, NULL, 3, 'noibat,hienthi', 'tin-tuc', 1609287411, 1625552405, 2),
 (4, 0, 0, 4, 0, 'news-3-4960-8318.jpg', '{\"p\":\"news-3-4960-8318.jpg\",\"w\":270,\"h\":200,\"m\":\"image\\/jpeg\"}', 'can-canh-nike-airmax-97-voi-day-giay-thong-minh-cuc-doc', 'close-up-of-nike-airmax-97-with-unique-smart-shoelaces', '&lt;p&gt;Frank Rudy was the first person to have the idea of ​​putting air cushioning in a shoe. His inspiration comes from the night set designs of spacecraft at NASA - where he works every day.&lt;/p&gt;\r\n\r\n&lt;p&gt;Immediately after the idea came up, he approached Nike\'s development department. Realizing the potential of the technology, Nike tried it out with its own shoe, Nike Tailwind, and in 1978. This product had an air cushion inside. However, this air cushion is completely hidden in the shoe.&lt;/p&gt;\r\n\r\n&lt;p&gt;This product did not get much success after its inception and was quickly forgotten. See also: Top 7 of the best shoe cushion technologies by Nike&lt;/p&gt;\r\n', '&lt;p&gt;Frank Rudy là người đầu tiên có ý tưởng đặt đệm khí vào một chiếc giày. Nguồn cảm hứng của anh đến từ những thiết kế bộ đêm của tàu vũ trụ tại NASA - nơi anh làm việc hằng ngày.&lt;/p&gt;\r\n\r\n&lt;p&gt;Ngay sau khi nảy ra ý tưởng này, anh lập tức tiếp cận với bộ phận phát triển của Nike. Nhận thấy tiềm năng của công nghệ, Nike đã thử áp dụng thử với sản phẩm giày của mình là Nike Tailwind và năm 1978.&lt;/p&gt;\r\n\r\n&lt;p&gt;Sản phẩm này có đệm khí ở bên trong. Tuy nhiên, lớp đệm khí này lại ẩn hoàn toàn trong giày. Sau khi ra đời, sản phẩm này không nhận được nhiều sự thành công cho lắm do đó nhanh chóng bị lãng quên.&lt;/p&gt;\r\n\r\n&lt;p&gt;Xem thêm: &lt;a href=&quot;https://thethao247.vn/318-top-7-cong-nghe-dem-giay-ti-do-cua-nike-d177270.html&quot; rel=&quot;dofollow&quot; target=&quot;_blank&quot;&gt;Top 7 công nghệ đệm giày tốt nhất của Nike&lt;/a&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;1987, Nike Air Max 1, đôi giày Air Max đầu tiên ra đời&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;a data-at-1366=&quot;https://media.thethao247.vn/origin_1366x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-at-1920=&quot;https://media.thethao247.vn/origin_1920x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-at-450=&quot;https://media.thethao247.vn/origin_450x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-at-800=&quot;https://media.thethao247.vn/origin_800x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-caption=&quot;&quot; href=&quot;https://media.thethao247.vn/origin_850x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot;&gt;&lt;img alt=&quot;&quot; data-ll-status=&quot;loading&quot; src=&quot;https://media.thethao247.vn/origin_850x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; title=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Nike Air Max 1 (ảnh: sneakerfreaker.com)&lt;/p&gt;\r\n\r\n&lt;p&gt;Tinker Hatfield - nhà thiết kế chính của Nike, được coi là cha đẻ của Air Max và là người đưa những bộ đệm này trở nên có thể nhìn thấy được.&lt;/p&gt;\r\n\r\n&lt;p&gt;Ông nảy ra ý tưởng đưa lớp đệm Air có thể nhìn thấy được quan sát những lớp kính của Trung tâm triển lãm Pompidou Centre tại Paris. Ngày sau khi trở về Mỹ ông bắt tay vào thiết kế bộ đệm với càng nhiều không khí càng tốt. Từ đây, thuật ngữ &quot;không khí tối đa&quot; Maximum Air được gọi tắt là Air Max ra đời.&lt;/p&gt;\r\n\r\n&lt;p&gt;Năm 1987, sản phẩm Nike Air Max 1 ra đời. Với bộ đệm khí có thể nhìn thấy ở đế giày. Ngay lập tức đôi giày đem lại sự chú ý của thị trường và bán rất chạy.&lt;/p&gt;\r\n\r\n&lt;p&gt;Trong những năm sau đó, Nike tiếp tục nỗ lực để cải tiến bộ đệm này với mục tiêu đệm càng nhiều khí càng tốt. 3 phiên bản Air Max ra đời trong thời gian này là Air Max 90 (1990), Air Max 180 (1991), Air Max 93 (1993).&lt;/p&gt;\r\n\r\n&lt;p&gt;Tuy nhiên tại thời điểm này, tất cả các mẫu đều có bộ đệm khí chỉ có thể được đặt ở phần gót giày. Điều đồng nghĩa với phần mũi và giữa bàn chân vẫn chưa được bảo vệ với đệm không khí.&lt;/p&gt;\r\n', 'The Nike Phantom GT are soccer boots created from the analysis of large amounts of data from players and unique tape technology.', 'Nike Phantom GT là đôi giày đá bóng được tạo ra từ sự phân tích một lượng lớn dữ liệu từ các cầu thủ và công nghệ băng dán độc đáo.', 'Close-up of Nike Airmax 97 with unique smart shoelaces', 'Cận cảnh Nike Airmax 97 với dây giày thông minh cực độc', NULL, NULL, 4, 'noibat,hienthi', 'tin-tuc', 1609287457, 1625552408, 2),
-(5, 0, 0, 0, 0, 'news-1-1102-3175.jpg', '{\"p\":\"news-1-1102-3175.jpg\",\"w\":270,\"h\":200,\"m\":\"image\\/jpeg\"}', 'chinh-sach-tra-hang', 'return-policy', '', '', '', '', 'Return policy', 'Chính sách trả hàng', NULL, NULL, 1, 'hienthi', 'chinh-sach', 1609287818, 1620827241, 1),
-(6, 0, 0, 0, 0, 'news-1-4178-9067.jpeg', '', 'chinh-sach-bao-hanh', 'warranty-policy', '', '', '', '', 'Warranty Policy', 'Chính sách bảo hành', NULL, NULL, 2, 'hienthi', 'chinh-sach', 1609287823, 1609287842, 0),
+(5, 0, 0, 0, 0, 'news-1-1102-3175.jpg', '{\"p\":\"news-1-1102-3175.jpg\",\"w\":270,\"h\":200,\"m\":\"image\\/jpeg\"}', 'chinh-sach-tra-hang', 'return-policy', '', '', '', '', 'Return policy', 'Chính sách trả hàng', NULL, NULL, 1, 'hienthi', 'chinh-sach', 1609287818, 1620827241, 3),
+(6, 0, 0, 0, 0, 'news-1-4178-9067.jpeg', '{\"p\":\"news-1-4178-9067.jpeg\",\"w\":270,\"h\":200,\"m\":\"image\\/jpeg\"}', 'chinh-sach-bao-hanh', 'warranty-policy', '', '', '', '', 'Warranty Policy', 'Chính sách bảo hành', NULL, NULL, 2, 'hienthi', 'chinh-sach', 1609287823, 1609287842, 1),
 (7, 0, 0, 0, 0, 'news-2-1467-6954.jpg', '', 'chinh-sach-mua-hang', 'purchase-policy', '', '', '', '', 'Purchase policy', 'Chính sách mua hàng', NULL, NULL, 3, 'hienthi', 'chinh-sach', 1609287848, 1609287867, 0),
 (8, 0, 0, 0, 0, 'news-3-4960-6754.jpg', '', 'chinh-sach-nguoi-dung', 'user-policy', '', '', '', '', 'User policy', 'Chính sách người dùng', NULL, NULL, 4, 'hienthi', 'chinh-sach', 1609287874, 1609287892, 0),
 (9, 0, 0, 0, 0, '', '', 'thanh-toan-tai-cong-ty', 'payment-at-the-company', '', '', '- Customers please pay directly at the company right after buying at\r\nShowroom 1: No. 103 - 105 Le Thanh Nghi - Dong Tam - Hai Ba Trung - Hanoi.\r\nShowroom 2: No. 58 Ho Tung Mau - Cau Giay - Hanoi.\r\n- As soon as you pay, the accountant will send you back the financial invoice and the sales staff will guide you on the form of delivery and receipt.', '- Quý khách hàng vui lòng thanh toán trực tiếp tại công ty ngay khi mua hàng tại\r\nShowroom 1 : Số 103 - 105 Lê Thanh Nghị– Đồng Tâm - Hai Bà Trưng– Hà Nội.\r\nShowroom 2 : Số 58 Hồ Tùng Mậu  – Cầu Giấy – Hà Nội.\r\n- Ngay khi quý khách thanh toán xong, nhân viên kế toán sẽ gửi lại quý khách hóa đơn tài chính và nhân viên kinh doanh sẽ hướng dẫn quý khách hình thức giao nhận hàng.', 'Payment at the company', 'Thanh toán tại công ty', NULL, NULL, 1, 'hienthi', 'hinh-thuc-thanh-toan', 1609287951, 1620819794, 0),
 (10, 0, 0, 0, 0, '', '', 'thanh-toan-bang-chuyen-khoan', 'payment-by-bank-transfer', '', '', '- If the delivery place is suburban, suburban or inner city of Hanoi but different from the payment place (in case you send gifts, send goods to friends, partners ...) we will collect money 100% of the order value in advance + shipping fee calculated in the shipping policy by bank transfer method before shipment', '- Nếu địa điểm giao hàng là ngoại thành, ngoại tỉnh hoặc nội thành thành phố Hà Nội nhưng khác với địa điểm thanh toán (trong trường hợp Quý khách gửi quà, gửi hàng cho bạn bè, đối tác …) chúng tôi sẽ thu tiền trước 100% giá trị đơn hàng + phí vận chuyển theo cước phí tính trong chinh sách vận chuyển bằng phương thức chuyển khoản trước khi giao hàng', 'Payment by bank transfer', 'Thanh toán bằng chuyển khoản', NULL, NULL, 2, 'hienthi', 'hinh-thuc-thanh-toan', 1609287971, 1609287996, 0),
 (11, 0, 0, 0, 0, '', '', 'thanh-toan-tai-diem-giao-hang', 'payment-at-the-point-of-delivery', '', '', '- You pay the forwarder for the whole or the rest of the purchased order value (if deposited).\r\n- This form of payment is only made for orders with a delivery address in Hanoi city (within a radius of 30 km from the place of purchase).\r\n- If the place of delivery is right at the place of payment, our delivery staff will collect the money upon delivery.', '- Quý khách thanh toán cho nhân viên giao nhận toàn bộ hoặc phần còn lại của giá trị đơn hàng đã mua (nếu đã đặt cọc)\r\n- Hình thức thanh toán này chỉ thực hiện với các đơn hàng có địa chỉ giao hàng tại nội thành thành phố Hà Nội (trong phạm vi bán kính 30 km tính từ nơi mua hàng).\r\n- Nếu địa điểm giao hàng ngay tại nơi thanh toán, nhân viên giao hàng của chúng tôi sẽ thu tiền khi giao hàng.', 'Payment at the point of delivery', 'Thanh toán tại điểm giao hàng', NULL, NULL, 3, 'hienthi', 'hinh-thuc-thanh-toan', 1609288000, 1609288028, 0),
-(12, 0, 0, 4, 0, 'news-3-4960-8318-3743.jpg', '', 'can-canh-nike-airmax-97-voi-day-giay-thong-minh-cuc-doc-1', '', '&lt;p&gt;Frank Rudy was the first person to have the idea of ​​putting air cushioning in a shoe. His inspiration comes from the night set designs of spacecraft at NASA - where he works every day.&lt;/p&gt;\r\n\r\n&lt;p&gt;Immediately after the idea came up, he approached Nike\'s development department. Realizing the potential of the technology, Nike tried it out with its own shoe, Nike Tailwind, and in 1978. This product had an air cushion inside. However, this air cushion is completely hidden in the shoe.&lt;/p&gt;\r\n\r\n&lt;p&gt;This product did not get much success after its inception and was quickly forgotten. See also: Top 7 of the best shoe cushion technologies by Nike&lt;/p&gt;\r\n', '&lt;p&gt;Frank Rudy là người đầu tiên có ý tưởng đặt đệm khí vào một chiếc giày. Nguồn cảm hứng của anh đến từ những thiết kế bộ đêm của tàu vũ trụ tại NASA - nơi anh làm việc hằng ngày.&lt;/p&gt;\r\n\r\n&lt;p&gt;Ngay sau khi nảy ra ý tưởng này, anh lập tức tiếp cận với bộ phận phát triển của Nike. Nhận thấy tiềm năng của công nghệ, Nike đã thử áp dụng thử với sản phẩm giày của mình là Nike Tailwind và năm 1978.&lt;/p&gt;\r\n\r\n&lt;p&gt;Sản phẩm này có đệm khí ở bên trong. Tuy nhiên, lớp đệm khí này lại ẩn hoàn toàn trong giày. Sau khi ra đời, sản phẩm này không nhận được nhiều sự thành công cho lắm do đó nhanh chóng bị lãng quên.&lt;/p&gt;\r\n\r\n&lt;p&gt;Xem thêm: &lt;a href=&quot;https://thethao247.vn/318-top-7-cong-nghe-dem-giay-ti-do-cua-nike-d177270.html&quot; rel=&quot;dofollow&quot; target=&quot;_blank&quot;&gt;Top 7 công nghệ đệm giày tốt nhất của Nike&lt;/a&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;1987, Nike Air Max 1, đôi giày Air Max đầu tiên ra đời&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;a data-at-1366=&quot;https://media.thethao247.vn/origin_1366x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-at-1920=&quot;https://media.thethao247.vn/origin_1920x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-at-450=&quot;https://media.thethao247.vn/origin_450x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-at-800=&quot;https://media.thethao247.vn/origin_800x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-caption=&quot;&quot; href=&quot;https://media.thethao247.vn/origin_850x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot;&gt;&lt;img alt=&quot;&quot; data-ll-status=&quot;loading&quot; src=&quot;https://media.thethao247.vn/origin_850x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; title=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Nike Air Max 1 (ảnh: sneakerfreaker.com)&lt;/p&gt;\r\n\r\n&lt;p&gt;Tinker Hatfield - nhà thiết kế chính của Nike, được coi là cha đẻ của Air Max và là người đưa những bộ đệm này trở nên có thể nhìn thấy được.&lt;/p&gt;\r\n\r\n&lt;p&gt;Ông nảy ra ý tưởng đưa lớp đệm Air có thể nhìn thấy được quan sát những lớp kính của Trung tâm triển lãm Pompidou Centre tại Paris. Ngày sau khi trở về Mỹ ông bắt tay vào thiết kế bộ đệm với càng nhiều không khí càng tốt. Từ đây, thuật ngữ &quot;không khí tối đa&quot; Maximum Air được gọi tắt là Air Max ra đời.&lt;/p&gt;\r\n\r\n&lt;p&gt;Năm 1987, sản phẩm Nike Air Max 1 ra đời. Với bộ đệm khí có thể nhìn thấy ở đế giày. Ngay lập tức đôi giày đem lại sự chú ý của thị trường và bán rất chạy.&lt;/p&gt;\r\n\r\n&lt;p&gt;Trong những năm sau đó, Nike tiếp tục nỗ lực để cải tiến bộ đệm này với mục tiêu đệm càng nhiều khí càng tốt. 3 phiên bản Air Max ra đời trong thời gian này là Air Max 90 (1990), Air Max 180 (1991), Air Max 93 (1993).&lt;/p&gt;\r\n\r\n&lt;p&gt;Tuy nhiên tại thời điểm này, tất cả các mẫu đều có bộ đệm khí chỉ có thể được đặt ở phần gót giày. Điều đồng nghĩa với phần mũi và giữa bàn chân vẫn chưa được bảo vệ với đệm không khí.&lt;/p&gt;\r\n', 'The Nike Phantom GT are soccer boots created from the analysis of large amounts of data from players and unique tape technology.', 'Nike Phantom GT là đôi giày đá bóng được tạo ra từ sự phân tích một lượng lớn dữ liệu từ các cầu thủ và công nghệ băng dán độc đáo.', '', 'Cận cảnh Nike Airmax 97 với dây giày thông minh cực độc (1)', NULL, NULL, 5, 'hienthi,noibat', 'tin-tuc', 1650269072, 0, 0);
+(12, 0, 0, 4, 0, 'news-3-4960-8318-3743.jpg', '', 'can-canh-nike-airmax-97-voi-day-giay-thong-minh-cuc-doc-1', '', '&lt;p&gt;Frank Rudy was the first person to have the idea of ​​putting air cushioning in a shoe. His inspiration comes from the night set designs of spacecraft at NASA - where he works every day.&lt;/p&gt;\r\n\r\n&lt;p&gt;Immediately after the idea came up, he approached Nike\'s development department. Realizing the potential of the technology, Nike tried it out with its own shoe, Nike Tailwind, and in 1978. This product had an air cushion inside. However, this air cushion is completely hidden in the shoe.&lt;/p&gt;\r\n\r\n&lt;p&gt;This product did not get much success after its inception and was quickly forgotten. See also: Top 7 of the best shoe cushion technologies by Nike&lt;/p&gt;\r\n', '&lt;p&gt;Frank Rudy là người đầu tiên có ý tưởng đặt đệm khí vào một chiếc giày. Nguồn cảm hứng của anh đến từ những thiết kế bộ đêm của tàu vũ trụ tại NASA - nơi anh làm việc hằng ngày.&lt;/p&gt;\r\n\r\n&lt;p&gt;Ngay sau khi nảy ra ý tưởng này, anh lập tức tiếp cận với bộ phận phát triển của Nike. Nhận thấy tiềm năng của công nghệ, Nike đã thử áp dụng thử với sản phẩm giày của mình là Nike Tailwind và năm 1978.&lt;/p&gt;\r\n\r\n&lt;p&gt;Sản phẩm này có đệm khí ở bên trong. Tuy nhiên, lớp đệm khí này lại ẩn hoàn toàn trong giày. Sau khi ra đời, sản phẩm này không nhận được nhiều sự thành công cho lắm do đó nhanh chóng bị lãng quên.&lt;/p&gt;\r\n\r\n&lt;p&gt;Xem thêm: &lt;a href=&quot;https://thethao247.vn/318-top-7-cong-nghe-dem-giay-ti-do-cua-nike-d177270.html&quot; rel=&quot;dofollow&quot; target=&quot;_blank&quot;&gt;Top 7 công nghệ đệm giày tốt nhất của Nike&lt;/a&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;1987, Nike Air Max 1, đôi giày Air Max đầu tiên ra đời&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;a data-at-1366=&quot;https://media.thethao247.vn/origin_1366x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-at-1920=&quot;https://media.thethao247.vn/origin_1920x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-at-450=&quot;https://media.thethao247.vn/origin_450x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-at-800=&quot;https://media.thethao247.vn/origin_800x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; data-caption=&quot;&quot; href=&quot;https://media.thethao247.vn/origin_850x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot;&gt;&lt;img alt=&quot;&quot; data-ll-status=&quot;loading&quot; src=&quot;https://media.thethao247.vn/origin_850x0/upload/thanhtung/2019/04/08/air-max-1-nike-air-max.jpg&quot; title=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Nike Air Max 1 (ảnh: sneakerfreaker.com)&lt;/p&gt;\r\n\r\n&lt;p&gt;Tinker Hatfield - nhà thiết kế chính của Nike, được coi là cha đẻ của Air Max và là người đưa những bộ đệm này trở nên có thể nhìn thấy được.&lt;/p&gt;\r\n\r\n&lt;p&gt;Ông nảy ra ý tưởng đưa lớp đệm Air có thể nhìn thấy được quan sát những lớp kính của Trung tâm triển lãm Pompidou Centre tại Paris. Ngày sau khi trở về Mỹ ông bắt tay vào thiết kế bộ đệm với càng nhiều không khí càng tốt. Từ đây, thuật ngữ &quot;không khí tối đa&quot; Maximum Air được gọi tắt là Air Max ra đời.&lt;/p&gt;\r\n\r\n&lt;p&gt;Năm 1987, sản phẩm Nike Air Max 1 ra đời. Với bộ đệm khí có thể nhìn thấy ở đế giày. Ngay lập tức đôi giày đem lại sự chú ý của thị trường và bán rất chạy.&lt;/p&gt;\r\n\r\n&lt;p&gt;Trong những năm sau đó, Nike tiếp tục nỗ lực để cải tiến bộ đệm này với mục tiêu đệm càng nhiều khí càng tốt. 3 phiên bản Air Max ra đời trong thời gian này là Air Max 90 (1990), Air Max 180 (1991), Air Max 93 (1993).&lt;/p&gt;\r\n\r\n&lt;p&gt;Tuy nhiên tại thời điểm này, tất cả các mẫu đều có bộ đệm khí chỉ có thể được đặt ở phần gót giày. Điều đồng nghĩa với phần mũi và giữa bàn chân vẫn chưa được bảo vệ với đệm không khí.&lt;/p&gt;\r\n', 'The Nike Phantom GT are soccer boots created from the analysis of large amounts of data from players and unique tape technology.', 'Nike Phantom GT là đôi giày đá bóng được tạo ra từ sự phân tích một lượng lớn dữ liệu từ các cầu thủ và công nghệ băng dán độc đáo.', '', 'Cận cảnh Nike Airmax 97 với dây giày thông minh cực độc (1)', NULL, NULL, 5, 'hienthi,noibat', 'tin-tuc', 1650269072, 0, 0),
+(15, 0, 0, 0, 0, '', '', '', '', '', '', '', 'tại thích', '', 'Tại sao chọn', '', '', 1, 'hienthi', 'tai-sao-chon', 1681795472, 1682151502, 0),
+(14, 0, 0, 0, 0, 'img7548-4331.jpg', '', 'anh-tam', '', '', '', '', 'Hàng đẹp, chất lượng', '', 'Anh Tâm', '', '', 1, 'noibat,hienthi', 'nhan-xet', 1681794848, 1682151551, 0),
+(16, 0, 0, 0, 0, '', '', '', '', '', '', '', 'mua hàng dễ không', '', 'anh Tâm', '', '', 1, 'hienthi', 'cau-hoi', 1681795514, 1682151519, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_newsletter`
+-- Cấu trúc bảng cho bảng `table_newsletter`
 --
 
 CREATE TABLE `table_newsletter` (
@@ -5039,7 +5128,7 @@ CREATE TABLE `table_newsletter` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_news_cat`
+-- Cấu trúc bảng cho bảng `table_news_cat`
 --
 
 CREATE TABLE `table_news_cat` (
@@ -5065,7 +5154,7 @@ CREATE TABLE `table_news_cat` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_news_item`
+-- Cấu trúc bảng cho bảng `table_news_item`
 --
 
 CREATE TABLE `table_news_item` (
@@ -5092,7 +5181,7 @@ CREATE TABLE `table_news_item` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_news_list`
+-- Cấu trúc bảng cho bảng `table_news_list`
 --
 
 CREATE TABLE `table_news_list` (
@@ -5117,7 +5206,7 @@ CREATE TABLE `table_news_list` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_news_sub`
+-- Cấu trúc bảng cho bảng `table_news_sub`
 --
 
 CREATE TABLE `table_news_sub` (
@@ -5145,7 +5234,7 @@ CREATE TABLE `table_news_sub` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_news_tags`
+-- Cấu trúc bảng cho bảng `table_news_tags`
 --
 
 CREATE TABLE `table_news_tags` (
@@ -5157,7 +5246,7 @@ CREATE TABLE `table_news_tags` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_order`
+-- Cấu trúc bảng cho bảng `table_order`
 --
 
 CREATE TABLE `table_order` (
@@ -5182,10 +5271,20 @@ CREATE TABLE `table_order` (
   `numb` int(11) DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `table_order`
+--
+
+INSERT INTO `table_order` (`id`, `id_user`, `code`, `fullname`, `phone`, `address`, `email`, `order_payment`, `temp_price`, `total_price`, `city`, `district`, `ward`, `ship_price`, `requirements`, `notes`, `date_created`, `order_status`, `numb`) VALUES
+(34, 0, 'TQJDLK', 'rdhh', '0764735759', 'gege, Phường Bình Thọ, Thành Phố Thủ Đức, Hồ Chí Minh', 'sgegs@gmail.com', 9, 445000, 445000, 62, 665, 11331, 0, 'ê', '', 1684588607, 1, 1),
+(35, 0, 'ZIAERX', 'Huỳnh Minh Tâm', '0764735759', 'dfhgdhgr, Phường Hiệp Bình Chánh, Thành Phố Thủ Đức, Hồ Chí Minh', 'huynhminhtamm2002@gmail.com', 10, 890000, 890000, 62, 665, 11335, 0, '', '', 1684590008, 1, 1),
+(36, 0, 'WQWHPT', 'Huỳnh Minh Tâm', '0764735759', 'dfhgdhgr, Phường Hiệp Bình Chánh, Thành Phố Thủ Đức, Hồ Chí Minh', 'huynhminhtamm2002@gmail.com', 10, 890000, 890000, 62, 665, 11335, 0, '', '', 1684590119, 2, 1),
+(37, 0, 'U3WWHM', 'Tâm', '0764735759', '24 đường Đua, Phường Thủ Thiêm, Thành Phố Thủ Đức, Hồ Chí Minh', 'huynhminhtamm2002@gmail.com', 10, 1335000, 1335000, 62, 665, 11326, 0, '', '', 1684590211, 2, 1);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_order_detail`
+-- Cấu trúc bảng cho bảng `table_order_detail`
 --
 
 CREATE TABLE `table_order_detail` (
@@ -5202,10 +5301,20 @@ CREATE TABLE `table_order_detail` (
   `quantity` int(11) DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `table_order_detail`
+--
+
+INSERT INTO `table_order_detail` (`id`, `id_order`, `id_product`, `photo`, `name`, `code`, `color`, `size`, `regular_price`, `sale_price`, `quantity`) VALUES
+(58, 34, 53, '21-5704.jpeg', 'ÁO LỤA PHỐI NƠ SAU', 'TQJDLK', '', '', 890000, 445000, 1),
+(59, 35, 53, '21-5704.jpeg', 'ÁO LỤA PHỐI NƠ SAU', 'ZIAERX', '', '', 890000, 445000, 2),
+(60, 36, 53, '21-5704.jpeg', 'ÁO LỤA PHỐI NƠ SAU', 'WQWHPT', '', '', 890000, 445000, 2),
+(61, 37, 53, '21-5704.jpeg', 'ÁO LỤA PHỐI NƠ SAU', 'U3WWHM', '', '', 890000, 445000, 3);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_order_status`
+-- Cấu trúc bảng cho bảng `table_order_status`
 --
 
 CREATE TABLE `table_order_status` (
@@ -5216,7 +5325,7 @@ CREATE TABLE `table_order_status` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_order_status`
+-- Đang đổ dữ liệu cho bảng `table_order_status`
 --
 
 INSERT INTO `table_order_status` (`id`, `namevi`, `nameen`, `class_order`) VALUES
@@ -5229,7 +5338,7 @@ INSERT INTO `table_order_status` (`id`, `namevi`, `nameen`, `class_order`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_permission`
+-- Cấu trúc bảng cho bảng `table_permission`
 --
 
 CREATE TABLE `table_permission` (
@@ -5239,7 +5348,7 @@ CREATE TABLE `table_permission` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_permission`
+-- Đang đổ dữ liệu cho bảng `table_permission`
 --
 
 INSERT INTO `table_permission` (`id`, `id_permission_group`, `permission`) VALUES
@@ -5434,7 +5543,7 @@ INSERT INTO `table_permission` (`id`, `id_permission_group`, `permission`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_permission_group`
+-- Cấu trúc bảng cho bảng `table_permission_group`
 --
 
 CREATE TABLE `table_permission_group` (
@@ -5447,7 +5556,7 @@ CREATE TABLE `table_permission_group` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_permission_group`
+-- Đang đổ dữ liệu cho bảng `table_permission_group`
 --
 
 INSERT INTO `table_permission_group` (`id`, `name`, `numb`, `status`, `date_created`, `date_updated`) VALUES
@@ -5457,7 +5566,7 @@ INSERT INTO `table_permission_group` (`id`, `name`, `numb`, `status`, `date_crea
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_photo`
+-- Cấu trúc bảng cho bảng `table_photo`
 --
 
 CREATE TABLE `table_photo` (
@@ -5481,25 +5590,27 @@ CREATE TABLE `table_photo` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_photo`
+-- Đang đổ dữ liệu cho bảng `table_photo`
 --
 
 INSERT INTO `table_photo` (`id`, `photo`, `contenten`, `contentvi`, `descen`, `descvi`, `nameen`, `namevi`, `link`, `link_video`, `options`, `type`, `act`, `numb`, `status`, `date_created`, `date_updated`) VALUES
 (1, 'colour3-4653.jpg', '', '', '', '', '', '', '', '', '{\"background\":{\"repeat\":\"no-repeat\",\"size\":\"cover\",\"position\":\"center top\",\"attachment\":\"0\",\"color\":\"E4FFCC\",\"type_show\":\"0\"}}', 'background', 'photo_static', 0, '', 1609237729, 1609980480),
 (2, 'banner-5151-3538.jpg', '', '', '', '', '', '', '', '', '', 'banner', 'photo_static', 0, 'hienthi', 1609237742, 1621819273),
-(3, 'logo-8180-7565.jpg', '', '', '', '', '', '', '', '', '{\"p\":\"logo-8180-7565.jpg\",\"w\":120,\"h\":100,\"m\":\"image\\/jpeg\"}', 'logo', 'photo_static', 0, 'hienthi', 1609237751, 1621821752),
-(4, 'logo-8180-2695.jpg', '', '', '', '', '', '', '', '', '', 'favicon', 'photo_static', 0, 'hienthi', 1609237759, 1621821758),
+(3, 'anh-chup-man-hinh-2023-04-22-luc-134927-4466.png', '', '', '', '', '', '', '', '', '{\"p\":\"anh-chup-man-hinh-2023-04-22-luc-134927-4466.png\",\"w\":1096,\"h\":618,\"m\":\"image\\/png\"}', 'logo', 'photo_static', 0, 'hienthi', 1609237751, 1682146177),
+(4, 'anh-chup-man-hinh-2023-04-22-luc-134855-6363.png', '', '', '', '', '', '', '', '', '', 'favicon', 'photo_static', 0, 'hienthi', 1609237759, 1682146146),
 (5, 'popup-4515-4540.jpg', '', '', '', '', 'Sneaker Shoes EN', 'Sneaker Shoes VI', 'https://www.google.com/', '', '', 'popup', 'photo_static', 0, '', 1609237771, 1650266298),
-(6, 'slide-1-8072-67580.jpg', '', '', '', 'mô tả 2 ngắn mô tả ngắn mô tả ngắn mô tả ngắn mô tả ngắn mô tả ngắn mô tả ngắn mô tả ngắn mô tả ngắn mô tả ngắn mô tả ngắn mô tả ngắn mô tả ngắn mô tả ngắn mô tả ngắn ', 'Sneaker Shoes EN', 'Sneaker Shoes VI 2', 'https://www.google.com/', '', '', 'slide', 'photo_multi', 2, 'hienthi', 0, 1667555072),
-(7, 'slide-2-9203-63971.jpg', '', '', '', 'mô tả ngắn mô tả ngắn mô tả ngắn mô tả ngắn mô tả ngắn mô tả ngắn mô tả ngắn mô tả ngắn mô tả ngắn mô tả ngắn mô tả ngắn mô tả ngắn mô tả ngắn mô tả ngắn mô tả ngắn ', 'Sneaker Shoes EN', 'Sneaker Shoes VI', 'https://www.google.com/', '', '', 'slide', 'photo_multi', 1, 'hienthi', 0, 1667555064),
-(8, 'mxh1-1-1957-80510.png', '', '', '', '', '', '', 'https://www.google.com/', '', '', 'social', 'photo_multi', 1, 'hienthi', 0, 0),
-(9, 'mxh1-2-1178-74341.png', '', '', '', '', '', '', 'https://www.google.com/', '', '', 'social', 'photo_multi', 2, 'hienthi', 0, 0),
-(10, 'mxh1-3-4655-85900.png', '', '', '', '', '', '', 'https://www.google.com/', '', '', 'social', 'photo_multi', 3, 'hienthi', 0, 0),
-(11, 'mxh1-4-6766-68891.png', '', '', '', '', '', '', 'https://www.google.com/', '', '', 'social', 'photo_multi', 4, 'hienthi', 0, 0),
-(12, '', '', '', '', '', 'Wildlife Scenery', 'Wildlife Scenery', '', 'https://www.youtube.com/watch?v=lC373xN-K50', '', 'video', 'photo_multi', 1, 'hienthi,noibat', 0, 0),
-(13, '', '', '', '', '', 'View of Croatia', 'View of Croatia', '', 'https://www.youtube.com/watch?v=39nNRQ1gR3c', '', 'video', 'photo_multi', 2, 'hienthi,noibat', 0, 0),
-(14, '', '', '', '', '', 'Greece Aerial', 'Greece Aerial', '', 'https://www.youtube.com/watch?v=0jvt8Js0OU0', '', 'video', 'photo_multi', 3, 'hienthi,noibat', 0, 0),
-(15, '', '', '', '', '', 'Wildlife of Botswana', 'Wildlife of Botswana', '', 'https://www.youtube.com/watch?v=9IWBvZ9iuUE', '', 'video', 'photo_multi', 4, 'hienthi,noibat', 0, 0),
+(47, '6dd2c9ca58fccb39ba1f634b2be729d9-14250.jpeg', '', '', '', '', '', '', '', '', '', 'slide', 'photo_multi', 1, 'hienthi', 1681260331, 0),
+(48, '55836306652720d955e42831d0577809-41901.jpeg', '', '', '', '', '', '', '', '', '', 'slide', 'photo_multi', 1, 'hienthi', 1681260331, 0),
+(49, 'logodoan-1110.png', '', '', '', '', '', '', '', '', '', 'anh-dich-vu', 'photo_static', 0, 'hienthi', 1681725290, 1682148427),
+(50, 'anh-chup-man-hinh-2023-04-22-luc-144000-5812.png', '', '', '', '', '', '', '', '', '', 'QR', 'photo_static', 0, 'hienthi', 1681725302, 1682149224),
+(8, 'anh-chup-man-hinh-2023-04-17-luc-165749-6475.png', '', '', '', '', '', '', 'https://www.facebook.com/CKC.confessions', '', '', 'social', 'photo_multi', 1, 'hienthi', 0, 1681725478),
+(9, 'anh-chup-man-hinh-2023-04-17-luc-165923-4742.png', '', '', '', '', '', '', 'https://www.tiktok.com/@tultatamne', '', '', 'social', 'photo_multi', 2, 'hienthi', 0, 1681725572),
+(10, 'anh-chup-man-hinh-2023-04-17-luc-170016-7193.png', '', '', '', '', '', '', 'https://www.youtube.com/channel/UCs5vqbtCKv7FxsUmXAruSag', '', '', 'social', 'photo_multi', 3, 'hienthi', 0, 1681725639),
+(51, 'anh-chup-man-hinh-2023-04-22-luc-142824-9073.png', '', '', '', '', '', '', 'https://caothang.edu.vn', '', '', 'social', 'photo_multi', 4, 'hienthi', 1681793254, 1682148530),
+(12, '', '', '', '', '', 'Wildlife Scenery', 'Hạnh Phúc Mới - Cover', '', 'https://www.youtube.com/watch?v=t2ZhCjUuy9Q', '', 'video', 'photo_multi', 1, 'noibat,hienthi', 0, 1681795858),
+(54, 'anh-chup-man-hinh-2023-04-17-luc-165749-57630.png', '', '', '', '', '', '', 'https://facebook.com', '', '', 'doi-tac', 'photo_multi', 1, 'hienthi', 1681796000, 0),
+(53, '6dd2c9ca58fccb39ba1f634b2be729d9-39700.jpeg', '', '', '', '', '', '', '', '', '', 'banner', 'photo_multi', 1, 'hienthi', 1681795970, 0),
+(52, 'anh-chup-man-hinh-2023-04-17-luc-144558-46040.png', '', '', '', '', '', '', '', '', '', 'banner', 'photo_multi', 1, 'hienthi', 1681795929, 0),
 (16, 'partner-4839-12730.jpg', '', '', '', '', 'Sneaker Shoes EN', 'Sneaker Shoes VI', 'https://www.google.com/', '', '', 'doitac', 'photo_multi', 1, 'hienthi', 0, 0),
 (17, 'partner-3855-47340.jpg', '', '', '', '', 'Sneaker Shoes EN', 'Sneaker Shoes VI', 'https://www.google.com/', '', '', 'doitac', 'photo_multi', 2, 'hienthi', 0, 0),
 (18, 'partner-3855-95291.jpg', '', '', '', '', 'Sneaker Shoes EN', 'Sneaker Shoes VI', 'https://www.google.com/', '', '', 'doitac', 'photo_multi', 3, 'hienthi', 0, 0),
@@ -5510,18 +5621,20 @@ INSERT INTO `table_photo` (`id`, `photo`, `contenten`, `contentvi`, `descen`, `d
 (23, 'partner-5044-65871.jpg', '', '', '', '', 'Sneaker Shoes EN', 'Sneaker Shoes VI', 'https://www.google.com/', '', '', 'doitac', 'photo_multi', 8, 'hienthi', 0, 0),
 (24, 'partner-4839-88880.jpg', '', '', '', '', 'Sneaker Shoes EN', 'Sneaker Shoes VI', 'https://www.google.com/', '', '', 'doitac', 'photo_multi', 9, 'hienthi', 0, 0),
 (25, 'partner-5044-82861.jpg', '', '', '', '', 'Sneaker Shoes EN', 'Sneaker Shoes VI', 'https://www.google.com/', '', '', 'doitac', 'photo_multi', 10, 'hienthi', 0, 0),
-(26, 'watermark-7234-4342.png', '', '', '', '', '', '', '', '', '{\"watermark\":{\"position\":\"1\",\"per\":\"5\",\"small_per\":\"5\",\"max\":\"70\",\"min\":\"50\"}}', 'watermark', 'photo_static', 0, 'hienthi', 1609249795, 1621818316),
+(26, 'anh-chup-man-hinh-2023-04-22-luc-134855-9775.png', '', '', '', '', '', '', '', '', '{\"watermark\":{\"position\":\"1\",\"per\":\"5\",\"small_per\":\"5\",\"max\":\"70\",\"min\":\"50\"}}', 'watermark', 'photo_static', 0, 'hienthi', 1609249795, 1682153117),
 (27, 'watermark-news-9980-5609.png', '', '', '', '', '', '', '', '', '{\"watermark\":{\"position\":\"1\",\"per\":\"5\",\"small_per\":\"5\",\"max\":\"90\",\"min\":\"50\"}}', 'watermark-news', 'photo_static', 0, 'hienthi', 1609287062, 1609308504),
 (28, 'poduct-1-1758-7258.jpeg', 'COMPLEX is a community of creators and curators, armed with the Internet, committed to surfacing and sharing the voices and conversations that define our new America. Our videos exemplify convergence culture, exploring topics that include music, sneakers, style, sports and pop culture through original shows and Complex News segments. Featuring your favorite celebrities, authoritative commentary, and a unique voice, our videos make culture pop.', 'COMPLEX là một cộng đồng gồm những người sáng tạo và người quản lý, được trang bị Internet, cam kết xuất hiện và chia sẻ những tiếng nói và cuộc trò chuyện xác định nước Mỹ mới của chúng ta. Video của chúng tôi thể hiện văn hóa hội tụ, khám phá các chủ đề bao gồm âm nhạc, giày thể thao, phong cách, thể thao và văn hóa đại chúng thông qua các chương trình gốc và phân đoạn Tin tức phức hợp. Với những người nổi tiếng yêu thích của bạn, bình luận có thẩm quyền và giọng nói độc đáo, video của chúng tôi làm nổi bật văn hóa.', 'Billie Eilish goes Sneaker Shopping at Stadium Goods in New York City and talks about how Riff Raff\'s music got her into Jordans, potentially working with Jordan Brand on a shoe, and why she likes men\'s sneakers.', 'Billie Eilish đi mua sắm giày thể thao tại Stadium Goods ở thành phố New York và nói về cách âm nhạc của Riff Raff đã đưa cô ấy đến với Jordans, có khả năng hợp tác với Jordan Brand về một đôi giày và tại sao cô ấy thích giày thể thao nam.', 'Billie Eilish Goes Sneaker Shopping With Complex', 'Billie Eilish đi mua sắm giày thể thao với khu phức hợp', '', 'https://www.youtube.com/watch?v=EvdzQdnZPcw', '', 'video', 'photo_static', 0, 'hienthi', 1609288413, 1621819276),
 (43, 'banner-seo-home-1517.jpg', '', '', '', '', '', '', '', '', '{\"p\":\"banner-seo-home-1517.jpg\",\"w\":500,\"h\":260,\"m\":\"image\\/jpeg\"}', 'banner-seo-home', 'photo_static', 0, '', 1651566338, 0),
 (44, 'banner-quangcao-4632.jpg', '', '', '', '', '', '', '', '', '', 'banner-quangcao', 'photo_static', 0, 'hienthi', 1653470916, 1657165307),
 (45, 'quangcao-63650.jpg', '', '', '', '', '', 'quảng cáo 1', '', '', '', 'quang-cao', 'photo_multi', 1, 'hienthi', 1653470941, 0),
-(46, 'quangcao2-45681.jpg', '', '', '', '', '', 'quảng cáo 2', '', '', '', 'quang-cao', 'photo_multi', 2, 'hienthi', 1653470941, 0);
+(46, 'quangcao2-45681.jpg', '', '', '', '', '', 'quảng cáo 2', '', '', '', 'quang-cao', 'photo_multi', 2, 'hienthi', 1653470941, 0),
+(55, 'anh-chup-man-hinh-2023-04-22-luc-143007-47170.png', '', '', '', '', '', 'Nina', 'https://nina.vn', '', '', 'doi-tac', 'photo_multi', 1, 'hienthi', 1682148630, 1682148637),
+(56, 'logo-49960.png', '', '', '', '', '', 'ivymoda', 'https://ivymoda.com/', '', '', 'doi-tac', 'photo_multi', 1, 'hienthi', 1682148740, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_product`
+-- Cấu trúc bảng cho bảng `table_product`
 --
 
 CREATE TABLE `table_product` (
@@ -5554,28 +5667,26 @@ CREATE TABLE `table_product` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_product`
+-- Đang đổ dữ liệu cho bảng `table_product`
 --
 
 INSERT INTO `table_product` (`id`, `id_list`, `id_item`, `id_cat`, `id_sub`, `id_brand`, `photo`, `options`, `slugvi`, `slugen`, `contenten`, `contentvi`, `descen`, `descvi`, `nameen`, `namevi`, `code`, `regular_price`, `discount`, `sale_price`, `numb`, `status`, `type`, `date_created`, `date_updated`, `view`) VALUES
-(1, 1, 1, 1, 1, 1, 'poduct-1-1318-2291.jpg', '{\"p\":\"poduct-1-1318-2291.jpg\",\"w\":540,\"h\":540,\"m\":\"image\\/jpeg\"}', 'giay-slip-on-ultraboost-20', 'slip-on-ultraboost-20', '&lt;p&gt;Dong Hai Men\'s Shoes - G0702 with Monkstrap design is a men\'s shoe that is loved by gentlemen because of its elegance and masculinity. Characteristic of Double Monkstrap, the G0702 has a unique design with a snap and two metal buckles across the upper part of the shoe. Made of high quality cowhide leather with moderate elasticity, suitable shape, and soft and soft shoe lining creating a comfortable feeling for men to use. Men\'s shoes G0702 has a luxurious but classic style that is suitable for office, meeting and party environments.&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Product code: G0702&lt;/li&gt;\r\n	&lt;li&gt;Color: Yellow, Black&lt;/li&gt;\r\n	&lt;li&gt;Size: 38 - 43&lt;/li&gt;\r\n	&lt;li&gt;Material: Cowhide&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '&lt;p&gt;Giày tây nam Đông Hải - G0702 với kiểu dáng Monkstrap là kiểu giày nam được quý ông yêu thích bởi sự lịch lãm, nam tính. Mang nét đặc trưng của Double Monkstrap, G0702 có thiết kế độc đáo với phần đóng mở bằng dây gài và 2 khóa kim loại vắt ngang qua phần thân giày. Được làm bằng chất liệu da bò cao cấp có độ co giãn vừa phải, form dáng phù hợp, cùng với lớp lót giày mềm mịn tạo cảm giác thoải mái, dễ chịu cho phái mạnh khi sử dụng. Giày tây nam G0702 mang phong cách sang trọng mà cổ điển phù hợp với môi trường công sở, hội họp và dự tiệc.&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Mã sản phẩm: G0702&lt;/li&gt;\r\n	&lt;li&gt;Màu: Vàng, Đen&lt;/li&gt;\r\n	&lt;li&gt;Size: 38 - 43&lt;/li&gt;\r\n	&lt;li&gt;Chất liệu: Da bò&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', 'Hurry to the streets without much time? Get your feet in these adidas Superstar slip-on shoes and easily create an elegant style at the last minute.\r\nThe wireless design on the body of the shoe combines a sporty stretch belt that hugs the feet for a comfortable fit. Wherever you go, whether paired with trousers or short skirts, the shoes will help you stand out with a modern style.', 'Vội ra đường mà không có nhiều thời gian? Hãy xỏ chân vào đôi giày slip-on adidas Superstar này và dễ dàng tạo phong cách thanh lịch vào phút chót. \r\nThiết kế không dây trên thân giày kết hợp đai co giãn đậm chất thể thao ôm sát bàn chân cho độ vừa vặn thoải mái. Dù bạn đi đâu, dù phối với quần ống loe hay váy ngắn, đôi giày cũng sẽ giúp bạn nổi bật với phong cách hiện đại.', 'Slip On Ultraboost 20', 'Giày Slip On Ultraboost 20', 'SOUL-20', 350000, 29, 250000, 1, 'noibat,hienthi', 'san-pham', 1609248457, 1651202472, 466),
-(2, 1, 1, 1, 1, 2, 'poduct-1-1758-7675.jpeg', '{\"p\":\"poduct-1-1758-7675.jpeg\",\"w\":540,\"h\":540,\"m\":\"image\\/jpeg\"}', 'giay-slip-on-ultraboost-21', 'slip-on-ultraboost-21', '&lt;p&gt;Dong Hai Men\'s Shoes - G0702 with Monkstrap design is a men\'s shoe that is loved by gentlemen because of its elegance and masculinity. Characteristic of Double Monkstrap, the G0702 has a unique design with a snap and two metal buckles across the upper part of the shoe. Made of high quality cowhide leather with moderate elasticity, suitable shape, and soft and soft shoe lining creating a comfortable feeling for men to use. Men\'s shoes G0702 has a luxurious but classic style that is suitable for office, meeting and party environments.&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Product code: G0702&lt;/li&gt;\r\n	&lt;li&gt;Color: Yellow, Black&lt;/li&gt;\r\n	&lt;li&gt;Size: 38 - 43&lt;/li&gt;\r\n	&lt;li&gt;Material: Cowhide&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '&lt;p&gt;Giày tây nam Đông Hải - G0702 với kiểu dáng Monkstrap là kiểu giày nam được quý ông yêu thích bởi sự lịch lãm, nam tính. Mang nét đặc trưng của Double Monkstrap, G0702 có thiết kế độc đáo với phần đóng mở bằng dây gài và 2 khóa kim loại vắt ngang qua phần thân giày. Được làm bằng chất liệu da bò cao cấp có độ co giãn vừa phải, form dáng phù hợp, cùng với lớp lót giày mềm mịn tạo cảm giác thoải mái, dễ chịu cho phái mạnh khi sử dụng. Giày tây nam G0702 mang phong cách sang trọng mà cổ điển phù hợp với môi trường công sở, hội họp và dự tiệc.&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Mã sản phẩm: G0702&lt;/li&gt;\r\n	&lt;li&gt;Màu: Vàng, Đen&lt;/li&gt;\r\n	&lt;li&gt;Size: 38 - 43&lt;/li&gt;\r\n	&lt;li&gt;Chất liệu: Da bò&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', 'Hurry to the streets without much time? Get your feet in these adidas Superstar slip-on shoes and easily create an elegant style at the last minute.\r\nThe wireless design on the body of the shoe combines a sporty stretch belt that hugs the feet for a comfortable fit. Wherever you go, whether paired with trousers or short skirts, the shoes will help you stand out with a modern style.', 'Vội ra đường mà không có nhiều thời gian? Hãy xỏ chân vào đôi giày slip-on adidas Superstar này và dễ dàng tạo phong cách thanh lịch vào phút chót. \r\nThiết kế không dây trên thân giày kết hợp đai co giãn đậm chất thể thao ôm sát bàn chân cho độ vừa vặn thoải mái. Dù bạn đi đâu, dù phối với quần ống loe hay váy ngắn, đôi giày cũng sẽ giúp bạn nổi bật với phong cách hiện đại.', 'Slip On Ultraboost 21', 'Giày Slip On Ultraboost 21', 'SOUL-21', 450000, 33, 300000, 2, 'noibat,hienthi', 'san-pham', 1609248594, 1625552119, 44),
-(3, 1, 1, 1, 1, 3, 'poduct-2-3013-3373.jpg', '{\"p\":\"poduct-2-3013-3373.jpg\",\"w\":540,\"h\":540,\"m\":\"image\\/jpeg\"}', 'giay-slip-on-ultraboost-22', 'slip-on-ultraboost-22', '&lt;p&gt;Dong Hai Men\'s Shoes - G0702 with Monkstrap design is a men\'s shoe that is loved by gentlemen because of its elegance and masculinity. Characteristic of Double Monkstrap, the G0702 has a unique design with a snap and two metal buckles across the upper part of the shoe. Made of high quality cowhide leather with moderate elasticity, suitable shape, and soft and soft shoe lining creating a comfortable feeling for men to use. Men\'s shoes G0702 has a luxurious but classic style that is suitable for office, meeting and party environments.&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Product code: G0702&lt;/li&gt;\r\n	&lt;li&gt;Color: Yellow, Black&lt;/li&gt;\r\n	&lt;li&gt;Size: 38 - 43&lt;/li&gt;\r\n	&lt;li&gt;Material: Cowhide&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '&lt;p&gt;Giày tây nam Đông Hải - G0702 với kiểu dáng Monkstrap là kiểu giày nam được quý ông yêu thích bởi sự lịch lãm, nam tính. Mang nét đặc trưng của Double Monkstrap, G0702 có thiết kế độc đáo với phần đóng mở bằng dây gài và 2 khóa kim loại vắt ngang qua phần thân giày. Được làm bằng chất liệu da bò cao cấp có độ co giãn vừa phải, form dáng phù hợp, cùng với lớp lót giày mềm mịn tạo cảm giác thoải mái, dễ chịu cho phái mạnh khi sử dụng. Giày tây nam G0702 mang phong cách sang trọng mà cổ điển phù hợp với môi trường công sở, hội họp và dự tiệc.&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Mã sản phẩm: G0702&lt;/li&gt;\r\n	&lt;li&gt;Màu: Vàng, Đen&lt;/li&gt;\r\n	&lt;li&gt;Size: 38 - 43&lt;/li&gt;\r\n	&lt;li&gt;Chất liệu: Da bò&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', 'Hurry to the streets without much time? Get your feet in these adidas Superstar slip-on shoes and easily create an elegant style at the last minute.\r\nThe wireless design on the body of the shoe combines a sporty stretch belt that hugs the feet for a comfortable fit. Wherever you go, whether paired with trousers or short skirts, the shoes will help you stand out with a modern style.', 'Vội ra đường mà không có nhiều thời gian? Hãy xỏ chân vào đôi giày slip-on adidas Superstar này và dễ dàng tạo phong cách thanh lịch vào phút chót. \r\nThiết kế không dây trên thân giày kết hợp đai co giãn đậm chất thể thao ôm sát bàn chân cho độ vừa vặn thoải mái. Dù bạn đi đâu, dù phối với quần ống loe hay váy ngắn, đôi giày cũng sẽ giúp bạn nổi bật với phong cách hiện đại.', 'Slip On Ultraboost 22', 'Giày Slip On Ultraboost 22', 'SOUL-22', 250000, 40, 150000, 3, 'noibat,hienthi', 'san-pham', 1609248686, 1625552223, 8),
-(4, 1, 1, 1, 1, 4, 'poduct-5-3937-6721.jpg', '{\"p\":\"poduct-5-3937-6721.jpg\",\"w\":540,\"h\":540,\"m\":\"image\\/jpeg\"}', 'giay-slip-on-ultraboost-23', 'slip-on-ultraboost-23', '&lt;p&gt;Dong Hai Men\'s Shoes - G0702 with Monkstrap design is a men\'s shoe that is loved by gentlemen because of its elegance and masculinity. Characteristic of Double Monkstrap, the G0702 has a unique design with a snap and two metal buckles across the upper part of the shoe. Made of high quality cowhide leather with moderate elasticity, suitable shape, and soft and soft shoe lining creating a comfortable feeling for men to use. Men\'s shoes G0702 has a luxurious but classic style that is suitable for office, meeting and party environments.&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Product code: G0702&lt;/li&gt;\r\n	&lt;li&gt;Color: Yellow, Black&lt;/li&gt;\r\n	&lt;li&gt;Size: 38 - 43&lt;/li&gt;\r\n	&lt;li&gt;Material: Cowhide&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '&lt;p&gt;Giày tây nam Đông Hải - G0702 với kiểu dáng Monkstrap là kiểu giày nam được quý ông yêu thích bởi sự lịch lãm, nam tính. Mang nét đặc trưng của Double Monkstrap, G0702 có thiết kế độc đáo với phần đóng mở bằng dây gài và 2 khóa kim loại vắt ngang qua phần thân giày. Được làm bằng chất liệu da bò cao cấp có độ co giãn vừa phải, form dáng phù hợp, cùng với lớp lót giày mềm mịn tạo cảm giác thoải mái, dễ chịu cho phái mạnh khi sử dụng. Giày tây nam G0702 mang phong cách sang trọng mà cổ điển phù hợp với môi trường công sở, hội họp và dự tiệc.&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Mã sản phẩm: G0702&lt;/li&gt;\r\n	&lt;li&gt;Màu: Vàng, Đen&lt;/li&gt;\r\n	&lt;li&gt;Size: 38 - 43&lt;/li&gt;\r\n	&lt;li&gt;Chất liệu: Da bò&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', 'Hurry to the streets without much time? Get your feet in these adidas Superstar slip-on shoes and easily create an elegant style at the last minute.\r\nThe wireless design on the body of the shoe combines a sporty stretch belt that hugs the feet for a comfortable fit. Wherever you go, whether paired with trousers or short skirts, the shoes will help you stand out with a modern style.', 'Vội ra đường mà không có nhiều thời gian? Hãy xỏ chân vào đôi giày slip-on adidas Superstar này và dễ dàng tạo phong cách thanh lịch vào phút chót. \r\nThiết kế không dây trên thân giày kết hợp đai co giãn đậm chất thể thao ôm sát bàn chân cho độ vừa vặn thoải mái. Dù bạn đi đâu, dù phối với quần ống loe hay váy ngắn, đôi giày cũng sẽ giúp bạn nổi bật với phong cách hiện đại.', 'Slip On Ultraboost 23', 'Giày Slip On Ultraboost 23', 'SOUL-23', 550000, 27, 400000, 4, 'noibat,hienthi', 'san-pham', 1609248760, 1625552226, 3),
-(5, 2, 2, 2, 2, 5, 'poduct-7-6172-3493.jpg', '{\"p\":\"poduct-7-6172-3493.jpg\",\"w\":540,\"h\":540,\"m\":\"image\\/jpeg\"}', 'giay-slip-on-ultraboost-24', 'slip-on-ultraboost-24', '&lt;p&gt;Dong Hai Men\'s Shoes - G0702 with Monkstrap design is a men\'s shoe that is loved by gentlemen because of its elegance and masculinity. Characteristic of Double Monkstrap, the G0702 has a unique design with a snap and two metal buckles across the upper part of the shoe. Made of high quality cowhide leather with moderate elasticity, suitable shape, and soft and soft shoe lining creating a comfortable feeling for men to use. Men\'s shoes G0702 has a luxurious but classic style that is suitable for office, meeting and party environments.&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Product code: G0702&lt;/li&gt;\r\n	&lt;li&gt;Color: Yellow, Black&lt;/li&gt;\r\n	&lt;li&gt;Size: 38 - 43&lt;/li&gt;\r\n	&lt;li&gt;Material: Cowhide&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '&lt;p&gt;Giày tây nam Đông Hải - G0702 với kiểu dáng Monkstrap là kiểu giày nam được quý ông yêu thích bởi sự lịch lãm, nam tính. Mang nét đặc trưng của Double Monkstrap, G0702 có thiết kế độc đáo với phần đóng mở bằng dây gài và 2 khóa kim loại vắt ngang qua phần thân giày. Được làm bằng chất liệu da bò cao cấp có độ co giãn vừa phải, form dáng phù hợp, cùng với lớp lót giày mềm mịn tạo cảm giác thoải mái, dễ chịu cho phái mạnh khi sử dụng. Giày tây nam G0702 mang phong cách sang trọng mà cổ điển phù hợp với môi trường công sở, hội họp và dự tiệc.&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Mã sản phẩm: G0702&lt;/li&gt;\r\n	&lt;li&gt;Màu: Vàng, Đen&lt;/li&gt;\r\n	&lt;li&gt;Size: 38 - 43&lt;/li&gt;\r\n	&lt;li&gt;Chất liệu: Da bò&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', 'Hurry to the streets without much time? Get your feet in these adidas Superstar slip-on shoes and easily create an elegant style at the last minute.\r\nThe wireless design on the body of the shoe combines a sporty stretch belt that hugs the feet for a comfortable fit. Wherever you go, whether paired with trousers or short skirts, the shoes will help you stand out with a modern style.', 'Vội ra đường mà không có nhiều thời gian? Hãy xỏ chân vào đôi giày slip-on adidas Superstar này và dễ dàng tạo phong cách thanh lịch vào phút chót. \r\nThiết kế không dây trên thân giày kết hợp đai co giãn đậm chất thể thao ôm sát bàn chân cho độ vừa vặn thoải mái. Dù bạn đi đâu, dù phối với quần ống loe hay váy ngắn, đôi giày cũng sẽ giúp bạn nổi bật với phong cách hiện đại.', 'Slip On Ultraboost 24', 'Giày Slip On Ultraboost 24', 'SOUL-24', 150000, 40, 90000, 5, 'noibat,hienthi', 'san-pham', 1609249040, 1625552229, 1),
-(6, 2, 2, 2, 2, 6, 'poduct-3-9767-8087.jpg', '{\"p\":\"poduct-3-9767-8087.jpg\",\"w\":540,\"h\":540,\"m\":\"image\\/jpeg\"}', 'giay-slip-on-ultraboost-25', 'slip-on-ultraboost-25', '&lt;p&gt;Dong Hai Men\'s Shoes - G0702 with Monkstrap design is a men\'s shoe that is loved by gentlemen because of its elegance and masculinity. Characteristic of Double Monkstrap, the G0702 has a unique design with a snap and two metal buckles across the upper part of the shoe. Made of high quality cowhide leather with moderate elasticity, suitable shape, and soft and soft shoe lining creating a comfortable feeling for men to use. Men\'s shoes G0702 has a luxurious but classic style that is suitable for office, meeting and party environments.&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Product code: G0702&lt;/li&gt;\r\n	&lt;li&gt;Color: Yellow, Black&lt;/li&gt;\r\n	&lt;li&gt;Size: 38 - 43&lt;/li&gt;\r\n	&lt;li&gt;Material: Cowhide&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '&lt;p&gt;Giày tây nam Đông Hải - G0702 với kiểu dáng Monkstrap là kiểu giày nam được quý ông yêu thích bởi sự lịch lãm, nam tính. Mang nét đặc trưng của Double Monkstrap, G0702 có thiết kế độc đáo với phần đóng mở bằng dây gài và 2 khóa kim loại vắt ngang qua phần thân giày. Được làm bằng chất liệu da bò cao cấp có độ co giãn vừa phải, form dáng phù hợp, cùng với lớp lót giày mềm mịn tạo cảm giác thoải mái, dễ chịu cho phái mạnh khi sử dụng. Giày tây nam G0702 mang phong cách sang trọng mà cổ điển phù hợp với môi trường công sở, hội họp và dự tiệc.&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Mã sản phẩm: G0702&lt;/li&gt;\r\n	&lt;li&gt;Màu: Vàng, Đen&lt;/li&gt;\r\n	&lt;li&gt;Size: 38 - 43&lt;/li&gt;\r\n	&lt;li&gt;Chất liệu: Da bò&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', 'Hurry to the streets without much time? Get your feet in these adidas Superstar slip-on shoes and easily create an elegant style at the last minute.\r\nThe wireless design on the body of the shoe combines a sporty stretch belt that hugs the feet for a comfortable fit. Wherever you go, whether paired with trousers or short skirts, the shoes will help you stand out with a modern style.', 'Vội ra đường mà không có nhiều thời gian? Hãy xỏ chân vào đôi giày slip-on adidas Superstar này và dễ dàng tạo phong cách thanh lịch vào phút chót. \r\nThiết kế không dây trên thân giày kết hợp đai co giãn đậm chất thể thao ôm sát bàn chân cho độ vừa vặn thoải mái. Dù bạn đi đâu, dù phối với quần ống loe hay váy ngắn, đôi giày cũng sẽ giúp bạn nổi bật với phong cách hiện đại.', 'Slip On Ultraboost 25', 'Giày Slip On Ultraboost 25', 'SOUL-25', 150000, 40, 90000, 6, 'noibat,hienthi', 'san-pham', 1609249099, 1625552232, 3),
-(7, 2, 2, 2, 2, 7, 'poduct-8-2281-3560.jpg', '{\"p\":\"poduct-8-2281-3560.jpg\",\"w\":540,\"h\":540,\"m\":\"image\\/jpeg\"}', 'giay-slip-on-ultraboost-26', 'slip-on-ultraboost-26', '&lt;p&gt;Dong Hai Men\'s Shoes - G0702 with Monkstrap design is a men\'s shoe that is loved by gentlemen because of its elegance and masculinity. Characteristic of Double Monkstrap, the G0702 has a unique design with a snap and two metal buckles across the upper part of the shoe. Made of high quality cowhide leather with moderate elasticity, suitable shape, and soft and soft shoe lining creating a comfortable feeling for men to use. Men\'s shoes G0702 has a luxurious but classic style that is suitable for office, meeting and party environments.&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Product code: G0702&lt;/li&gt;\r\n	&lt;li&gt;Color: Yellow, Black&lt;/li&gt;\r\n	&lt;li&gt;Size: 38 - 43&lt;/li&gt;\r\n	&lt;li&gt;Material: Cowhide&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '&lt;p&gt;Giày tây nam Đông Hải - G0702 với kiểu dáng Monkstrap là kiểu giày nam được quý ông yêu thích bởi sự lịch lãm, nam tính. Mang nét đặc trưng của Double Monkstrap, G0702 có thiết kế độc đáo với phần đóng mở bằng dây gài và 2 khóa kim loại vắt ngang qua phần thân giày. Được làm bằng chất liệu da bò cao cấp có độ co giãn vừa phải, form dáng phù hợp, cùng với lớp lót giày mềm mịn tạo cảm giác thoải mái, dễ chịu cho phái mạnh khi sử dụng. Giày tây nam G0702 mang phong cách sang trọng mà cổ điển phù hợp với môi trường công sở, hội họp và dự tiệc.&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Mã sản phẩm: G0702&lt;/li&gt;\r\n	&lt;li&gt;Màu: Vàng, Đen&lt;/li&gt;\r\n	&lt;li&gt;Size: 38 - 43&lt;/li&gt;\r\n	&lt;li&gt;Chất liệu: Da bò&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', 'Hurry to the streets without much time? Get your feet in these adidas Superstar slip-on shoes and easily create an elegant style at the last minute.\r\nThe wireless design on the body of the shoe combines a sporty stretch belt that hugs the feet for a comfortable fit. Wherever you go, whether paired with trousers or short skirts, the shoes will help you stand out with a modern style.', 'Vội ra đường mà không có nhiều thời gian? Hãy xỏ chân vào đôi giày slip-on adidas Superstar này và dễ dàng tạo phong cách thanh lịch vào phút chót. \r\nThiết kế không dây trên thân giày kết hợp đai co giãn đậm chất thể thao ôm sát bàn chân cho độ vừa vặn thoải mái. Dù bạn đi đâu, dù phối với quần ống loe hay váy ngắn, đôi giày cũng sẽ giúp bạn nổi bật với phong cách hiện đại.', 'Slip On Ultraboost 26', 'Giày Slip On Ultraboost 26', 'SOUL-26', 300000, 67, 100000, 7, 'noibat,hienthi', 'san-pham', 1609249216, 1625552236, 1),
-(8, 2, 2, 2, 2, 1, 'poduct-9-3401-4091.jpg', '{\"p\":\"poduct-9-3401-4091.jpg\",\"w\":540,\"h\":540,\"m\":\"image\\/jpeg\"}', 'giay-slip-on-ultraboost-27', 'slip-on-ultraboost-27', '&lt;p&gt;Dong Hai Men\'s Shoes - G0702 with Monkstrap design is a men\'s shoe that is loved by gentlemen because of its elegance and masculinity. Characteristic of Double Monkstrap, the G0702 has a unique design with a snap and two metal buckles across the upper part of the shoe. Made of high quality cowhide leather with moderate elasticity, suitable shape, and soft and soft shoe lining creating a comfortable feeling for men to use. Men\'s shoes G0702 has a luxurious but classic style that is suitable for office, meeting and party environments.&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Product code: G0702&lt;/li&gt;\r\n	&lt;li&gt;Color: Yellow, Black&lt;/li&gt;\r\n	&lt;li&gt;Size: 38 - 43&lt;/li&gt;\r\n	&lt;li&gt;Material: Cowhide&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '&lt;p&gt;Giày tây nam Đông Hải - G0702 với kiểu dáng Monkstrap là kiểu giày nam được quý ông yêu thích bởi sự lịch lãm, nam tính. Mang nét đặc trưng của Double Monkstrap, G0702 có thiết kế độc đáo với phần đóng mở bằng dây gài và 2 khóa kim loại vắt ngang qua phần thân giày. Được làm bằng chất liệu da bò cao cấp có độ co giãn vừa phải, form dáng phù hợp, cùng với lớp lót giày mềm mịn tạo cảm giác thoải mái, dễ chịu cho phái mạnh khi sử dụng. Giày tây nam G0702 mang phong cách sang trọng mà cổ điển phù hợp với môi trường công sở, hội họp và dự tiệc.&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Mã sản phẩm: G0702&lt;/li&gt;\r\n	&lt;li&gt;Màu: Vàng, Đen&lt;/li&gt;\r\n	&lt;li&gt;Size: 38 - 43&lt;/li&gt;\r\n	&lt;li&gt;Chất liệu: Da bò&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', 'Hurry to the streets without much time? Get your feet in these adidas Superstar slip-on shoes and easily create an elegant style at the last minute.\r\nThe wireless design on the body of the shoe combines a sporty stretch belt that hugs the feet for a comfortable fit. Wherever you go, whether paired with trousers or short skirts, the shoes will help you stand out with a modern style.', 'Vội ra đường mà không có nhiều thời gian? Hãy xỏ chân vào đôi giày slip-on adidas Superstar này và dễ dàng tạo phong cách thanh lịch vào phút chót. \r\nThiết kế không dây trên thân giày kết hợp đai co giãn đậm chất thể thao ôm sát bàn chân cho độ vừa vặn thoải mái. Dù bạn đi đâu, dù phối với quần ống loe hay váy ngắn, đôi giày cũng sẽ giúp bạn nổi bật với phong cách hiện đại.', 'Slip On Ultraboost 27', 'Giày Slip On Ultraboost 27', 'SOUL-27', 400000, 38, 250000, 8, 'noibat,hienthi', 'san-pham', 1609249283, 1625550712, 1),
-(36, 2, 2, 2, 2, 1, 'poduct-9-3401-4091-9734.jpg', '', 'giay-slip-on-ultraboost-27-1', '', '&lt;p&gt;Dong Hai Men\'s Shoes - G0702 with Monkstrap design is a men\'s shoe that is loved by gentlemen because of its elegance and masculinity. Characteristic of Double Monkstrap, the G0702 has a unique design with a snap and two metal buckles across the upper part of the shoe. Made of high quality cowhide leather with moderate elasticity, suitable shape, and soft and soft shoe lining creating a comfortable feeling for men to use. Men\'s shoes G0702 has a luxurious but classic style that is suitable for office, meeting and party environments.&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Product code: G0702&lt;/li&gt;\r\n	&lt;li&gt;Color: Yellow, Black&lt;/li&gt;\r\n	&lt;li&gt;Size: 38 - 43&lt;/li&gt;\r\n	&lt;li&gt;Material: Cowhide&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '&lt;p&gt;Giày tây nam Đông Hải - G0702 với kiểu dáng Monkstrap là kiểu giày nam được quý ông yêu thích bởi sự lịch lãm, nam tính. Mang nét đặc trưng của Double Monkstrap, G0702 có thiết kế độc đáo với phần đóng mở bằng dây gài và 2 khóa kim loại vắt ngang qua phần thân giày. Được làm bằng chất liệu da bò cao cấp có độ co giãn vừa phải, form dáng phù hợp, cùng với lớp lót giày mềm mịn tạo cảm giác thoải mái, dễ chịu cho phái mạnh khi sử dụng. Giày tây nam G0702 mang phong cách sang trọng mà cổ điển phù hợp với môi trường công sở, hội họp và dự tiệc.&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Mã sản phẩm: G0702&lt;/li&gt;\r\n	&lt;li&gt;Màu: Vàng, Đen&lt;/li&gt;\r\n	&lt;li&gt;Size: 38 - 43&lt;/li&gt;\r\n	&lt;li&gt;Chất liệu: Da bò&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', 'Hurry to the streets without much time? Get your feet in these adidas Superstar slip-on shoes and easily create an elegant style at the last minute.\r\nThe wireless design on the body of the shoe combines a sporty stretch belt that hugs the feet for a comfortable fit. Wherever you go, whether paired with trousers or short skirts, the shoes will help you stand out with a modern style.', 'Vội ra đường mà không có nhiều thời gian? Hãy xỏ chân vào đôi giày slip-on adidas Superstar này và dễ dàng tạo phong cách thanh lịch vào phút chót. \r\nThiết kế không dây trên thân giày kết hợp đai co giãn đậm chất thể thao ôm sát bàn chân cho độ vừa vặn thoải mái. Dù bạn đi đâu, dù phối với quần ống loe hay váy ngắn, đôi giày cũng sẽ giúp bạn nổi bật với phong cách hiện đại.', '', 'Giày Slip On Ultraboost 27 (1)', 'SOUL-27', 400000, 38, 250000, 9, 'hienthi,noibat', 'san-pham', 1650274736, 0, 0),
+(53, 3, 0, 4, 0, 8, '21-5704.jpeg', '{\"p\":\"21-5704.jpeg\",\"w\":1400,\"h\":2100,\"m\":\"image\\/jpeg\"}', 'ao-lua-phoi-no-sau', '', '', '&lt;p&gt;Áo được làm từ chất liệu lụa mềm, dáng suông. Dáng tay ngắn và cao, cổ phối nơ thắt đằng sau. Phía trước có những đường xếp ly bản lớn. Hai bên vai áo và phía sau phối xếp ly bản nhỏ.&lt;/p&gt;\r\n\r\n&lt;p&gt;Thiết kế nàng mang đến phong cách dịu dáng và thanh lịch cho những cô nàng yêu thích sự nữ tính. Chất liệu lụa mềm mại mang đến sức hút từ sự sang trọng. Vải mềm có độ bay tự nhiên cùng dáng suông thẳng giúp mỗi chuyển động của nàng đều tràn đầy thi vị.&lt;/p&gt;\r\n\r\n&lt;p&gt;Nàng có thể phối chiếc áo này với chân váy chữ A hoặc sơ vin cùng quần cạp cao đều rất đẹp.&lt;/p&gt;\r\n\r\n&lt;p&gt;Màu sắc: Trắng - Nude - Gold - Xanh Lime&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Mẫu mặc size S:&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Chiều cao:&lt;/strong&gt; 1m69&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Cân nặng:&lt;/strong&gt; 48kg&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Số đo:&lt;/strong&gt; 80-60-90cm&lt;/p&gt;\r\n\r\n&lt;table width=&quot;70%&quot;&gt;\r\n	&lt;tbody&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Dòng sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Ladies&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Nhóm sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Áo&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Cổ áo&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Cổ cách điệu&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n	&lt;/tbody&gt;\r\n&lt;/table&gt;\r\n\r\n&lt;p&gt; &lt;/p&gt;\r\n\r\n&lt;p&gt;Chi tiết bảo quản sản phẩm : &lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;* Các sản phẩm thuộc dòng cao cấp (Senora) và áo khoác (dạ, tweed, lông, phao) chỉ giặt khô, tuyệt đối không giặt ướt.&lt;/strong&gt;&lt;/p&gt;\r\n', '', 'SKU: 15M7434', '', 'ÁO LỤA PHỐI NƠ SAU', '', 890000, 50, 445000, 0, 'noibat,hienthi', 'san-pham', 1684582390, 1684582780, 4),
 (39, 0, 0, 0, 0, 0, 'h1-7115.jpg', '{\"p\":\"h1-7115.jpg\",\"w\":907,\"h\":605,\"m\":\"image\\/jpeg\"}', 'tieu-de-album', 'tieu-de-album-en', '', '', '', '', 'tiêu đề album en', 'tiêu đề album', '', 0, 0, 0, 1, 'hienthi', 'thu-vien-anh', 1675393681, 0, 14),
 (40, 0, 0, 0, 0, 0, '', '', 'tieu-de-album-1', '', '', '', '', '', '', 'tiêu đề album (1)', '', 0, 0, 0, 2, 'hienthi', 'thu-vien-anh', 1675393749, 0, 0),
 (41, 0, 0, 0, 0, 0, '', '', 'tieu-de-album-1-1', '', '', '', '', '', '', 'tiêu đề album (1) (1)', '', 0, 0, 0, 3, 'hienthi', 'thu-vien-anh', 1675393752, 0, 0),
-(42, 0, 0, 0, 0, 0, '', '', 'tieu-de-album-1-1-1', '', '', '', '', '', '', 'tiêu đề album (1) (1) (1)', '', 0, 0, 0, 4, 'hienthi', 'thu-vien-anh', 1675393753, 0, 0);
+(42, 0, 0, 0, 0, 0, '', '', 'tieu-de-album-1-1-1', '', '', '', '', '', '', 'tiêu đề album (1) (1) (1)', '', 0, 0, 0, 4, 'hienthi', 'thu-vien-anh', 1675393753, 0, 0),
+(52, 3, 0, 4, 0, 8, '11-6122.jpeg', '{\"p\":\"11-6122.jpeg\",\"w\":1400,\"h\":2100,\"m\":\"image\\/jpeg\"}', 'ao-so-mi-hoa-lua', '', '', '&lt;p&gt;Áo sơ mi dáng suông, cổ 2 ve, ống tay ngắn được lên gấu khoảng 3cm. Phía trước có cúc cài nhỏ. Chất liệu chính là lụa cao cấp có độ bóng và độ bắt sáng nhẹ.&lt;/p&gt;\r\n\r\n&lt;p&gt;Họa tiết hoa đậu thơm ấn tượng tiếp tục xuất hiện trong một item mới đến từ IVY moda. Sắc vàng cam nổi bật trên nền lụa mềm mượt đem đến sắc thái rạng rỡ và thu hút của mùa hè. Thiết kế áo gọn dàng, không bó nhưng vẫn tôn dáng người mặc. Nàng có thể sơ vin cùng quần cạp cao hoặc phối thả dáng như IVY moda gợi ý đều được.&lt;/p&gt;\r\n\r\n&lt;p&gt;Màu sắc: Họa tiết Vàng nghệ&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Mẫu mặc size M:&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Chiều cao:&lt;/strong&gt; 1m67&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Cân nặng:&lt;/strong&gt; 50kg&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Số đo:&lt;/strong&gt; 83-65-93cm&lt;/p&gt;\r\n\r\n&lt;table width=&quot;70%&quot;&gt;\r\n	&lt;tbody&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Dòng sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Ladies&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Nhóm sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Áo&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Cổ áo&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Cổ 2 ve&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n	&lt;/tbody&gt;\r\n&lt;/table&gt;\r\n\r\n&lt;p&gt; &lt;/p&gt;\r\n\r\n&lt;p&gt;Chi tiết bảo quản sản phẩm : &lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;* Các sản phẩm thuộc dòng cao cấp (Senora) và áo khoác (dạ, tweed, lông, phao) chỉ giặt khô, tuyệt đối không giặt ướt.&lt;/strong&gt;&lt;/p&gt;\r\n', '', 'SKU: 16M7443', '', 'ÁO SƠ MI HOA LỤA', '', 890000, 50, 445000, 2, 'noibat,hienthi', 'san-pham', 1684582319, 0, 4),
+(54, 3, 0, 4, 0, 8, '31-3345.jpeg', '{\"p\":\"11-6122-5581-4321.jpeg\",\"w\":1400,\"h\":2100,\"m\":\"image\\/jpeg\"}', 'ao-so-mi-hoa-lua-1-1', '', '', '&lt;p&gt;Áo sơ mi kiểu, cổ tròn. Tay lỡ, 2 bên vai cut-out tạo kiểu. Dáng áo ôm. Cài bằng khuy sau cổ áo.&lt;/p&gt;\r\n\r\n&lt;p&gt;Bằng chất liệu vải Tuysi pha Lụa1 lớp, thông thoáng, bền màu và giữ phom hiệu quả. Thiết kế tay dài mang đậm chất thanh tao, lịch sự tại môi trường công sở nhờ vào phần cổ, vai được cách điệu, vừa giúp chiếc áo không bị đơn điệu, nhạt nhòa lại mang đến nét nữ tính duyên dáng cho phái đẹp.&lt;/p&gt;\r\n\r\n&lt;p&gt;Màu sắc: Đen - Trắng - Nude&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Mẫu mặc size S:&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Chiều cao: &lt;/strong&gt;1m66&lt;br /&gt;\r\n&lt;strong&gt;Cân nặng:&lt;/strong&gt; 48kg&lt;br /&gt;\r\n&lt;strong&gt;Số đo 3 vòng: &lt;/strong&gt;78-61-88&lt;/p&gt;\r\n\r\n&lt;table width=&quot;70%&quot;&gt;\r\n	&lt;tbody&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Dòng sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Ladies&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Nhóm sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Áo&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Cổ áo&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Cổ tròn&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n	&lt;/tbody&gt;\r\n&lt;/table&gt;\r\n\r\n&lt;p&gt;Chi tiết bảo quản sản phẩm : &lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;* Các sản phẩm thuộc dòng cao cấp (Senora) và áo khoác (dạ, tweed, lông, phao) chỉ giặt khô, tuyệt đối không giặt ướt.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt; &lt;/p&gt;\r\n', '', 'SKU: 16M6922', '', 'ÁO TAY LỠ CUT-OUT', '', 990000, 50, 495000, 3, 'noibat,hienthi', 'san-pham', 1684582397, 1684583152, 1),
+(55, 3, 0, 5, 0, 8, '11-8721.jpeg', '', 'ao-len-ngan-tay-phoi-ke-ngang', '', '', '&lt;p&gt;Áo len ngắn tay được thiết kế với chất liệu len chọn lọc cao cấp, tạo nên hình ảnh mềm mại và sang trọng. Điểm nhấn nằm ở họa tiết kẻ ngang đầy ấn tượng trên nền màu áo đổi lập. Sự kết hợp tinh tế giúp tôn lên vẻ đẹp tối giản và tạo nên sự khác biệt trong thiết kế.&lt;/p&gt;\r\n\r\n&lt;p&gt;Nhờ sự thoải mái và dễ chịu mà chất liệu len cùng kiểu dáng basic của sản phẩm mang lại, chiếc áo sẽ là lựa chọn hoàn hảo cho những buổi đi chơi, dạo phố hay hẹn hò cùng bạn bè, gia đình. Thiết kế đa năng này còn có thể kết hợp với quần suông, baggy hoặc chân váy để tạo nên nhiều phong cách thời trang khác nhau.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Thông tin mẫu:&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Chiều cao: &lt;/strong&gt;167 cm&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Cân nặng: &lt;/strong&gt;50 kg&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Số đo 3 vòng: &lt;/strong&gt;83-65-93 cm&lt;/p&gt;\r\n\r\n&lt;p&gt;Mẫu mặc size M&lt;/p&gt;\r\n\r\n&lt;p&gt;Lưu ý: Màu sắc sản phẩm thực tế sẽ có sự chênh lệch nhỏ so với ảnh do điều kiện ánh sáng khi chụp và màu sắc hiển thị qua màn hình máy tính/ điện thoại.&lt;/p&gt;\r\n\r\n&lt;table width=&quot;70%&quot;&gt;\r\n	&lt;tbody&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Dòng sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Ladies&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Nhóm sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Áo&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Cổ áo&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Cổ tròn&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Tay áo&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Tay ngắn&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Kiểu dáng&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Ôm&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Độ dài&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Dài thường&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Họa tiết&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Kẻ&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Chất liệu&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Len&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n	&lt;/tbody&gt;\r\n&lt;/table&gt;\r\n\r\n&lt;p&gt; &lt;/p&gt;\r\n\r\n&lt;p&gt;Chi tiết bảo quản sản phẩm : &lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;* Các sản phẩm thuộc dòng cao cấp (Senora) và áo khoác (dạ, tweed, lông, phao) chỉ giặt khô, tuyệt đối không giặt ướt.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải dệt kim: sau khi giặt sản phẩm phải được phơi ngang tránh bai dãn.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải voan, lụa, chiffon nên giặt bằng tay.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải thô, tuytsi, kaki không có phối hay trang trí đá cườm thì có thể giặt máy.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải thô, tuytsi, kaki có phối màu tường phản hay trang trí voan, lụa, đá cườm thì cần giặt tay.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Đồ Jeans nên hạn chế giặt bằng máy giặt vì sẽ làm phai màu jeans. Nếu giặt thì nên lộn trái sản phẩm khi giặt, đóng khuy, kéo khóa, không nên giặt chung cùng đồ sáng màu, tránh dính màu vào các sản phẩm khác. &lt;/p&gt;\r\n\r\n&lt;p&gt;* Các sản phẩm cần được giặt ngay không ngâm tránh bị loang màu, phân biệt màu và loại vải để tránh trường hợp vải phai. Không nên giặt sản phẩm với xà phòng có chất tẩy mạnh, nên giặt cùng xà phòng pha loãng.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Các sản phẩm có thể giặt bằng máy thì chỉ nên để chế độ giặt nhẹ, vắt mức trung bình và nên phân các loại sản phẩm cùng màu và cùng loại vải khi giặt.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Nên phơi sản phẩm tại chỗ thoáng mát, tránh ánh nắng trực tiếp sẽ dễ bị phai bạc màu, nên làm khô quần áo bằng cách phơi ở những điểm gió sẽ giữ màu vải tốt hơn.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Những chất vải 100% cotton, không nên phơi sản phẩm bằng mắc áo mà nên vắt ngang sản phẩm lên dây phơi để tránh tình trạng rạn vải.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Khi ủi sản phẩm bằng bàn là và sử dụng chế độ hơi nước sẽ làm cho sản phẩm dễ ủi phẳng, mát và không bị cháy, giữ màu sản phẩm được đẹp và bền lâu hơn. Nhiệt độ của bàn là tùy theo từng loại vải. &lt;/p&gt;\r\n', '', 'SKU: 57M7846', '', 'ÁO LEN NGẮN TAY PHỐI KẺ NGANG', '', 1100000, 1, 1090000, 1, 'noibat,hienthi', 'san-pham', 1684583604, 0, 0),
+(56, 3, 0, 5, 0, 8, '21-5445.jpeg', '', 'ao-thun-theu-hoa-tiet', '', '', '&lt;p&gt;Áo thun cổ tròn dáng slim fit. Chất liệu vải thun mềm mịn, thoáng mát. Họa tiết thêu lạ mắt, nổi bật trên nền màu tươi sáng giúp item này thu hút hơn bao giờ hết. Phối cùng jeans hay chân váy là nàng đã có 1 set đồ đi chơi trẻ trung, năng động!&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Thông tin mẫu:&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Chiều cao: &lt;/strong&gt;167 cm&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Cân nặng: &lt;/strong&gt;50 kg&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Số đo 3 vòng: &lt;/strong&gt;83-65-93 cm&lt;/p&gt;\r\n\r\n&lt;p&gt;Mẫu mặc size M&lt;/p&gt;\r\n\r\n&lt;p&gt;Lưu ý: Màu sắc sản phẩm thực tế sẽ có sự chênh lệch nhỏ so với ảnh do điều kiện ánh sáng khi chụp và màu sắc hiển thị qua màn hình máy tính/ điện thoại.&lt;/p&gt;\r\n\r\n&lt;table width=&quot;70%&quot;&gt;\r\n	&lt;tbody&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Dòng sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Ladies&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Nhóm sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Áo&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Cổ áo&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Cổ tròn&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Tay áo&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Tay ngắn&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Kiểu dáng&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Suông&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Độ dài&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Dài thường&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Họa tiết&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Trơn&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Chất liệu&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Thun&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n	&lt;/tbody&gt;\r\n&lt;/table&gt;\r\n\r\n&lt;p&gt; &lt;/p&gt;\r\n\r\n&lt;p&gt;Chi tiết bảo quản sản phẩm : &lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;* Các sản phẩm thuộc dòng cao cấp (Senora) và áo khoác (dạ, tweed, lông, phao) chỉ giặt khô, tuyệt đối không giặt ướt.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải dệt kim: sau khi giặt sản phẩm phải được phơi ngang tránh bai dãn.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải voan, lụa, chiffon nên giặt bằng tay.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải thô, tuytsi, kaki không có phối hay trang trí đá cườm thì có thể giặt máy.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải thô, tuytsi, kaki có phối màu tường phản hay trang trí voan, lụa, đá cườm thì cần giặt tay.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Đồ Jeans nên hạn chế giặt bằng máy giặt vì sẽ làm phai màu jeans. Nếu giặt thì nên lộn trái sản phẩm khi giặt, đóng khuy, kéo khóa, không nên giặt chung cùng đồ sáng màu, tránh dính màu vào các sản phẩm khác. &lt;/p&gt;\r\n\r\n&lt;p&gt;* Các sản phẩm cần được giặt ngay không ngâm tránh bị loang màu, phân biệt màu và loại vải để tránh trường hợp vải phai. Không nên giặt sản phẩm với xà phòng có chất tẩy mạnh, nên giặt cùng xà phòng pha loãng.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Các sản phẩm có thể giặt bằng máy thì chỉ nên để chế độ giặt nhẹ, vắt mức trung bình và nên phân các loại sản phẩm cùng màu và cùng loại vải khi giặt.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Nên phơi sản phẩm tại chỗ thoáng mát, tránh ánh nắng trực tiếp sẽ dễ bị phai bạc màu, nên làm khô quần áo bằng cách phơi ở những điểm gió sẽ giữ màu vải tốt hơn.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Những chất vải 100% cotton, không nên phơi sản phẩm bằng mắc áo mà nên vắt ngang sản phẩm lên dây phơi để tránh tình trạng rạn vải.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Khi ủi sản phẩm bằng bàn là và sử dụng chế độ hơi nước sẽ làm cho sản phẩm dễ ủi phẳng, mát và không bị cháy, giữ màu sản phẩm được đẹp và bền lâu hơn. Nhiệt độ của bàn là tùy theo từng loại vải. &lt;/p&gt;\r\n', '', 'SKU: 57M7762', '', 'ÁO THUN THÊU HỌA TIẾT', '', 600000, 2, 590000, 2, 'hienthi,noibat', 'san-pham', 1684583623, 1684583784, 0),
+(57, 3, 0, 5, 0, 8, '31-3901.jpeg', '', 'ao-thun-cest-pouvoir', '', '', '&lt;p&gt;Áo thun cổ tròn dáng slim fit. Chất liệu vải thun mềm mịn, thoáng mát. Họa tiết thêu lạ mắt, nổi bật trên nền màu tươi sáng giúp item này thu hút hơn bao giờ hết. Phối cùng jeans hay chân váy là nàng đã có 1 set đồ đi chơi trẻ trung, năng động!&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Thông tin mẫu:&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Chiều cao: &lt;/strong&gt;167 cm&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Cân nặng: &lt;/strong&gt;50 kg&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Số đo 3 vòng: &lt;/strong&gt;83-65-93 cm&lt;/p&gt;\r\n\r\n&lt;p&gt;Mẫu mặc size M&lt;/p&gt;\r\n\r\n&lt;p&gt;Lưu ý: Màu sắc sản phẩm thực tế sẽ có sự chênh lệch nhỏ so với ảnh do điều kiện ánh sáng khi chụp và màu sắc hiển thị qua màn hình máy tính/ điện thoại.&lt;/p&gt;\r\n\r\n&lt;table width=&quot;70%&quot;&gt;\r\n	&lt;tbody&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Dòng sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Ladies&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Nhóm sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Áo&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Cổ áo&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Cổ tròn&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Tay áo&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Tay ngắn&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Kiểu dáng&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Suông&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Độ dài&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Dài thường&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Họa tiết&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Trơn&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Chất liệu&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Thun&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n	&lt;/tbody&gt;\r\n&lt;/table&gt;\r\n\r\n&lt;p&gt; &lt;/p&gt;\r\n\r\n&lt;p&gt;Chi tiết bảo quản sản phẩm : &lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;* Các sản phẩm thuộc dòng cao cấp (Senora) và áo khoác (dạ, tweed, lông, phao) chỉ giặt khô, tuyệt đối không giặt ướt.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải dệt kim: sau khi giặt sản phẩm phải được phơi ngang tránh bai dãn.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải voan, lụa, chiffon nên giặt bằng tay.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải thô, tuytsi, kaki không có phối hay trang trí đá cườm thì có thể giặt máy.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải thô, tuytsi, kaki có phối màu tường phản hay trang trí voan, lụa, đá cườm thì cần giặt tay.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Đồ Jeans nên hạn chế giặt bằng máy giặt vì sẽ làm phai màu jeans. Nếu giặt thì nên lộn trái sản phẩm khi giặt, đóng khuy, kéo khóa, không nên giặt chung cùng đồ sáng màu, tránh dính màu vào các sản phẩm khác. &lt;/p&gt;\r\n\r\n&lt;p&gt;* Các sản phẩm cần được giặt ngay không ngâm tránh bị loang màu, phân biệt màu và loại vải để tránh trường hợp vải phai. Không nên giặt sản phẩm với xà phòng có chất tẩy mạnh, nên giặt cùng xà phòng pha loãng.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Các sản phẩm có thể giặt bằng máy thì chỉ nên để chế độ giặt nhẹ, vắt mức trung bình và nên phân các loại sản phẩm cùng màu và cùng loại vải khi giặt.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Nên phơi sản phẩm tại chỗ thoáng mát, tránh ánh nắng trực tiếp sẽ dễ bị phai bạc màu, nên làm khô quần áo bằng cách phơi ở những điểm gió sẽ giữ màu vải tốt hơn.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Những chất vải 100% cotton, không nên phơi sản phẩm bằng mắc áo mà nên vắt ngang sản phẩm lên dây phơi để tránh tình trạng rạn vải.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Khi ủi sản phẩm bằng bàn là và sử dụng chế độ hơi nước sẽ làm cho sản phẩm dễ ủi phẳng, mát và không bị cháy, giữ màu sản phẩm được đẹp và bền lâu hơn. Nhiệt độ của bàn là tùy theo từng loại vải. &lt;/p&gt;\r\n', '', 'SKU: 57M7608', '', 'ÁO THUN C\'EST POUVOIR', '', 600000, 2, 590000, 3, 'hienthi,noibat', 'san-pham', 1684583791, 1684583918, 0),
+(58, 3, 0, 6, 0, 8, '1-1-2694.jpeg', '', 'ao-2-day-dang-xoe', '', '', '&lt;p&gt;- Áo 2 dây 1 lớp dáng xòe rộng, độ dài qua mông.&lt;/p&gt;\r\n\r\n&lt;p&gt;- Phần ngực may quây phối đỉa, phía sau có chun co giãn.&lt;/p&gt;\r\n\r\n&lt;p&gt;- Chất liệu vải thô mềm mát, nhăn nhẹ.&lt;/p&gt;\r\n\r\n&lt;p&gt;- Áo có đai cùng màu đi kèm.&lt;/p&gt;\r\n\r\n&lt;p&gt;- Mix cùng quần sooc ngắn, phù hợp đi dạo phố, du lịch.&lt;/p&gt;\r\n\r\n&lt;p&gt;Lưu ý: Màu sắc sản phẩm thực tế sẽ có sự chênh lệch nhỏ so với ảnh do điều kiện ánh sáng khi chụp và màu sắc hiển thị qua mản hình máy tính/ điện thoại.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Thông tin mẫu:&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Chiều cao:&lt;/strong&gt; 168 cm&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Cân nặng:&lt;/strong&gt; 50 kg&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Số đo 3 vòng:&lt;/strong&gt;80-62-95 cm&lt;/p&gt;\r\n\r\n&lt;p&gt;Mẫu mặc size S&lt;/p&gt;\r\n\r\n&lt;table width=&quot;70%&quot;&gt;\r\n	&lt;tbody&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Dòng sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;You&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Nhóm sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Áo&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Cổ áo&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Cổ khác&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Tay áo&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;2dây&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Kiểu dáng&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Xòe&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Độ dài&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Dài thường&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Họa tiết&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Trơn&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Chất liệu&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Thô&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n	&lt;/tbody&gt;\r\n&lt;/table&gt;\r\n\r\n&lt;p&gt; &lt;/p&gt;\r\n\r\n&lt;p&gt;Chi tiết bảo quản sản phẩm : &lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;* Các sản phẩm thuộc dòng cao cấp (Senora) và áo khoác (dạ, tweed, lông, phao) chỉ giặt khô, tuyệt đối không giặt ướt.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải dệt kim: sau khi giặt sản phẩm phải được phơi ngang tránh bai dãn.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải voan, lụa, chiffon nên giặt bằng tay.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải thô, tuytsi, kaki không có phối hay trang trí đá cườm thì có thể giặt máy.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải thô, tuytsi, kaki có phối màu tường phản hay trang trí voan, lụa, đá cườm thì cần giặt tay.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Đồ Jeans nên hạn chế giặt bằng máy giặt vì sẽ làm phai màu jeans. Nếu giặt thì nên lộn trái sản phẩm khi giặt, đóng khuy, kéo khóa, không nên giặt chung cùng đồ sáng màu, tránh dính màu vào các sản phẩm khác. &lt;/p&gt;\r\n\r\n&lt;p&gt;* Các sản phẩm cần được giặt ngay không ngâm tránh bị loang màu, phân biệt màu và loại vải để tránh trường hợp vải phai. Không nên giặt sản phẩm với xà phòng có chất tẩy mạnh, nên giặt cùng xà phòng pha loãng.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Các sản phẩm có thể giặt bằng máy thì chỉ nên để chế độ giặt nhẹ, vắt mức trung bình và nên phân các loại sản phẩm cùng màu và cùng loại vải khi giặt.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Nên phơi sản phẩm tại chỗ thoáng mát, tránh ánh nắng trực tiếp sẽ dễ bị phai bạc màu, nên làm khô quần áo bằng cách phơi ở những điểm gió sẽ giữ màu vải tốt hơn.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Những chất vải 100% cotton, không nên phơi sản phẩm bằng mắc áo mà nên vắt ngang sản phẩm lên dây phơi để tránh tình trạng rạn vải.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Khi ủi sản phẩm bằng bàn là và sử dụng chế độ hơi nước sẽ làm cho sản phẩm dễ ủi phẳng, mát và không bị cháy, giữ màu sản phẩm được đẹp và bền lâu hơn. Nhiệt độ của bàn là tùy theo từng loại vải. &lt;/p&gt;\r\n', '', 'SKU: 16B9407', '', 'ÁO 2 DÂY DÁNG XÒE', '', 600000, 1, 595000, 0, 'noibat,hienthi', 'san-pham', 1684584153, 1684584241, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_product_brand`
+-- Cấu trúc bảng cho bảng `table_product_brand`
 --
 
 CREATE TABLE `table_product_brand` (
@@ -5597,10 +5708,17 @@ CREATE TABLE `table_product_brand` (
   `date_updated` int(11) DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `table_product_brand`
+--
+
+INSERT INTO `table_product_brand` (`id`, `slugvi`, `slugen`, `contenten`, `contentvi`, `descen`, `descvi`, `nameen`, `namevi`, `photo`, `options`, `numb`, `status`, `type`, `date_created`, `date_updated`) VALUES
+(8, '', '', '', '', '', '', '', 'ivymoda', '', '', 1, '', 'san-pham', 1682150350, 0);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_product_cat`
+-- Cấu trúc bảng cho bảng `table_product_cat`
 --
 
 CREATE TABLE `table_product_cat` (
@@ -5624,17 +5742,23 @@ CREATE TABLE `table_product_cat` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_product_cat`
+-- Đang đổ dữ liệu cho bảng `table_product_cat`
 --
 
 INSERT INTO `table_product_cat` (`id`, `id_list`, `slugvi`, `slugen`, `contenten`, `contentvi`, `descen`, `descvi`, `nameen`, `namevi`, `photo`, `options`, `numb`, `status`, `type`, `date_created`, `date_updated`) VALUES
-(1, 1, 'giay-tay-de-cao', 'high-heels', '', '', 'Originally designed for basketball in the \'70s. Adored by hip hop stars in the\' 80s. The adidas Superstar shoes are now an iconic street fashionista.', 'Thiết kế ban đầu dành cho sân bóng rổ vào thập niên 70. Được các ngôi sao hip hop tôn sùng vào thập niên 80. Đôi giày adidas Superstar giờ đây đã trở thành biểu tượng của các tín đồ thời trang đường phố. ', 'High heels', 'Giày tây đế cao', 'poduct-2-3013-8863.jpg', '', 1, 'noibat,hienthi', 'san-pham', 1609247105, 1616894237),
-(2, 2, 'giay-cao-got', 'pumps', '', '', 'Originally designed for basketball in the \'70s. Adored by hip hop stars in the\' 80s. The adidas Superstar shoes are now an iconic street fashionista.', 'Thiết kế ban đầu dành cho sân bóng rổ vào thập niên 70. Được các ngôi sao hip hop tôn sùng vào thập niên 80. Đôi giày adidas Superstar giờ đây đã trở thành biểu tượng của các tín đồ thời trang đường phố. ', 'Pumps', 'Giày cao gót', 'poduct-5-3937-5589.jpg', '', 2, 'hienthi,noibat', 'san-pham', 1609247214, 0);
+(12, 3, 'len', '', '', '', '', '', '', 'Len', '', '', 8, 'hienthi', 'san-pham', 1682151744, 1682151752),
+(4, 3, 'so-mi', '', '', '', '', '', '', 'Sơ mi', '', '[]', 1, 'hienthi', 'san-pham', 1682150231, 0),
+(5, 3, 'thun', '', '', '', '', '', '', 'Thun', '', '', 2, 'hienthi', 'san-pham', 1682150451, 1682150485),
+(6, 3, 'kieu', '', '', '', '', '', '', 'Kiểu', '', '', 3, 'hienthi', 'san-pham', 1682150469, 0),
+(7, 3, 'croptop', '', '', '', '', '', '', 'Croptop', '', '', 4, 'hienthi', 'san-pham', 1682150503, 1682150520),
+(8, 3, 'thun-ngan-tay', '', '', '', '', '', '', 'Thun ngắn tay', '', '', 5, 'hienthi', 'san-pham', 1682150536, 0),
+(9, 3, 'thun-dai-tay', '', '', '', '', '', '', 'Thun dài tay', '', '', 6, 'hienthi', 'san-pham', 1682150554, 0),
+(10, 3, 'peplum', '', '', '', '', '', '', 'Peplum', '', '', 7, 'hienthi', 'san-pham', 1682150571, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_product_item`
+-- Cấu trúc bảng cho bảng `table_product_item`
 --
 
 CREATE TABLE `table_product_item` (
@@ -5661,7 +5785,7 @@ CREATE TABLE `table_product_item` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_product_list`
+-- Cấu trúc bảng cho bảng `table_product_list`
 --
 
 CREATE TABLE `table_product_list` (
@@ -5684,17 +5808,21 @@ CREATE TABLE `table_product_list` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_product_list`
+-- Đang đổ dữ liệu cho bảng `table_product_list`
 --
 
 INSERT INTO `table_product_list` (`id`, `slugvi`, `slugen`, `contenten`, `contentvi`, `descen`, `descvi`, `nameen`, `namevi`, `photo`, `options`, `numb`, `status`, `type`, `date_created`, `date_updated`) VALUES
-(1, 'giay-nam', 'mens-shoes', '', '', 'Originally designed for basketball in the \'70s. Adored by hip hop stars in the\' 80s. The adidas Superstar shoes are now an iconic street fashionista.', 'Thiết kế ban đầu dành cho sân bóng rổ vào thập niên 70. Được các ngôi sao hip hop tôn sùng vào thập niên 80. Đôi giày adidas Superstar giờ đây đã trở thành biểu tượng của các tín đồ thời trang đường phố. ', 'Men\'s shoes', 'Giày nam', 'poduct-1-1318-7456.jpg', '', 1, 'noibat,hienthi', 'san-pham', 1609246822, 1616894227),
-(2, 'giay-nu', 'womens-shoes', '', '', 'Originally designed for basketball in the \'70s. Adored by hip hop stars in the\' 80s. The adidas Superstar shoes are now an iconic street fashionista.', 'Thiết kế ban đầu dành cho sân bóng rổ vào thập niên 70. Được các ngôi sao hip hop tôn sùng vào thập niên 80. Đôi giày adidas Superstar giờ đây đã trở thành biểu tượng của các tín đồ thời trang đường phố. ', 'Women\'s shoes', 'Giày nữ', 'poduct-1-1758-1072.jpeg', '', 2, 'noibat,hienthi', 'san-pham', 1609246926, 0);
+(3, 'ao', '', '', '', '', '', '', 'Áo', '', '[]', 1, 'hienthi', 'san-pham', 1682149799, 0),
+(4, 'ao-khoac', '', '', '', '', '', '', 'Áo khoác', '', '', 2, 'hienthi', 'san-pham', 1682149858, 0),
+(5, 'quan-jumpsuit', '', '', '', '', '', '', 'Quần &amp; Jumpsuit', '', '', 3, 'hienthi', 'san-pham', 1682149968, 0),
+(6, 'chan-vay', '', '', '', '', '', '', 'Chân váy', '', '', 5, 'hienthi', 'san-pham', 1682149982, 1682150011),
+(7, 'dam', '', '', '', '', '', '', 'Đầm', '', '', 4, 'hienthi', 'san-pham', 1682149999, 0),
+(8, 'phu-kien', '', '', '', '', '', '', 'Phụ Kiện', '', '', 6, 'hienthi', 'san-pham', 1682150031, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_product_sale`
+-- Cấu trúc bảng cho bảng `table_product_sale`
 --
 
 CREATE TABLE `table_product_sale` (
@@ -5705,18 +5833,35 @@ CREATE TABLE `table_product_sale` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_product_sale`
+-- Đang đổ dữ liệu cho bảng `table_product_sale`
 --
 
 INSERT INTO `table_product_sale` (`id`, `id_parent`, `id_color`, `id_size`) VALUES
-(122, 1, 0, 3),
-(121, 1, 0, 2),
-(120, 1, 0, 1);
+(138, 52, 0, 1),
+(139, 52, 0, 2),
+(140, 52, 0, 3),
+(141, 52, 0, 4),
+(142, 54, 0, 1),
+(143, 54, 0, 2),
+(144, 54, 0, 3),
+(145, 54, 0, 4),
+(146, 55, 0, 1),
+(147, 55, 0, 2),
+(148, 55, 0, 3),
+(149, 55, 0, 4),
+(150, 57, 0, 1),
+(151, 57, 0, 2),
+(152, 57, 0, 3),
+(153, 57, 0, 4),
+(161, 58, 0, 4),
+(160, 58, 0, 3),
+(159, 58, 0, 2),
+(158, 58, 0, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_product_sub`
+-- Cấu trúc bảng cho bảng `table_product_sub`
 --
 
 CREATE TABLE `table_product_sub` (
@@ -5744,7 +5889,7 @@ CREATE TABLE `table_product_sub` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_product_tags`
+-- Cấu trúc bảng cho bảng `table_product_tags`
 --
 
 CREATE TABLE `table_product_tags` (
@@ -5754,25 +5899,16 @@ CREATE TABLE `table_product_tags` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_product_tags`
+-- Đang đổ dữ liệu cho bảng `table_product_tags`
 --
 
 INSERT INTO `table_product_tags` (`id`, `id_parent`, `id_tags`) VALUES
-(50331653, 1, 1),
-(2, 2, 1),
-(50331651, 22301802, 1434583040),
-(5, 4, 1),
-(6, 5, 1),
-(7, 5, 2),
-(8, 6, 1),
-(9, 6, 2),
-(10, 7, 1),
-(11, 7, 2);
+(50331651, 22301802, 1434583040);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_pushonesignal`
+-- Cấu trúc bảng cho bảng `table_pushonesignal`
 --
 
 CREATE TABLE `table_pushonesignal` (
@@ -5786,7 +5922,7 @@ CREATE TABLE `table_pushonesignal` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_pushonesignal`
+-- Đang đổ dữ liệu cho bảng `table_pushonesignal`
 --
 
 INSERT INTO `table_pushonesignal` (`id`, `name`, `link`, `photo`, `description`, `date_created`, `numb`) VALUES
@@ -5795,7 +5931,7 @@ INSERT INTO `table_pushonesignal` (`id`, `name`, `link`, `photo`, `description`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_seo`
+-- Cấu trúc bảng cho bảng `table_seo`
 --
 
 CREATE TABLE `table_seo` (
@@ -5813,25 +5949,29 @@ CREATE TABLE `table_seo` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 
 --
--- Dumping data for table `table_seo`
+-- Đang đổ dữ liệu cho bảng `table_seo`
 --
 
 INSERT INTO `table_seo` (`id`, `id_parent`, `com`, `act`, `type`, `titlevi`, `keywordsvi`, `descriptionvi`, `titleen`, `keywordsen`, `descriptionen`) VALUES
-(200, 0, 'setting', 'update', 'setting', '', '', '', '', '', ''),
-(110, 1, 'product', 'man_list', 'san-pham', 'Giày nam', 'Giày nam', 'Thiết kế ban đầu dành cho sân bóng rổ vào thập niên 70. Được các ngôi sao hip hop tôn sùng vào thập niên 80. Đôi giày adidas Superstar giờ đây đã trở thành biểu', 'Men\'s shoes', 'Men\'s shoes', 'Originally designed for basketball in the \'70s. Adored by hip hop stars in the\' 80s. The adidas Superstar shoes are now an iconic street fashionista.'),
-(6, 2, 'product', 'man_list', 'san-pham', 'Giày nữ', 'Giày nữ', 'Thiết kế ban đầu dành cho sân bóng rổ vào thập niên 70. Được các ngôi sao hip hop tôn sùng vào thập niên 80. Đôi giày adidas Superstar giờ đây đã trở thành biểu', 'Women\'s shoes', 'Women\'s shoes', 'Originally designed for basketball in the \'70s. Adored by hip hop stars in the\' 80s. The adidas Superstar shoes are now an iconic street fashionista.'),
-(111, 1, 'product', 'man_cat', 'san-pham', 'Giày tây đế cao', 'Giày tây đế cao', 'Thiết kế ban đầu dành cho sân bóng rổ vào thập niên 70. Được các ngôi sao hip hop tôn sùng vào thập niên 80. Đôi giày adidas Superstar giờ đây đã trở thành biểu', 'High heels', 'High heels', 'Originally designed for basketball in the \'70s. Adored by hip hop stars in the\' 80s. The adidas Superstar shoes are now an iconic street fashionista.'),
-(8, 2, 'product', 'man_cat', 'san-pham', 'Giày cao gót', 'Giày cao gót', 'Thiết kế ban đầu dành cho sân bóng rổ vào thập niên 70. Được các ngôi sao hip hop tôn sùng vào thập niên 80. Đôi giày adidas Superstar giờ đây đã trở thành biểu', 'Pumps', 'Pumps', 'Originally designed for basketball in the \'70s. Adored by hip hop stars in the\' 80s. The adidas Superstar shoes are now an iconic street fashionista.'),
-(186, 1, 'product', 'man', 'san-pham', 'Giày Slip On Ultraboost 20', 'Giày Slip On Ultraboost 20', 'Vội ra đường mà không có nhiều thời gian? Hãy xỏ chân vào đôi giày slip-on adidas Superstar này và dễ dàng tạo phong cách thanh lịch vào phút chót.  Thiết kế kh', 'Slip On Ultraboost 20', 'Slip On Ultraboost 20', 'Hurry to the streets without much time? Get your feet in these adidas Superstar slip-on shoes and easily create an elegant style at the last minute. The wireles'),
+(226, 3, 'product', 'man_list', 'san-pham', 'Áo', 'Áo', '', '', '', ''),
+(227, 4, 'product', 'man_list', 'san-pham', 'Áo khoác', 'Áo khoác', '', '', '', ''),
+(228, 5, 'product', 'man_list', 'san-pham', 'Quần &amp; Jumpsuit', 'Quần &amp; Jumpsuit', '', '', '', ''),
+(231, 6, 'product', 'man_list', 'san-pham', 'Chân váy', 'Chân váy', '', '', '', ''),
+(230, 7, 'product', 'man_list', 'san-pham', 'Đầm', 'Đầm', '', '', '', ''),
+(232, 8, 'product', 'man_list', 'san-pham', 'Phụ Kiện', 'Phụ Kiện', '', '', '', ''),
+(233, 4, 'product', 'man_cat', 'san-pham', 'Sơ mi', 'Sơ mi', '', '', '', ''),
+(244, 14, 'news', 'man', 'nhan-xet', 'Anh Tâm', 'Anh Tâm', 'Hàng đẹp, chất lượng', '', '', ''),
+(225, 0, 'setting', 'update', 'setting', 'The Vy Fashion', 'The Vy Fashion', '', '', '', ''),
 (89, 1, 'tags', 'man', 'san-pham', 'Giày giá rẻ', 'Giày giá rẻ', 'Giày giá rẻ', 'Cheap shoes', 'Cheap shoes', 'Giày giá rẻ'),
 (22, 2, 'tags', 'man', 'san-pham', 'Guốc đế thấp', 'Guốc đế thấp', 'Guốc đế thấp', 'Low-base clogs', 'Low-base clogs', 'Low-base clogs'),
-(157, 2, 'product', 'man', 'san-pham', 'Giày Slip On Ultraboost 21', 'Giày Slip On Ultraboost 21', 'Vội ra đường mà không có nhiều thời gian? Hãy xỏ chân vào đôi giày slip-on adidas Superstar này và dễ dàng tạo phong cách thanh lịch vào phút chót.  Thiết kế kh', 'Slip On Ultraboost 21', 'Slip On Ultraboost 21', 'Hurry to the streets without much time? Get your feet in these adidas Superstar slip-on shoes and easily create an elegant style at the last minute. The wireles'),
-(158, 3, 'product', 'man', 'san-pham', 'Giày Slip On Ultraboost 22', 'Giày Slip On Ultraboost 22', 'Vội ra đường mà không có nhiều thời gian? Hãy xỏ chân vào đôi giày slip-on adidas Superstar này và dễ dàng tạo phong cách thanh lịch vào phút chót.  Thiết kế kh', 'Slip On Ultraboost 22', 'Slip On Ultraboost 22', 'Hurry to the streets without much time? Get your feet in these adidas Superstar slip-on shoes and easily create an elegant style at the last minute. The wireles'),
-(159, 4, 'product', 'man', 'san-pham', 'Giày Slip On Ultraboost 23', 'Giày Slip On Ultraboost 23', 'Vội ra đường mà không có nhiều thời gian? Hãy xỏ chân vào đôi giày slip-on adidas Superstar này và dễ dàng tạo phong cách thanh lịch vào phút chót.  Thiết kế kh', 'Slip On Ultraboost 23', 'Slip On Ultraboost 23', 'Hurry to the streets without much time? Get your feet in these adidas Superstar slip-on shoes and easily create an elegant style at the last minute. The wireles'),
-(160, 5, 'product', 'man', 'san-pham', 'Giày Slip On Ultraboost 24', 'Giày Slip On Ultraboost 24', 'Vội ra đường mà không có nhiều thời gian? Hãy xỏ chân vào đôi giày slip-on adidas Superstar này và dễ dàng tạo phong cách thanh lịch vào phút chót.  Thiết kế kh', 'Slip On Ultraboost 24', 'Slip On Ultraboost 24', 'Hurry to the streets without much time? Get your feet in these adidas Superstar slip-on shoes and easily create an elegant style at the last minute. The wireles'),
-(161, 6, 'product', 'man', 'san-pham', 'Giày Slip On Ultraboost 25', 'Giày Slip On Ultraboost 25', 'Vội ra đường mà không có nhiều thời gian? Hãy xỏ chân vào đôi giày slip-on adidas Superstar này và dễ dàng tạo phong cách thanh lịch vào phút chót.  Thiết kế kh', 'Slip On Ultraboost 25', 'Slip On Ultraboost 25', 'Hurry to the streets without much time? Get your feet in these adidas Superstar slip-on shoes and easily create an elegant style at the last minute. The wireles'),
-(162, 7, 'product', 'man', 'san-pham', 'Giày Slip On Ultraboost 26', 'Giày Slip On Ultraboost 26', 'Vội ra đường mà không có nhiều thời gian? Hãy xỏ chân vào đôi giày slip-on adidas Superstar này và dễ dàng tạo phong cách thanh lịch vào phút chót.  Thiết kế kh', 'Slip On Ultraboost 26', 'Slip On Ultraboost 26', 'Hurry to the streets without much time? Get your feet in these adidas Superstar slip-on shoes and easily create an elegant style at the last minute. The wireles'),
-(153, 8, 'product', 'man', 'san-pham', 'Giày Slip On Ultraboost 27', 'Giày Slip On Ultraboost 27', 'Vội ra đường mà không có nhiều thời gian? Hãy xỏ chân vào đôi giày slip-on adidas Superstar này và dễ dàng tạo phong cách thanh lịch vào phút chót.  Thiết kế kh', 'Slip On Ultraboost 27', 'Slip On Ultraboost 27', 'Hurry to the streets without much time? Get your feet in these adidas Superstar slip-on shoes and easily create an elegant style at the last minute. The wireles'),
+(251, 53, 'product', 'man', 'san-pham', 'ÁO LỤA PHỐI NƠ SAU', 'ÁO LỤA PHỐI NƠ SAU', 'SKU: 15M7434', '', '', ''),
+(236, 5, 'product', 'man_cat', 'san-pham', 'Thun', 'Thun', '', '', '', ''),
+(235, 6, 'product', 'man_cat', 'san-pham', 'Kiểu', 'Kiểu', '', '', '', ''),
+(238, 7, 'product', 'man_cat', 'san-pham', 'Croptop', 'Croptop', '', '', '', ''),
+(239, 8, 'product', 'man_cat', 'san-pham', 'Thun ngắn tay', 'Thun ngắn tay', '', '', '', ''),
+(240, 9, 'product', 'man_cat', 'san-pham', 'Thun dài tay', 'Thun dài tay', '', '', '', ''),
+(241, 10, 'product', 'man_cat', 'san-pham', 'Peplum', 'Peplum', '', '', '', ''),
+(246, 12, 'product', 'man_cat', 'san-pham', 'Len', 'Len', '', '', '', ''),
 (203, 1, 'news', 'man', 'tin-tuc', 'Nike giới thiệu giày đá bóng băng dán độc đáo', 'Nike giới thiệu giày đá bóng băng dán độc đáo', 'Nike Phantom GT là đôi giày đá bóng được tạo ra từ sự phân tích một lượng lớn dữ liệu từ các cầu thủ và công nghệ băng dán độc đáo.', 'Nike introduces a unique taped soccer shoe', 'Nike introduces a unique taped soccer shoe', 'The Nike Phantom GT are soccer boots created from the analysis of large amounts of data from players and unique tape technology.'),
 (164, 2, 'news', 'man', 'tin-tuc', 'Nike Zoom công nghệ đệm giày thành công nhất của Nike', 'Nike Zoom công nghệ đệm giày thành công nhất của Nike', 'Nike Phantom GT là đôi giày đá bóng được tạo ra từ sự phân tích một lượng lớn dữ liệu từ các cầu thủ và công nghệ băng dán độc đáo.', 'Nike Zoom Nike\'s most successful shoe cushioning technology', 'Nike Zoom Nike\'s most successful shoe cushioning technology', 'The Nike Phantom GT are soccer boots created from the analysis of large amounts of data from players and unique tape technology.'),
 (165, 3, 'news', 'man', 'tin-tuc', 'Gã khổng lồ Nike đóng cửa hàng loạt ở Trung Quốc vì corona', 'Gã khổng lồ Nike đóng cửa hàng loạt ở Trung Quốc vì corona', 'Nike Phantom GT là đôi giày đá bóng được tạo ra từ sự phân tích một lượng lớn dữ liệu từ các cầu thủ và công nghệ băng dán độc đáo.', 'Giant Nike mass stores in China because of corona', 'Giant Nike mass stores in China because of corona', 'The Nike Phantom GT are soccer boots created from the analysis of large amounts of data from players and unique tape technology.'),
@@ -5840,13 +5980,19 @@ INSERT INTO `table_seo` (`id`, `id_parent`, `com`, `act`, `type`, `titlevi`, `ke
 (61, 6, 'news', 'man', 'chinh-sach', 'Chính sách bảo hành', 'Chính sách bảo hành', 'Chính sách bảo hành', 'Warranty Policy', 'Warranty Policy', 'Warranty Policy'),
 (62, 7, 'news', 'man', 'chinh-sach', 'Chính sách mua hàng', 'Chính sách mua hàng', 'Chính sách mua hàng', 'Purchase policy', 'Purchase policy', 'Purchase policy'),
 (63, 8, 'news', 'man', 'chinh-sach', 'Chính sách người dùng', 'Chính sách người dùng', 'Chính sách người dùng', 'User policy', 'User policy', 'User policy'),
-(198, 0, 'static', 'update', 'gioi-thieu', '', '', '', '', '', ''),
-(204, 39, 'product', 'man', 'thu-vien-anh', '', '', '', '', '', '');
+(221, 0, 'static', 'update', 'gioi-thieu', '', '', '', '', '', ''),
+(204, 39, 'product', 'man', 'thu-vien-anh', '', '', '', '', '', ''),
+(250, 52, 'product', 'man', 'san-pham', 'ÁO SƠ MI HOA LỤA', 'ÁO SƠ MI HOA LỤA', 'SKU: 16M7443', '', '', ''),
+(252, 54, 'product', 'man', 'san-pham', 'ÁO TAY LỠ CUT-OUT', 'ÁO TAY LỠ CUT-OUT', 'SKU: 16M6922', '', '', ''),
+(253, 55, 'product', 'man', 'san-pham', 'ÁO LEN NGẮN TAY PHỐI KẺ NGANG', 'ÁO LEN NGẮN TAY PHỐI KẺ NGANG', 'SKU: 57M7846', '', '', ''),
+(254, 56, 'product', 'man', 'san-pham', 'ÁO THUN THÊU HỌA TIẾT', 'ÁO THUN THÊU HỌA TIẾT', 'SKU: 57M7762', '', '', ''),
+(255, 57, 'product', 'man', 'san-pham', 'ÁO THUN C\'EST POUVOIR', 'ÁO THUN C\'EST POUVOIR', 'SKU: 57M7608', '', '', ''),
+(257, 58, 'product', 'man', 'san-pham', 'ÁO 2 DÂY DÁNG XÒE', 'ÁO 2 DÂY DÁNG XÒE', 'SKU: 16B9407', '', '', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_seopage`
+-- Cấu trúc bảng cho bảng `table_seopage`
 --
 
 CREATE TABLE `table_seopage` (
@@ -5863,11 +6009,11 @@ CREATE TABLE `table_seopage` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 
 --
--- Dumping data for table `table_seopage`
+-- Đang đổ dữ liệu cho bảng `table_seopage`
 --
 
 INSERT INTO `table_seopage` (`id`, `photo`, `options`, `type`, `titlevi`, `keywordsvi`, `descriptionvi`, `titleen`, `keywordsen`, `descriptionen`) VALUES
-(1, 'poduct-1-1318-2901.jpg', '{\"p\":\"poduct-1-1318-2901.jpg\",\"w\":540,\"h\":540,\"m\":\"image\\/jpeg\"}', 'san-pham', '', '', '', '', '', ''),
+(1, 'd825cab89dae2a88dc8b681e4b3b5ec2-6174.jpeg', '{\"p\":\"d825cab89dae2a88dc8b681e4b3b5ec2-6174.jpeg\",\"w\":1400,\"h\":2099,\"m\":\"image\\/jpeg\"}', 'san-pham', 'ÁO SƠ MI TENCEL DÂY RÚT EO', 'ÁO SƠ MI', 'Áo sơ mi tay ngắn. Eo chiết dáng peplum có dây kéo rút dễ dàng điều chỉnh. \r\n\r\nChất liệu lụa mang lại cảm giác thoáng mát, thoải mái cho người mặc bởi khả năng hút ẩm cao, thấm hút tốt. Nàng có thể mix&amp;match mẫu áo này với quần dài, quần short, chân váy để tạo ra các outfit khác nhau một cách dễ dàng.', '', '', ''),
 (2, 'poduct-1-1758-3113.jpeg', '{\"p\":\"poduct-1-1758-3113.jpeg\",\"w\":540,\"h\":540,\"m\":\"image\\/jpeg\"}', 'tin-tuc', '', '', '', '', '', ''),
 (3, 'poduct-2-3013-6370.jpg', '{\"p\":\"poduct-2-3013-6370.jpg\",\"w\":540,\"h\":540,\"m\":\"image\\/jpeg\"}', 'tuyen-dung', '', '', '', '', '', ''),
 (4, 'poduct-3-8613-8608.jpg', '{\"p\":\"poduct-3-8613-8608.jpg\",\"w\":540,\"h\":540,\"m\":\"image\\/jpeg\"}', 'thu-vien-anh', '', '', '', 'Photo library', 'Photo library', 'Photo library'),
@@ -5877,7 +6023,7 @@ INSERT INTO `table_seopage` (`id`, `photo`, `options`, `type`, `titlevi`, `keywo
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_setting`
+-- Cấu trúc bảng cho bảng `table_setting`
 --
 
 CREATE TABLE `table_setting` (
@@ -5894,16 +6040,16 @@ CREATE TABLE `table_setting` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_setting`
+-- Đang đổ dữ liệu cho bảng `table_setting`
 --
 
 INSERT INTO `table_setting` (`id`, `options`, `mastertool`, `headjs`, `bodyjs`, `namevi`, `nameen`, `addressvi`, `addressen`, `analytics`) VALUES
-(1, '{\"mailertype\":\"1\",\"ip_host\":\"120.72.119.29\",\"port_host\":\"25\",\"secure_host\":\"tls\",\"email_host\":\"no-replay@lucphat.com\",\"password_host\":\"KUV2GqzF\",\"host_gmail\":\"smtp.gmail.com\",\"port_gmail\":\"587\",\"secure_gmail\":\"tls\",\"email_gmail\":\"autosendnoreply01@gmail.com\",\"password_gmail\":\"ntfocjyshxgoxqbg\",\"lang_default\":\"vi\",\"address\":\"\",\"email\":\"abc@gmail.com\",\"hotline\":\"0987654321\",\"phone\":\"0987654321\",\"zalo\":\"0987654321\",\"oaidzalo\":\"\",\"website\":\"https:\\/\\/www.google.com\\/\",\"fanpage\":\"https:\\/\\/www.facebook.com\\/facebook\\/\",\"toado\":\"\",\"toado_iframe\":\"<iframe src=\\\"https:\\/\\/www.google.com\\/maps\\/embed?pb=!1m18!1m12!1m3!1d3919.4481760094527!2d106.68480041483649!3d10.776945462130913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3b27d8a7fd%3A0xdb0d92470911a699!2sThe%20Box%20Market!5e0!3m2!1svi!2s!4v1589339784678!5m2!1svi!2s\\\" width=\\\"600\\\" height=\\\"450\\\" frameborder=\\\"0\\\" style=\\\"border:0;\\\" allowfullscreen=\\\"\\\" aria-hidden=\\\"false\\\" tabindex=\\\"0\\\"><\\/iframe>\",\"coords\":\"\",\"coords_iframe\":\"<iframe src=\\\"https:\\/\\/www.google.com\\/maps\\/embed?pb=!1m18!1m12!1m3!1d3919.4481760094527!2d106.68480041483649!3d10.776945462130913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3b27d8a7fd%3A0xdb0d92470911a699!2sThe%20Box%20Market!5e0!3m2!1svi!2s!4v1589339784678!5m2!1svi!2s\\\" width=\\\"600\\\" height=\\\"450\\\" frameborder=\\\"0\\\" style=\\\"border:0;\\\" allowfullscreen=\\\"\\\" aria-hidden=\\\"false\\\" tabindex=\\\"0\\\"><\\/iframe>\",\"link_googlemaps\":\"https:\\/\\/www.google.com\\/maps\",\"worktime\":\"8h - 17h \"}', '', '', '', 'tên công ty', 'name comny', 'Công Viên Phần Mềm Quang Trung,  Phường Tân Chánh Hiệp, Quận 12, TP.HCM', 'address company', '');
+(1, '{\"mailertype\":\"1\",\"ip_host\":\"120.72.119.29\",\"port_host\":\"25\",\"secure_host\":\"tls\",\"email_host\":\"no-replay@lucphat.com\",\"password_host\":\"KUV2GqzF\",\"host_gmail\":\"smtp.gmail.com\",\"port_gmail\":\"587\",\"secure_gmail\":\"tls\",\"email_gmail\":\"autosendnoreply01@gmail.com\",\"password_gmail\":\"ntfocjyshxgoxqbg\",\"lang_default\":\"vi\",\"address\":\"\",\"email\":\"huynhminhtamm2002@gmail.com\",\"hotline\":\"0967201370\",\"phone\":\"0909857416\",\"zalo\":\"0967201370\",\"oaidzalo\":\"\",\"website\":\"https:\\/\\/thevyfashion.com\",\"fanpage\":\"https:\\/\\/www.facebook.com\\/CKC.confessions\\/\",\"toado\":\"\",\"toado_iframe\":\"<iframe src=\\\"https:\\/\\/www.google.com\\/maps\\/embed?pb=!1m18!1m12!1m3!1d3919.4481760094527!2d106.68480041483649!3d10.776945462130913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3b27d8a7fd%3A0xdb0d92470911a699!2sThe%20Box%20Market!5e0!3m2!1svi!2s!4v1589339784678!5m2!1svi!2s\\\" width=\\\"600\\\" height=\\\"450\\\" frameborder=\\\"0\\\" style=\\\"border:0;\\\" allowfullscreen=\\\"\\\" aria-hidden=\\\"false\\\" tabindex=\\\"0\\\"><\\/iframe>\",\"coords\":\"\",\"coords_iframe\":\"<iframe src=\\\"https:\\/\\/www.google.com\\/maps\\/embed?pb=!1m18!1m12!1m3!1d3919.5178266417506!2d106.69916291433034!3d10.771594992324776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f40a3b49e59%3A0xa1bd14e483a602db!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEvhu7kgdGh14bqtdCBDYW8gVGjhuq9uZw!5e0!3m2!1svi!2s!4v1681260478735!5m2!1svi!2s\\\" width=\\\"600\\\" height=\\\"450\\\" style=\\\"border:0;\\\" allowfullscreen=\\\"\\\" loading=\\\"lazy\\\" referrerpolicy=\\\"no-referrer-when-downgrade\\\"><\\/iframe>\",\"link_googlemaps\":\"https:\\/\\/goo.gl\\/maps\\/Gn8jNpXhnqrb33NV8\",\"worktime\":\"8h - 17h \"}', '', '', '', 'The Vy Fashion', 'name comny', '65 Huỳnh Thúc Kháng, phường Bến Nghé, quận 1, TPHCM', 'address company', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_size`
+-- Cấu trúc bảng cho bảng `table_size`
 --
 
 CREATE TABLE `table_size` (
@@ -5918,7 +6064,7 @@ CREATE TABLE `table_size` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_size`
+-- Đang đổ dữ liệu cho bảng `table_size`
 --
 
 INSERT INTO `table_size` (`id`, `namevi`, `nameen`, `type`, `numb`, `status`, `date_created`, `date_updated`) VALUES
@@ -5930,7 +6076,7 @@ INSERT INTO `table_size` (`id`, `namevi`, `nameen`, `type`, `numb`, `status`, `d
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_static`
+-- Cấu trúc bảng cho bảng `table_static`
 --
 
 CREATE TABLE `table_static` (
@@ -5954,20 +6100,20 @@ CREATE TABLE `table_static` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_static`
+-- Đang đổ dữ liệu cho bảng `table_static`
 --
 
 INSERT INTO `table_static` (`id`, `photo`, `photo1`, `options`, `slugvi`, `slugen`, `contenten`, `contentvi`, `descen`, `descvi`, `nameen`, `namevi`, `file_attach`, `type`, `status`, `date_created`, `date_updated`) VALUES
-(1, 'news-2-1467-6233.jpg', '', '{\"p\":\"news-2-1467-6233.jpg\",\"w\":1140,\"h\":800,\"m\":\"image\\/jpeg\"}', 'gioi-thieu', 'about-us', '', '&lt;p&gt;Nike luôn dẫn đầu thị trường về sự sáng tạo trong các thiết kế của mình. Công nghệ thân giày Flyknit là một ví dụ điển hình.&lt;/p&gt;\r\n\r\n&lt;p&gt;Nike là công ty dẫn đầu thị trường về đồ thể thao. Có được điều này là nhờ Nike sở hữu hàng loạt các công nghệ thể thao tiên tiến nhất  như &lt;a href=&quot;https://thethao247.vn/318-cong-nghe-dri-fit-cua-nike-co-gi-dac-biet-d176359.html&quot; rel=&quot;dofollow&quot; target=&quot;_blank&quot;&gt;công nghệ Dri-fit&lt;/a&gt; trong sản xuất quần áo, &lt;a href=&quot;https://thethao247.vn/318-kham-pha-lich-su-phat-trien-cong-nghe-nike-air-max-d177454.html&quot; rel=&quot;dofollow&quot; target=&quot;_blank&quot;&gt;công nghệ đệm giày không khí Air Max&lt;/a&gt;. Tuy nhiên, nhắc tới giày Nike, chúng ta không thể không nhắc tới công nghệ thân giày Flyknit.&lt;/p&gt;\r\n\r\n&lt;p&gt;Giới thiệu về công nghệ Nike Flyknit&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;a data-at-1366=&quot;https://media.thethao247.vn/origin_1366x0/upload/thanhtung/2019/04/10/Nike-Flyknit.jpg&quot; data-at-1920=&quot;https://media.thethao247.vn/origin_1920x0/upload/thanhtung/2019/04/10/Nike-Flyknit.jpg&quot; data-at-450=&quot;https://media.thethao247.vn/origin_450x0/upload/thanhtung/2019/04/10/Nike-Flyknit.jpg&quot; data-at-800=&quot;https://media.thethao247.vn/origin_800x0/upload/thanhtung/2019/04/10/Nike-Flyknit.jpg&quot; data-caption=&quot;&quot; href=&quot;https://media.thethao247.vn/origin_850x0/upload/thanhtung/2019/04/10/Nike-Flyknit.jpg&quot;&gt;&lt;img alt=&quot;&quot; data-ll-status=&quot;observed&quot; src=&quot;https://media.thethao247.vn/origin_850x0/upload/thanhtung/2019/04/10/Nike-Flyknit.jpg&quot; title=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Công nghệ flyknit khi được giới thiệu vào năm 2012 (ảnh: sivasdescalzo.com)&lt;/p&gt;\r\n\r\n&lt;p&gt;Flyknit là kết quả của nhiều năm nghiên cứu tại innovation kitchen (bếp công nghệ) của Nike. Công nghệ này chính thức được giới thiệu vào ngăm 2012 tại Olympic London.&lt;/p&gt;\r\n\r\n&lt;p&gt;Flyknit sở hữu những thông số kỹ thuật cực kì ấn tượng. Toàn bộ phần thân giày được dệt từ sợi flyknit chỉ nặng có 34 gram, khi kết hợp với với phần đế, tổng trọng lượng của đôi giày Flyknit Racer cũng chỉ đến 160 gram.&lt;/p&gt;\r\n\r\n&lt;p&gt;Điều này đồng nghĩa với việc các vận động viên sẽ mang trên chân đôi giày chỉ nhẹ bằng một nửa hoặc hai phần ba so với trước đây.&lt;/p&gt;\r\n\r\n&lt;p&gt;Bản chất công nghệ Flynknit là những sợi vải đặc biệt có khả năng đàn hồi được dệt nguyên khối bằng công nghệ dệt kĩ thuật số hiện đại nhất. Không có bất kì một đường nối hoặc đường may nào trên một tấm thân giày.&lt;/p&gt;\r\n\r\n&lt;p&gt;Nhờ vậy, Flyknit không chỉ nhẹ mà còn rất ôm chân và có thể phù hợp với mọi môn thể thao như đá bóng, chạy bộ, bóng rổ...v..v&lt;/p&gt;\r\n\r\n&lt;p&gt;Sự lan tỏa của Flyknit&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;a data-at-1366=&quot;https://media.thethao247.vn/origin_1366x0/upload/thanhtung/2019/04/10/Nike-Flyknit-racer.jpg&quot; data-at-1920=&quot;https://media.thethao247.vn/origin_1920x0/upload/thanhtung/2019/04/10/Nike-Flyknit-racer.jpg&quot; data-at-450=&quot;https://media.thethao247.vn/origin_450x0/upload/thanhtung/2019/04/10/Nike-Flyknit-racer.jpg&quot; data-at-800=&quot;https://media.thethao247.vn/origin_800x0/upload/thanhtung/2019/04/10/Nike-Flyknit-racer.jpg&quot; data-caption=&quot;&quot; href=&quot;https://media.thethao247.vn/origin_850x0/upload/thanhtung/2019/04/10/Nike-Flyknit-racer.jpg&quot;&gt;&lt;img alt=&quot;&quot; data-ll-status=&quot;loading&quot; src=&quot;https://media.thethao247.vn/origin_850x0/upload/thanhtung/2019/04/10/Nike-Flyknit-racer.jpg&quot; title=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Sự áp đảo tuyệt đối của sắc xanh từ những đôi Flyknit Racer tại Olympic London 2012&lt;/p&gt;\r\n\r\n&lt;p&gt;Tại sân khấu Olympic London, Nike đã được dịp phô diễn khả năng cải thiện hiệu suất với đôi giày Flyknit Racer của các vận động viên điền kinh.&lt;/p&gt;\r\n', '', '', 'About us', 'Giới thiệu', '', 'gioi-thieu', 'hienthi', 1609288150, 1657013768),
-(2, '', NULL, '', 'giay-tot-nhat-cho-nhung-nguoi-tot-nhat', 'slogan-company', '', '', '', '', 'slogan company', 'Giày tốt nhất cho những người tốt nhất', '', 'slogan', 'hienthi', 1609288216, 1657013785),
-(3, '', NULL, '', '', '', '&lt;p&gt;Address: 3rd Floor, No. 102 Nguyen Hoang, My Dinh 2, Hanoi&lt;/p&gt;\r\n\r\n&lt;p&gt;Email: giayadidaschinhhang@gmail.com&lt;/p&gt;\r\n\r\n&lt;p&gt;Hotline: 0966342792 or 0966342709&lt;/p&gt;\r\n\r\n&lt;p&gt;Website: http://google.com&lt;/p&gt;\r\n', '&lt;p&gt;Địa chỉ: Tầng 3 số 102 Nguyễn Hoàng, Mỹ Đình 2, Hà Nội&lt;/p&gt;\r\n\r\n&lt;p&gt;Email: giayadidaschinhhang@gmail.com&lt;/p&gt;\r\n\r\n&lt;p&gt;Hotline: 0966342792 hoặc 0966342709&lt;/p&gt;\r\n\r\n&lt;p&gt;Website: http://google.com&lt;/p&gt;\r\n', '', '', '', '', '', 'lienhe', 'hienthi', 1609288283, 1620819925),
-(4, '', NULL, '', 'sneaker-shoes-vi', 'name-comny', '&lt;p&gt;Address: 3rd Floor, No. 102 Nguyen Hoang, My Dinh 2, Hanoi&lt;/p&gt;\r\n\r\n&lt;p&gt;Email: giayadidaschinhhang@gmail.com&lt;/p&gt;\r\n\r\n&lt;p&gt;Hotline: 0966342792 or 0966342709&lt;/p&gt;\r\n\r\n&lt;p&gt;Website: http://google.com&lt;/p&gt;\r\n', '&lt;p&gt;Địa chỉ: Tầng 3 số 102 Nguyễn Hoàng, Mỹ Đình 2, Hà Nội&lt;/p&gt;\r\n\r\n&lt;p&gt;Email: giayadidaschinhhang@gmail.com&lt;/p&gt;\r\n\r\n&lt;p&gt;Hotline: 0966342792 hoặc 0966342709&lt;/p&gt;\r\n\r\n&lt;p&gt;Website: http://google.com&lt;/p&gt;\r\n', '', '', 'name comny', 'Sneaker Shoes VI', '', 'footer', 'hienthi', 1609288313, 1657013807),
-(5, '', NULL, '', 'name-copyright', 'name-copyright', '', '', '', '', 'name copyright', 'name copyright', '', 'copyright', 'hienthi', 1651129192, 0);
+(1, 'anh-chup-man-hinh-2023-04-22-luc-133856-7810.png', 'anh-chup-man-hinh-2023-04-17-luc-165749-7348.png', '{\"p\":\"anh-chup-man-hinh-2023-04-22-luc-133856-7810.png\",\"w\":698,\"h\":330,\"m\":\"image\\/png\"}', 'gioi-thieu', '', '', '&lt;p&gt;Nike luôn dẫn đầu thị trường về sự sáng tạo trong các thiết kế của mình. Công nghệ thân giày Flyknit là một ví dụ điển hình.&lt;/p&gt;\r\n\r\n&lt;p&gt;Nike là công ty dẫn đầu thị trường về đồ thể thao. Có được điều này là nhờ Nike sở hữu hàng loạt các công nghệ thể thao tiên tiến nhất  như &lt;a href=&quot;https://thethao247.vn/318-cong-nghe-dri-fit-cua-nike-co-gi-dac-biet-d176359.html&quot; rel=&quot;dofollow&quot; target=&quot;_blank&quot;&gt;công nghệ Dri-fit&lt;/a&gt; trong sản xuất quần áo, &lt;a href=&quot;https://thethao247.vn/318-kham-pha-lich-su-phat-trien-cong-nghe-nike-air-max-d177454.html&quot; rel=&quot;dofollow&quot; target=&quot;_blank&quot;&gt;công nghệ đệm giày không khí Air Max&lt;/a&gt;. Tuy nhiên, nhắc tới giày Nike, chúng ta không thể không nhắc tới công nghệ thân giày Flyknit.&lt;/p&gt;\r\n\r\n&lt;p&gt;Giới thiệu về công nghệ Nike Flyknit&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;a data-at-1366=&quot;https://media.thethao247.vn/origin_1366x0/upload/thanhtung/2019/04/10/Nike-Flyknit.jpg&quot; data-at-1920=&quot;https://media.thethao247.vn/origin_1920x0/upload/thanhtung/2019/04/10/Nike-Flyknit.jpg&quot; data-at-450=&quot;https://media.thethao247.vn/origin_450x0/upload/thanhtung/2019/04/10/Nike-Flyknit.jpg&quot; data-at-800=&quot;https://media.thethao247.vn/origin_800x0/upload/thanhtung/2019/04/10/Nike-Flyknit.jpg&quot; data-caption=&quot;&quot; href=&quot;https://media.thethao247.vn/origin_850x0/upload/thanhtung/2019/04/10/Nike-Flyknit.jpg&quot;&gt;&lt;img alt=&quot;&quot; data-ll-status=&quot;observed&quot; src=&quot;https://media.thethao247.vn/origin_850x0/upload/thanhtung/2019/04/10/Nike-Flyknit.jpg&quot; title=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Công nghệ flyknit khi được giới thiệu vào năm 2012 (ảnh: sivasdescalzo.com)&lt;/p&gt;\r\n\r\n&lt;p&gt;Flyknit là kết quả của nhiều năm nghiên cứu tại innovation kitchen (bếp công nghệ) của Nike. Công nghệ này chính thức được giới thiệu vào ngăm 2012 tại Olympic London.&lt;/p&gt;\r\n\r\n&lt;p&gt;Flyknit sở hữu những thông số kỹ thuật cực kì ấn tượng. Toàn bộ phần thân giày được dệt từ sợi flyknit chỉ nặng có 34 gram, khi kết hợp với với phần đế, tổng trọng lượng của đôi giày Flyknit Racer cũng chỉ đến 160 gram.&lt;/p&gt;\r\n\r\n&lt;p&gt;Điều này đồng nghĩa với việc các vận động viên sẽ mang trên chân đôi giày chỉ nhẹ bằng một nửa hoặc hai phần ba so với trước đây.&lt;/p&gt;\r\n\r\n&lt;p&gt;Bản chất công nghệ Flynknit là những sợi vải đặc biệt có khả năng đàn hồi được dệt nguyên khối bằng công nghệ dệt kĩ thuật số hiện đại nhất. Không có bất kì một đường nối hoặc đường may nào trên một tấm thân giày.&lt;/p&gt;\r\n\r\n&lt;p&gt;Nhờ vậy, Flyknit không chỉ nhẹ mà còn rất ôm chân và có thể phù hợp với mọi môn thể thao như đá bóng, chạy bộ, bóng rổ...v..v&lt;/p&gt;\r\n\r\n&lt;p&gt;Sự lan tỏa của Flyknit&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;a data-at-1366=&quot;https://media.thethao247.vn/origin_1366x0/upload/thanhtung/2019/04/10/Nike-Flyknit-racer.jpg&quot; data-at-1920=&quot;https://media.thethao247.vn/origin_1920x0/upload/thanhtung/2019/04/10/Nike-Flyknit-racer.jpg&quot; data-at-450=&quot;https://media.thethao247.vn/origin_450x0/upload/thanhtung/2019/04/10/Nike-Flyknit-racer.jpg&quot; data-at-800=&quot;https://media.thethao247.vn/origin_800x0/upload/thanhtung/2019/04/10/Nike-Flyknit-racer.jpg&quot; data-caption=&quot;&quot; href=&quot;https://media.thethao247.vn/origin_850x0/upload/thanhtung/2019/04/10/Nike-Flyknit-racer.jpg&quot;&gt;&lt;img alt=&quot;&quot; data-ll-status=&quot;loading&quot; src=&quot;https://media.thethao247.vn/origin_850x0/upload/thanhtung/2019/04/10/Nike-Flyknit-racer.jpg&quot; title=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Sự áp đảo tuyệt đối của sắc xanh từ những đôi Flyknit Racer tại Olympic London 2012&lt;/p&gt;\r\n\r\n&lt;p&gt;Tại sân khấu Olympic London, Nike đã được dịp phô diễn khả năng cải thiện hiệu suất với đôi giày Flyknit Racer của các vận động viên điền kinh.&lt;/p&gt;\r\n', '', '', 'About us', 'Giới thiệu', '', 'gioi-thieu', 'hienthi', 1609288150, 1682147954),
+(2, '', NULL, '', 'thoi-trang-la-tam-thoi-phong-cach-la-mai-mai', '', '', '', '', '', 'slogan company', 'Thời trang là tạm thời, phong cách là mãi mãi', '', 'slogan', 'hienthi', 1609288216, 1682787577),
+(3, '', NULL, '', '', '', '&lt;p&gt;Address: 3rd Floor, No. 102 Nguyen Hoang, My Dinh 2, Hanoi&lt;/p&gt;\r\n\r\n&lt;p&gt;Email: giayadidaschinhhang@gmail.com&lt;/p&gt;\r\n\r\n&lt;p&gt;Hotline: 0966342792 or 0966342709&lt;/p&gt;\r\n\r\n&lt;p&gt;Website: http://google.com&lt;/p&gt;\r\n', '&lt;h2&gt;The Vy Fashion&lt;/h2&gt;\r\n\r\n&lt;p&gt;Địa chỉ 65 Huỳnh Thúc Kháng, phường Bến Nghé, quận 1, TPHCM&lt;/p&gt;\r\n\r\n&lt;p&gt;SĐT:&lt;/p&gt;\r\n\r\n&lt;p&gt; &lt;/p&gt;\r\n', '', '', '', '', '', 'lienhe', 'hienthi', 1609288283, 1682148289),
+(4, '', NULL, '', 'the-vy-fashion', '', '&lt;p&gt;Address: 3rd Floor, No. 102 Nguyen Hoang, My Dinh 2, Hanoi&lt;/p&gt;\r\n\r\n&lt;p&gt;Email: giayadidaschinhhang@gmail.com&lt;/p&gt;\r\n\r\n&lt;p&gt;Hotline: 0966342792 or 0966342709&lt;/p&gt;\r\n\r\n&lt;p&gt;Website: http://google.com&lt;/p&gt;\r\n', '&lt;p&gt;Địa chỉ: 65 Huỳnh Thúc Kháng, phường Bến Nghé, quận 1, TPHCM&lt;/p&gt;\r\n\r\n&lt;p&gt;Email: huynhminhtamm2002@gmail.com&lt;/p&gt;\r\n\r\n&lt;p&gt;Hotline: 0966342792 hoặc 0966342709&lt;/p&gt;\r\n\r\n&lt;p&gt;Website: https://www.thevyfashion.com&lt;/p&gt;\r\n', '', '', 'name comny', 'The Vy Fashion', '', 'footer', 'hienthi', 1609288313, 1682149432),
+(5, '', NULL, '', 'the-vy-fashion', '', '', '', '', '', 'name copyright', 'The Vy Fashion', '', 'copyright', 'hienthi', 1651129192, 1682148397);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_tags`
+-- Cấu trúc bảng cho bảng `table_tags`
 --
 
 CREATE TABLE `table_tags` (
@@ -5990,7 +6136,7 @@ CREATE TABLE `table_tags` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_tags`
+-- Đang đổ dữ liệu cho bảng `table_tags`
 --
 
 INSERT INTO `table_tags` (`id`, `photo`, `options`, `slugvi`, `slugen`, `contenten`, `contentvi`, `descen`, `descvi`, `nameen`, `namevi`, `numb`, `type`, `status`, `date_created`, `date_updated`) VALUES
@@ -6000,7 +6146,7 @@ INSERT INTO `table_tags` (`id`, `photo`, `options`, `slugvi`, `slugen`, `content
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_user`
+-- Cấu trúc bảng cho bảng `table_user`
 --
 
 CREATE TABLE `table_user` (
@@ -6026,16 +6172,16 @@ CREATE TABLE `table_user` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_user`
+-- Đang đổ dữ liệu cho bảng `table_user`
 --
 
 INSERT INTO `table_user` (`id`, `id_permission`, `username`, `password`, `confirm_code`, `avatar`, `fullname`, `phone`, `email`, `address`, `gender`, `login_session`, `user_token`, `lastlogin`, `status`, `role`, `secret_key`, `birthday`, `numb`) VALUES
-(1, 0, 'admin', '6cc6484ae704b9cc4d730abe66dfc556', '', '', 'Administrator', '0939513667', 'admin@gmail.com', '222 huỳnh thị na', 1, '671324a3340835e15035ac6463594165', '68a191570a7c9f99b88d8c566fdbe93e', '1675820617', 'hienthi', 3, '671324a3340835e15035ac6463594165', 1608051600, 0);
+(1, 0, 'admin', '6cc6484ae704b9cc4d730abe66dfc556', '', '', 'Administrator', '0939513667', 'admin@gmail.com', '222 huỳnh thị na', 1, '671324a3340835e15035ac6463594165', '2c382fe36bccb57614e1afe00dff1056', '1684593171', 'hienthi', 3, '671324a3340835e15035ac6463594165', 1608051600, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_user_limit`
+-- Cấu trúc bảng cho bảng `table_user_limit`
 --
 
 CREATE TABLE `table_user_limit` (
@@ -6047,7 +6193,7 @@ CREATE TABLE `table_user_limit` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_user_limit`
+-- Đang đổ dữ liệu cho bảng `table_user_limit`
 --
 
 INSERT INTO `table_user_limit` (`id`, `login_ip`, `login_attempts`, `attempt_time`, `locked_time`) VALUES
@@ -6056,7 +6202,7 @@ INSERT INTO `table_user_limit` (`id`, `login_ip`, `login_attempts`, `attempt_tim
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_user_log`
+-- Cấu trúc bảng cho bảng `table_user_log`
 --
 
 CREATE TABLE `table_user_log` (
@@ -6068,7 +6214,7 @@ CREATE TABLE `table_user_log` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_user_log`
+-- Đang đổ dữ liệu cho bảng `table_user_log`
 --
 
 INSERT INTO `table_user_log` (`id`, `id_user`, `ip`, `timelog`, `user_agent`) VALUES
@@ -6224,12 +6370,34 @@ INSERT INTO `table_user_log` (`id`, `id_user`, `ip`, `timelog`, `user_agent`) VA
 (150, 1, '::1', 1675412163, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36'),
 (151, 1, '::1', 1675416198, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36'),
 (152, 1, '::1', 1675735735, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36'),
-(153, 1, '::1', 1675820617, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36');
+(153, 1, '::1', 1675820617, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36'),
+(154, 1, '::1', 1680686248, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36'),
+(155, 1, '::1', 1680768284, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36'),
+(156, 1, '::1', 1680914743, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'),
+(157, 1, '::1', 1681143046, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'),
+(158, 1, '::1', 1681196860, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'),
+(159, 1, '::1', 1681260184, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'),
+(160, 1, '::1', 1681717576, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.48'),
+(161, 1, '::1', 1681725063, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.48'),
+(162, 1, '::1', 1681725119, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.48'),
+(163, 1, '::1', 1681793179, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'),
+(164, 1, '::1', 1682143191, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'),
+(165, 1, '::1', 1682153099, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'),
+(166, 1, '::1', 1682154446, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'),
+(167, 1, '::1', 1682157123, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'),
+(168, 1, '::1', 1682787046, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'),
+(169, 1, '::1', 1682787413, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'),
+(170, 1, '::1', 1682831608, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'),
+(171, 1, '::1', 1683500030, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36'),
+(172, 1, '::1', 1684403745, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36'),
+(173, 1, '::1', 1684580439, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36'),
+(174, 1, '::1', 1684586001, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36'),
+(175, 1, '::1', 1684586227, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_user_online`
+-- Cấu trúc bảng cho bảng `table_user_online`
 --
 
 CREATE TABLE `table_user_online` (
@@ -6239,16 +6407,16 @@ CREATE TABLE `table_user_online` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_user_online`
+-- Đang đổ dữ liệu cho bảng `table_user_online`
 --
 
 INSERT INTO `table_user_online` (`session`, `time`, `ip`) VALUES
-('drli0234odlhbich39h4ou4158', 1675820625, '::1');
+('894a404d5c20bf17cecbbb47f8183605', 1684737964, '::1');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_ward`
+-- Cấu trúc bảng cho bảng `table_ward`
 --
 
 CREATE TABLE `table_ward` (
@@ -6269,7 +6437,7 @@ CREATE TABLE `table_ward` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_ward`
+-- Đang đổ dữ liệu cho bảng `table_ward`
 --
 
 INSERT INTO `table_ward` (`id`, `id_city`, `id_district`, `districtid`, `wardcode`, `name`, `slug`, `code`, `level`, `numb`, `status`, `date_updated`, `date_created`, `ship_price`) VALUES
@@ -17436,537 +17604,537 @@ INSERT INTO `table_ward` (`id`, `id_city`, `id_district`, `districtid`, `wardcod
 (11666, 62, 692, 1442, '20101', 'Phường Bến Nghé', 'phuong-ben-nghe', '', '', 11666, 'hienthi', 0, 0, 0);
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `table_city`
+-- Chỉ mục cho bảng `table_city`
 --
 ALTER TABLE `table_city`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_color`
+-- Chỉ mục cho bảng `table_color`
 --
 ALTER TABLE `table_color`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_comment`
+-- Chỉ mục cho bảng `table_comment`
 --
 ALTER TABLE `table_comment`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_comment_photo`
+-- Chỉ mục cho bảng `table_comment_photo`
 --
 ALTER TABLE `table_comment_photo`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_comment_video`
+-- Chỉ mục cho bảng `table_comment_video`
 --
 ALTER TABLE `table_comment_video`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_contact`
+-- Chỉ mục cho bảng `table_contact`
 --
 ALTER TABLE `table_contact`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_counter`
+-- Chỉ mục cho bảng `table_counter`
 --
 ALTER TABLE `table_counter`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_district`
+-- Chỉ mục cho bảng `table_district`
 --
 ALTER TABLE `table_district`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_excel`
+-- Chỉ mục cho bảng `table_excel`
 --
 ALTER TABLE `table_excel`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_gallery`
+-- Chỉ mục cho bảng `table_gallery`
 --
 ALTER TABLE `table_gallery`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_lang`
+-- Chỉ mục cho bảng `table_lang`
 --
 ALTER TABLE `table_lang`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_member`
+-- Chỉ mục cho bảng `table_member`
 --
 ALTER TABLE `table_member`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_news`
+-- Chỉ mục cho bảng `table_news`
 --
 ALTER TABLE `table_news`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_newsletter`
+-- Chỉ mục cho bảng `table_newsletter`
 --
 ALTER TABLE `table_newsletter`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_news_cat`
+-- Chỉ mục cho bảng `table_news_cat`
 --
 ALTER TABLE `table_news_cat`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_news_item`
+-- Chỉ mục cho bảng `table_news_item`
 --
 ALTER TABLE `table_news_item`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_news_list`
+-- Chỉ mục cho bảng `table_news_list`
 --
 ALTER TABLE `table_news_list`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_news_sub`
+-- Chỉ mục cho bảng `table_news_sub`
 --
 ALTER TABLE `table_news_sub`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_news_tags`
+-- Chỉ mục cho bảng `table_news_tags`
 --
 ALTER TABLE `table_news_tags`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_order`
+-- Chỉ mục cho bảng `table_order`
 --
 ALTER TABLE `table_order`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_order_detail`
+-- Chỉ mục cho bảng `table_order_detail`
 --
 ALTER TABLE `table_order_detail`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_order_status`
+-- Chỉ mục cho bảng `table_order_status`
 --
 ALTER TABLE `table_order_status`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_permission`
+-- Chỉ mục cho bảng `table_permission`
 --
 ALTER TABLE `table_permission`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_permission_group`
+-- Chỉ mục cho bảng `table_permission_group`
 --
 ALTER TABLE `table_permission_group`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_photo`
+-- Chỉ mục cho bảng `table_photo`
 --
 ALTER TABLE `table_photo`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_product`
+-- Chỉ mục cho bảng `table_product`
 --
 ALTER TABLE `table_product`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_product_brand`
+-- Chỉ mục cho bảng `table_product_brand`
 --
 ALTER TABLE `table_product_brand`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_product_cat`
+-- Chỉ mục cho bảng `table_product_cat`
 --
 ALTER TABLE `table_product_cat`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_product_item`
+-- Chỉ mục cho bảng `table_product_item`
 --
 ALTER TABLE `table_product_item`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_product_list`
+-- Chỉ mục cho bảng `table_product_list`
 --
 ALTER TABLE `table_product_list`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_product_sale`
+-- Chỉ mục cho bảng `table_product_sale`
 --
 ALTER TABLE `table_product_sale`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_product_sub`
+-- Chỉ mục cho bảng `table_product_sub`
 --
 ALTER TABLE `table_product_sub`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_product_tags`
+-- Chỉ mục cho bảng `table_product_tags`
 --
 ALTER TABLE `table_product_tags`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_pushonesignal`
+-- Chỉ mục cho bảng `table_pushonesignal`
 --
 ALTER TABLE `table_pushonesignal`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_seo`
+-- Chỉ mục cho bảng `table_seo`
 --
 ALTER TABLE `table_seo`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_seopage`
+-- Chỉ mục cho bảng `table_seopage`
 --
 ALTER TABLE `table_seopage`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_setting`
+-- Chỉ mục cho bảng `table_setting`
 --
 ALTER TABLE `table_setting`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_size`
+-- Chỉ mục cho bảng `table_size`
 --
 ALTER TABLE `table_size`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_static`
+-- Chỉ mục cho bảng `table_static`
 --
 ALTER TABLE `table_static`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_tags`
+-- Chỉ mục cho bảng `table_tags`
 --
 ALTER TABLE `table_tags`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_user`
+-- Chỉ mục cho bảng `table_user`
 --
 ALTER TABLE `table_user`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_user_limit`
+-- Chỉ mục cho bảng `table_user_limit`
 --
 ALTER TABLE `table_user_limit`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_user_log`
+-- Chỉ mục cho bảng `table_user_log`
 --
 ALTER TABLE `table_user_log`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_ward`
+-- Chỉ mục cho bảng `table_ward`
 --
 ALTER TABLE `table_ward`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `table_city`
+-- AUTO_INCREMENT cho bảng `table_city`
 --
 ALTER TABLE `table_city`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
--- AUTO_INCREMENT for table `table_color`
+-- AUTO_INCREMENT cho bảng `table_color`
 --
 ALTER TABLE `table_color`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
--- AUTO_INCREMENT for table `table_comment`
+-- AUTO_INCREMENT cho bảng `table_comment`
 --
 ALTER TABLE `table_comment`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
--- AUTO_INCREMENT for table `table_comment_photo`
+-- AUTO_INCREMENT cho bảng `table_comment_photo`
 --
 ALTER TABLE `table_comment_photo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
--- AUTO_INCREMENT for table `table_comment_video`
+-- AUTO_INCREMENT cho bảng `table_comment_video`
 --
 ALTER TABLE `table_comment_video`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `table_contact`
+-- AUTO_INCREMENT cho bảng `table_contact`
 --
 ALTER TABLE `table_contact`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `table_counter`
+-- AUTO_INCREMENT cho bảng `table_counter`
 --
 ALTER TABLE `table_counter`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10475;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10529;
 
 --
--- AUTO_INCREMENT for table `table_district`
+-- AUTO_INCREMENT cho bảng `table_district`
 --
 ALTER TABLE `table_district`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=725;
 
 --
--- AUTO_INCREMENT for table `table_excel`
+-- AUTO_INCREMENT cho bảng `table_excel`
 --
 ALTER TABLE `table_excel`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `table_gallery`
+-- AUTO_INCREMENT cho bảng `table_gallery`
 --
 ALTER TABLE `table_gallery`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
 
 --
--- AUTO_INCREMENT for table `table_lang`
+-- AUTO_INCREMENT cho bảng `table_lang`
 --
 ALTER TABLE `table_lang`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=338;
 
 --
--- AUTO_INCREMENT for table `table_member`
+-- AUTO_INCREMENT cho bảng `table_member`
 --
 ALTER TABLE `table_member`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
--- AUTO_INCREMENT for table `table_news`
+-- AUTO_INCREMENT cho bảng `table_news`
 --
 ALTER TABLE `table_news`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT for table `table_newsletter`
+-- AUTO_INCREMENT cho bảng `table_newsletter`
 --
 ALTER TABLE `table_newsletter`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `table_news_cat`
+-- AUTO_INCREMENT cho bảng `table_news_cat`
 --
 ALTER TABLE `table_news_cat`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `table_news_item`
+-- AUTO_INCREMENT cho bảng `table_news_item`
 --
 ALTER TABLE `table_news_item`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `table_news_list`
+-- AUTO_INCREMENT cho bảng `table_news_list`
 --
 ALTER TABLE `table_news_list`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `table_news_sub`
+-- AUTO_INCREMENT cho bảng `table_news_sub`
 --
 ALTER TABLE `table_news_sub`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `table_news_tags`
+-- AUTO_INCREMENT cho bảng `table_news_tags`
 --
 ALTER TABLE `table_news_tags`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT for table `table_order`
+-- AUTO_INCREMENT cho bảng `table_order`
 --
 ALTER TABLE `table_order`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
--- AUTO_INCREMENT for table `table_order_detail`
+-- AUTO_INCREMENT cho bảng `table_order_detail`
 --
 ALTER TABLE `table_order_detail`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
--- AUTO_INCREMENT for table `table_order_status`
+-- AUTO_INCREMENT cho bảng `table_order_status`
 --
 ALTER TABLE `table_order_status`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `table_permission`
+-- AUTO_INCREMENT cho bảng `table_permission`
 --
 ALTER TABLE `table_permission`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1903;
 
 --
--- AUTO_INCREMENT for table `table_permission_group`
+-- AUTO_INCREMENT cho bảng `table_permission_group`
 --
 ALTER TABLE `table_permission_group`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `table_photo`
+-- AUTO_INCREMENT cho bảng `table_photo`
 --
 ALTER TABLE `table_photo`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
--- AUTO_INCREMENT for table `table_product`
+-- AUTO_INCREMENT cho bảng `table_product`
 --
 ALTER TABLE `table_product`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
--- AUTO_INCREMENT for table `table_product_brand`
+-- AUTO_INCREMENT cho bảng `table_product_brand`
 --
 ALTER TABLE `table_product_brand`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `table_product_cat`
+-- AUTO_INCREMENT cho bảng `table_product_cat`
 --
 ALTER TABLE `table_product_cat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT for table `table_product_item`
+-- AUTO_INCREMENT cho bảng `table_product_item`
 --
 ALTER TABLE `table_product_item`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `table_product_list`
+-- AUTO_INCREMENT cho bảng `table_product_list`
 --
 ALTER TABLE `table_product_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `table_product_sale`
+-- AUTO_INCREMENT cho bảng `table_product_sale`
 --
 ALTER TABLE `table_product_sale`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=162;
 
 --
--- AUTO_INCREMENT for table `table_product_sub`
+-- AUTO_INCREMENT cho bảng `table_product_sub`
 --
 ALTER TABLE `table_product_sub`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `table_product_tags`
+-- AUTO_INCREMENT cho bảng `table_product_tags`
 --
 ALTER TABLE `table_product_tags`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50331654;
 
 --
--- AUTO_INCREMENT for table `table_pushonesignal`
+-- AUTO_INCREMENT cho bảng `table_pushonesignal`
 --
 ALTER TABLE `table_pushonesignal`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `table_seo`
+-- AUTO_INCREMENT cho bảng `table_seo`
 --
 ALTER TABLE `table_seo`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=205;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=258;
 
 --
--- AUTO_INCREMENT for table `table_seopage`
+-- AUTO_INCREMENT cho bảng `table_seopage`
 --
 ALTER TABLE `table_seopage`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `table_setting`
+-- AUTO_INCREMENT cho bảng `table_setting`
 --
 ALTER TABLE `table_setting`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `table_size`
+-- AUTO_INCREMENT cho bảng `table_size`
 --
 ALTER TABLE `table_size`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `table_static`
+-- AUTO_INCREMENT cho bảng `table_static`
 --
 ALTER TABLE `table_static`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `table_tags`
+-- AUTO_INCREMENT cho bảng `table_tags`
 --
 ALTER TABLE `table_tags`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `table_user`
+-- AUTO_INCREMENT cho bảng `table_user`
 --
 ALTER TABLE `table_user`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142;
 
 --
--- AUTO_INCREMENT for table `table_user_limit`
+-- AUTO_INCREMENT cho bảng `table_user_limit`
 --
 ALTER TABLE `table_user_limit`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `table_user_log`
+-- AUTO_INCREMENT cho bảng `table_user_log`
 --
 ALTER TABLE `table_user_log`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=154;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=176;
 
 --
--- AUTO_INCREMENT for table `table_ward`
+-- AUTO_INCREMENT cho bảng `table_ward`
 --
 ALTER TABLE `table_ward`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11667;
