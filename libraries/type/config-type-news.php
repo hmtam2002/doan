@@ -164,7 +164,7 @@ $config['news'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif';
 
 /* Dịch vụ */
 $nametype = "dich-vu";
-$config['news'][$nametype]['title_main'] = "Dịch Vụ In";
+$config['news'][$nametype]['title_main'] = "Dịch Vụ";
 $config['news'][$nametype]['dropdown'] = true;
 $config['news'][$nametype]['list'] = true;
 $config['news'][$nametype]['cat'] = true;
