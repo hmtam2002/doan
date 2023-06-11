@@ -7,8 +7,8 @@
     $config['static'][$nametype]['images1'] = true;
     $config['static'][$nametype]['file'] = false;
     $config['static'][$nametype]['name'] = true;
-    $config['static'][$nametype]['desc'] = false;
-    $config['static'][$nametype]['desc_cke'] = false;
+    $config['static'][$nametype]['desc'] = true;
+    $config['static'][$nametype]['desc_cke'] = true;
     $config['static'][$nametype]['content'] = true;
     $config['static'][$nametype]['content_cke'] = true;
     $config['static'][$nametype]['seo'] = true;

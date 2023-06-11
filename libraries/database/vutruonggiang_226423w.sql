@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: localhost
--- Thời gian đã tạo: Th5 22, 2023 lúc 08:46 AM
+-- Thời gian đã tạo: Th5 26, 2023 lúc 04:57 PM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 7.4.28
 
@@ -3980,7 +3980,11 @@ INSERT INTO `table_counter` (`id`, `tm`, `ip`) VALUES
 (10525, 1684677995, '::1'),
 (10526, 1684716627, '::1'),
 (10527, 1684717636, '::1'),
-(10528, 1684737964, '::1');
+(10528, 1684737964, '::1'),
+(10529, 1684821886, '::1'),
+(10530, 1685106441, '::1'),
+(10531, 1685111575, '::1'),
+(10532, 1685112645, '::1');
 
 -- --------------------------------------------------------
 
@@ -4816,16 +4820,7 @@ INSERT INTO `table_gallery` (`id`, `id_parent`, `photo`, `hash`, `nameen`, `name
 (100, 58, '1-5-4418.jpeg', '', '', '', 0, '', '', 4, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684584229, 0),
 (101, 58, '1-6-7040.jpeg', '', '', '', 0, '', '', 5, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684584229, 0),
 (102, 58, '1-7-2333.jpeg', '', '', '', 0, '', '', 6, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684584229, 0),
-(103, 58, '1-78-4863.jpeg', '', '', '', 0, '', '', 7, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684584229, 0),
-(104, 0, '1-1-2694-4500.jpeg', 'aVU8dwXREk', '', '', 0, '', '', 1, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684592450, 0),
-(105, 0, '1-1-2308.jpeg', 'aVU8dwXREk', '', '', 0, '', '', 2, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684592450, 0),
-(106, 0, '1-2-6342.jpeg', 'aVU8dwXREk', '', '', 0, '', '', 3, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684592450, 0),
-(107, 0, '1-3-3682.jpeg', 'aVU8dwXREk', '', '', 0, '', '', 4, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684592450, 0),
-(108, 0, '1-4-1762.jpeg', 'aVU8dwXREk', '', '', 0, '', '', 5, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684592450, 0),
-(109, 0, '1-5-5761.jpeg', 'aVU8dwXREk', '', '', 0, '', '', 6, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684592450, 0),
-(110, 0, '1-6-3309.jpeg', 'aVU8dwXREk', '', '', 0, '', '', 7, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684592450, 0),
-(111, 0, '1-7-2307.jpeg', 'aVU8dwXREk', '', '', 0, '', '', 8, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684592450, 0),
-(112, 0, '1-78-4933.jpeg', 'aVU8dwXREk', '', '', 0, '', '', 9, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684592450, 0);
+(103, 58, '1-78-4863.jpeg', '', '', '', 0, '', '', 7, 'san-pham', 'product', 'man', 'san-pham', 'hienthi', 1684584229, 0);
 
 -- --------------------------------------------------------
 
@@ -5271,16 +5266,6 @@ CREATE TABLE `table_order` (
   `numb` int(11) DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Đang đổ dữ liệu cho bảng `table_order`
---
-
-INSERT INTO `table_order` (`id`, `id_user`, `code`, `fullname`, `phone`, `address`, `email`, `order_payment`, `temp_price`, `total_price`, `city`, `district`, `ward`, `ship_price`, `requirements`, `notes`, `date_created`, `order_status`, `numb`) VALUES
-(34, 0, 'TQJDLK', 'rdhh', '0764735759', 'gege, Phường Bình Thọ, Thành Phố Thủ Đức, Hồ Chí Minh', 'sgegs@gmail.com', 9, 445000, 445000, 62, 665, 11331, 0, 'ê', '', 1684588607, 1, 1),
-(35, 0, 'ZIAERX', 'Huỳnh Minh Tâm', '0764735759', 'dfhgdhgr, Phường Hiệp Bình Chánh, Thành Phố Thủ Đức, Hồ Chí Minh', 'huynhminhtamm2002@gmail.com', 10, 890000, 890000, 62, 665, 11335, 0, '', '', 1684590008, 1, 1),
-(36, 0, 'WQWHPT', 'Huỳnh Minh Tâm', '0764735759', 'dfhgdhgr, Phường Hiệp Bình Chánh, Thành Phố Thủ Đức, Hồ Chí Minh', 'huynhminhtamm2002@gmail.com', 10, 890000, 890000, 62, 665, 11335, 0, '', '', 1684590119, 2, 1),
-(37, 0, 'U3WWHM', 'Tâm', '0764735759', '24 đường Đua, Phường Thủ Thiêm, Thành Phố Thủ Đức, Hồ Chí Minh', 'huynhminhtamm2002@gmail.com', 10, 1335000, 1335000, 62, 665, 11326, 0, '', '', 1684590211, 2, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -5300,16 +5285,6 @@ CREATE TABLE `table_order_detail` (
   `sale_price` double DEFAULT 0,
   `quantity` int(11) DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `table_order_detail`
---
-
-INSERT INTO `table_order_detail` (`id`, `id_order`, `id_product`, `photo`, `name`, `code`, `color`, `size`, `regular_price`, `sale_price`, `quantity`) VALUES
-(58, 34, 53, '21-5704.jpeg', 'ÁO LỤA PHỐI NƠ SAU', 'TQJDLK', '', '', 890000, 445000, 1),
-(59, 35, 53, '21-5704.jpeg', 'ÁO LỤA PHỐI NƠ SAU', 'ZIAERX', '', '', 890000, 445000, 2),
-(60, 36, 53, '21-5704.jpeg', 'ÁO LỤA PHỐI NƠ SAU', 'WQWHPT', '', '', 890000, 445000, 2),
-(61, 37, 53, '21-5704.jpeg', 'ÁO LỤA PHỐI NƠ SAU', 'U3WWHM', '', '', 890000, 445000, 3);
 
 -- --------------------------------------------------------
 
@@ -5599,8 +5574,8 @@ INSERT INTO `table_photo` (`id`, `photo`, `contenten`, `contentvi`, `descen`, `d
 (3, 'anh-chup-man-hinh-2023-04-22-luc-134927-4466.png', '', '', '', '', '', '', '', '', '{\"p\":\"anh-chup-man-hinh-2023-04-22-luc-134927-4466.png\",\"w\":1096,\"h\":618,\"m\":\"image\\/png\"}', 'logo', 'photo_static', 0, 'hienthi', 1609237751, 1682146177),
 (4, 'anh-chup-man-hinh-2023-04-22-luc-134855-6363.png', '', '', '', '', '', '', '', '', '', 'favicon', 'photo_static', 0, 'hienthi', 1609237759, 1682146146),
 (5, 'popup-4515-4540.jpg', '', '', '', '', 'Sneaker Shoes EN', 'Sneaker Shoes VI', 'https://www.google.com/', '', '', 'popup', 'photo_static', 0, '', 1609237771, 1650266298),
-(47, '6dd2c9ca58fccb39ba1f634b2be729d9-14250.jpeg', '', '', '', '', '', '', '', '', '', 'slide', 'photo_multi', 1, 'hienthi', 1681260331, 0),
-(48, '55836306652720d955e42831d0577809-41901.jpeg', '', '', '', '', '', '', '', '', '', 'slide', 'photo_multi', 1, 'hienthi', 1681260331, 0),
+(47, '6dd2c9ca58fccb39ba1f634b2be729d9-14250.jpeg', '', '', '', '', '', '', '', '', '', 'slide', 'photo_multi', 1, '', 1681260331, 0),
+(48, '55836306652720d955e42831d0577809-41901.jpeg', '', '', '', '', '', '', '', '', '', 'slide', 'photo_multi', 1, '', 1681260331, 0),
 (49, 'logodoan-1110.png', '', '', '', '', '', '', '', '', '', 'anh-dich-vu', 'photo_static', 0, 'hienthi', 1681725290, 1682148427),
 (50, 'anh-chup-man-hinh-2023-04-22-luc-144000-5812.png', '', '', '', '', '', '', '', '', '', 'QR', 'photo_static', 0, 'hienthi', 1681725302, 1682149224),
 (8, 'anh-chup-man-hinh-2023-04-17-luc-165749-6475.png', '', '', '', '', '', '', 'https://www.facebook.com/CKC.confessions', '', '', 'social', 'photo_multi', 1, 'hienthi', 0, 1681725478),
@@ -5629,7 +5604,11 @@ INSERT INTO `table_photo` (`id`, `photo`, `contenten`, `contentvi`, `descen`, `d
 (45, 'quangcao-63650.jpg', '', '', '', '', '', 'quảng cáo 1', '', '', '', 'quang-cao', 'photo_multi', 1, 'hienthi', 1653470941, 0),
 (46, 'quangcao2-45681.jpg', '', '', '', '', '', 'quảng cáo 2', '', '', '', 'quang-cao', 'photo_multi', 2, 'hienthi', 1653470941, 0),
 (55, 'anh-chup-man-hinh-2023-04-22-luc-143007-47170.png', '', '', '', '', '', 'Nina', 'https://nina.vn', '', '', 'doi-tac', 'photo_multi', 1, 'hienthi', 1682148630, 1682148637),
-(56, 'logo-49960.png', '', '', '', '', '', 'ivymoda', 'https://ivymoda.com/', '', '', 'doi-tac', 'photo_multi', 1, 'hienthi', 1682148740, 0);
+(56, 'logo-49960.png', '', '', '', '', '', 'ivymoda', 'https://ivymoda.com/', '', '', 'doi-tac', 'photo_multi', 1, 'hienthi', 1682148740, 0),
+(57, '35cbc7f406f32b21a8ceee16f41ab9bd-57530.gif', '', '', '', '', '', '', '', '', '', 'slide', 'photo_multi', 1, 'hienthi', 1685112614, 0),
+(58, '48f8af049963314d644d4b858aa9d222-61071.png', '', '', '', '', '', '', '', '', '', 'slide', 'photo_multi', 1, 'hienthi', 1685112615, 0),
+(59, '9572a429f14f1b76d6e0c94bbd129837-16540.jpg', '', '', '', '', '', '', '', '', '', 'slide', 'photo_multi', 1, 'hienthi', 1685112633, 0),
+(60, 'f29737db73f904570c725277be4e7765-28021.png', '', '', '', '', '', '', '', '', '', 'slide', 'photo_multi', 1, 'hienthi', 1685112633, 0);
 
 -- --------------------------------------------------------
 
@@ -5671,7 +5650,7 @@ CREATE TABLE `table_product` (
 --
 
 INSERT INTO `table_product` (`id`, `id_list`, `id_item`, `id_cat`, `id_sub`, `id_brand`, `photo`, `options`, `slugvi`, `slugen`, `contenten`, `contentvi`, `descen`, `descvi`, `nameen`, `namevi`, `code`, `regular_price`, `discount`, `sale_price`, `numb`, `status`, `type`, `date_created`, `date_updated`, `view`) VALUES
-(53, 3, 0, 4, 0, 8, '21-5704.jpeg', '{\"p\":\"21-5704.jpeg\",\"w\":1400,\"h\":2100,\"m\":\"image\\/jpeg\"}', 'ao-lua-phoi-no-sau', '', '', '&lt;p&gt;Áo được làm từ chất liệu lụa mềm, dáng suông. Dáng tay ngắn và cao, cổ phối nơ thắt đằng sau. Phía trước có những đường xếp ly bản lớn. Hai bên vai áo và phía sau phối xếp ly bản nhỏ.&lt;/p&gt;\r\n\r\n&lt;p&gt;Thiết kế nàng mang đến phong cách dịu dáng và thanh lịch cho những cô nàng yêu thích sự nữ tính. Chất liệu lụa mềm mại mang đến sức hút từ sự sang trọng. Vải mềm có độ bay tự nhiên cùng dáng suông thẳng giúp mỗi chuyển động của nàng đều tràn đầy thi vị.&lt;/p&gt;\r\n\r\n&lt;p&gt;Nàng có thể phối chiếc áo này với chân váy chữ A hoặc sơ vin cùng quần cạp cao đều rất đẹp.&lt;/p&gt;\r\n\r\n&lt;p&gt;Màu sắc: Trắng - Nude - Gold - Xanh Lime&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Mẫu mặc size S:&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Chiều cao:&lt;/strong&gt; 1m69&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Cân nặng:&lt;/strong&gt; 48kg&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Số đo:&lt;/strong&gt; 80-60-90cm&lt;/p&gt;\r\n\r\n&lt;table width=&quot;70%&quot;&gt;\r\n	&lt;tbody&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Dòng sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Ladies&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Nhóm sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Áo&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Cổ áo&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Cổ cách điệu&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n	&lt;/tbody&gt;\r\n&lt;/table&gt;\r\n\r\n&lt;p&gt; &lt;/p&gt;\r\n\r\n&lt;p&gt;Chi tiết bảo quản sản phẩm : &lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;* Các sản phẩm thuộc dòng cao cấp (Senora) và áo khoác (dạ, tweed, lông, phao) chỉ giặt khô, tuyệt đối không giặt ướt.&lt;/strong&gt;&lt;/p&gt;\r\n', '', 'SKU: 15M7434', '', 'ÁO LỤA PHỐI NƠ SAU', '', 890000, 50, 445000, 0, 'noibat,hienthi', 'san-pham', 1684582390, 1684582780, 4),
+(53, 3, 0, 4, 0, 8, '21-5704.jpeg', '{\"p\":\"21-5704.jpeg\",\"w\":1400,\"h\":2100,\"m\":\"image\\/jpeg\"}', 'ao-lua-phoi-no-sau', '', '', '&lt;p&gt;Áo được làm từ chất liệu lụa mềm, dáng suông. Dáng tay ngắn và cao, cổ phối nơ thắt đằng sau. Phía trước có những đường xếp ly bản lớn. Hai bên vai áo và phía sau phối xếp ly bản nhỏ.&lt;/p&gt;\r\n\r\n&lt;p&gt;Thiết kế nàng mang đến phong cách dịu dáng và thanh lịch cho những cô nàng yêu thích sự nữ tính. Chất liệu lụa mềm mại mang đến sức hút từ sự sang trọng. Vải mềm có độ bay tự nhiên cùng dáng suông thẳng giúp mỗi chuyển động của nàng đều tràn đầy thi vị.&lt;/p&gt;\r\n\r\n&lt;p&gt;Nàng có thể phối chiếc áo này với chân váy chữ A hoặc sơ vin cùng quần cạp cao đều rất đẹp.&lt;/p&gt;\r\n\r\n&lt;p&gt;Màu sắc: Trắng - Nude - Gold - Xanh Lime&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Mẫu mặc size S:&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Chiều cao:&lt;/strong&gt; 1m69&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Cân nặng:&lt;/strong&gt; 48kg&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Số đo:&lt;/strong&gt; 80-60-90cm&lt;/p&gt;\r\n\r\n&lt;table width=&quot;70%&quot;&gt;\r\n	&lt;tbody&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Dòng sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Ladies&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Nhóm sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Áo&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Cổ áo&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Cổ cách điệu&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n	&lt;/tbody&gt;\r\n&lt;/table&gt;\r\n\r\n&lt;p&gt; &lt;/p&gt;\r\n\r\n&lt;p&gt;Chi tiết bảo quản sản phẩm : &lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;* Các sản phẩm thuộc dòng cao cấp (Senora) và áo khoác (dạ, tweed, lông, phao) chỉ giặt khô, tuyệt đối không giặt ướt.&lt;/strong&gt;&lt;/p&gt;\r\n', '', 'SKU: 15M7434', '', 'ÁO LỤA PHỐI NƠ SAU', '', 890000, 50, 445000, 0, 'noibat,hienthi', 'san-pham', 1684582390, 1684582780, 5),
 (39, 0, 0, 0, 0, 0, 'h1-7115.jpg', '{\"p\":\"h1-7115.jpg\",\"w\":907,\"h\":605,\"m\":\"image\\/jpeg\"}', 'tieu-de-album', 'tieu-de-album-en', '', '', '', '', 'tiêu đề album en', 'tiêu đề album', '', 0, 0, 0, 1, 'hienthi', 'thu-vien-anh', 1675393681, 0, 14),
 (40, 0, 0, 0, 0, 0, '', '', 'tieu-de-album-1', '', '', '', '', '', '', 'tiêu đề album (1)', '', 0, 0, 0, 2, 'hienthi', 'thu-vien-anh', 1675393749, 0, 0),
 (41, 0, 0, 0, 0, 0, '', '', 'tieu-de-album-1-1', '', '', '', '', '', '', 'tiêu đề album (1) (1)', '', 0, 0, 0, 3, 'hienthi', 'thu-vien-anh', 1675393752, 0, 0),
@@ -5681,7 +5660,7 @@ INSERT INTO `table_product` (`id`, `id_list`, `id_item`, `id_cat`, `id_sub`, `id
 (55, 3, 0, 5, 0, 8, '11-8721.jpeg', '', 'ao-len-ngan-tay-phoi-ke-ngang', '', '', '&lt;p&gt;Áo len ngắn tay được thiết kế với chất liệu len chọn lọc cao cấp, tạo nên hình ảnh mềm mại và sang trọng. Điểm nhấn nằm ở họa tiết kẻ ngang đầy ấn tượng trên nền màu áo đổi lập. Sự kết hợp tinh tế giúp tôn lên vẻ đẹp tối giản và tạo nên sự khác biệt trong thiết kế.&lt;/p&gt;\r\n\r\n&lt;p&gt;Nhờ sự thoải mái và dễ chịu mà chất liệu len cùng kiểu dáng basic của sản phẩm mang lại, chiếc áo sẽ là lựa chọn hoàn hảo cho những buổi đi chơi, dạo phố hay hẹn hò cùng bạn bè, gia đình. Thiết kế đa năng này còn có thể kết hợp với quần suông, baggy hoặc chân váy để tạo nên nhiều phong cách thời trang khác nhau.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Thông tin mẫu:&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Chiều cao: &lt;/strong&gt;167 cm&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Cân nặng: &lt;/strong&gt;50 kg&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Số đo 3 vòng: &lt;/strong&gt;83-65-93 cm&lt;/p&gt;\r\n\r\n&lt;p&gt;Mẫu mặc size M&lt;/p&gt;\r\n\r\n&lt;p&gt;Lưu ý: Màu sắc sản phẩm thực tế sẽ có sự chênh lệch nhỏ so với ảnh do điều kiện ánh sáng khi chụp và màu sắc hiển thị qua màn hình máy tính/ điện thoại.&lt;/p&gt;\r\n\r\n&lt;table width=&quot;70%&quot;&gt;\r\n	&lt;tbody&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Dòng sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Ladies&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Nhóm sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Áo&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Cổ áo&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Cổ tròn&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Tay áo&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Tay ngắn&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Kiểu dáng&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Ôm&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Độ dài&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Dài thường&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Họa tiết&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Kẻ&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Chất liệu&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Len&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n	&lt;/tbody&gt;\r\n&lt;/table&gt;\r\n\r\n&lt;p&gt; &lt;/p&gt;\r\n\r\n&lt;p&gt;Chi tiết bảo quản sản phẩm : &lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;* Các sản phẩm thuộc dòng cao cấp (Senora) và áo khoác (dạ, tweed, lông, phao) chỉ giặt khô, tuyệt đối không giặt ướt.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải dệt kim: sau khi giặt sản phẩm phải được phơi ngang tránh bai dãn.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải voan, lụa, chiffon nên giặt bằng tay.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải thô, tuytsi, kaki không có phối hay trang trí đá cườm thì có thể giặt máy.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải thô, tuytsi, kaki có phối màu tường phản hay trang trí voan, lụa, đá cườm thì cần giặt tay.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Đồ Jeans nên hạn chế giặt bằng máy giặt vì sẽ làm phai màu jeans. Nếu giặt thì nên lộn trái sản phẩm khi giặt, đóng khuy, kéo khóa, không nên giặt chung cùng đồ sáng màu, tránh dính màu vào các sản phẩm khác. &lt;/p&gt;\r\n\r\n&lt;p&gt;* Các sản phẩm cần được giặt ngay không ngâm tránh bị loang màu, phân biệt màu và loại vải để tránh trường hợp vải phai. Không nên giặt sản phẩm với xà phòng có chất tẩy mạnh, nên giặt cùng xà phòng pha loãng.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Các sản phẩm có thể giặt bằng máy thì chỉ nên để chế độ giặt nhẹ, vắt mức trung bình và nên phân các loại sản phẩm cùng màu và cùng loại vải khi giặt.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Nên phơi sản phẩm tại chỗ thoáng mát, tránh ánh nắng trực tiếp sẽ dễ bị phai bạc màu, nên làm khô quần áo bằng cách phơi ở những điểm gió sẽ giữ màu vải tốt hơn.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Những chất vải 100% cotton, không nên phơi sản phẩm bằng mắc áo mà nên vắt ngang sản phẩm lên dây phơi để tránh tình trạng rạn vải.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Khi ủi sản phẩm bằng bàn là và sử dụng chế độ hơi nước sẽ làm cho sản phẩm dễ ủi phẳng, mát và không bị cháy, giữ màu sản phẩm được đẹp và bền lâu hơn. Nhiệt độ của bàn là tùy theo từng loại vải. &lt;/p&gt;\r\n', '', 'SKU: 57M7846', '', 'ÁO LEN NGẮN TAY PHỐI KẺ NGANG', '', 1100000, 1, 1090000, 1, 'noibat,hienthi', 'san-pham', 1684583604, 0, 0),
 (56, 3, 0, 5, 0, 8, '21-5445.jpeg', '', 'ao-thun-theu-hoa-tiet', '', '', '&lt;p&gt;Áo thun cổ tròn dáng slim fit. Chất liệu vải thun mềm mịn, thoáng mát. Họa tiết thêu lạ mắt, nổi bật trên nền màu tươi sáng giúp item này thu hút hơn bao giờ hết. Phối cùng jeans hay chân váy là nàng đã có 1 set đồ đi chơi trẻ trung, năng động!&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Thông tin mẫu:&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Chiều cao: &lt;/strong&gt;167 cm&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Cân nặng: &lt;/strong&gt;50 kg&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Số đo 3 vòng: &lt;/strong&gt;83-65-93 cm&lt;/p&gt;\r\n\r\n&lt;p&gt;Mẫu mặc size M&lt;/p&gt;\r\n\r\n&lt;p&gt;Lưu ý: Màu sắc sản phẩm thực tế sẽ có sự chênh lệch nhỏ so với ảnh do điều kiện ánh sáng khi chụp và màu sắc hiển thị qua màn hình máy tính/ điện thoại.&lt;/p&gt;\r\n\r\n&lt;table width=&quot;70%&quot;&gt;\r\n	&lt;tbody&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Dòng sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Ladies&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Nhóm sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Áo&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Cổ áo&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Cổ tròn&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Tay áo&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Tay ngắn&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Kiểu dáng&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Suông&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Độ dài&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Dài thường&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Họa tiết&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Trơn&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Chất liệu&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Thun&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n	&lt;/tbody&gt;\r\n&lt;/table&gt;\r\n\r\n&lt;p&gt; &lt;/p&gt;\r\n\r\n&lt;p&gt;Chi tiết bảo quản sản phẩm : &lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;* Các sản phẩm thuộc dòng cao cấp (Senora) và áo khoác (dạ, tweed, lông, phao) chỉ giặt khô, tuyệt đối không giặt ướt.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải dệt kim: sau khi giặt sản phẩm phải được phơi ngang tránh bai dãn.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải voan, lụa, chiffon nên giặt bằng tay.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải thô, tuytsi, kaki không có phối hay trang trí đá cườm thì có thể giặt máy.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải thô, tuytsi, kaki có phối màu tường phản hay trang trí voan, lụa, đá cườm thì cần giặt tay.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Đồ Jeans nên hạn chế giặt bằng máy giặt vì sẽ làm phai màu jeans. Nếu giặt thì nên lộn trái sản phẩm khi giặt, đóng khuy, kéo khóa, không nên giặt chung cùng đồ sáng màu, tránh dính màu vào các sản phẩm khác. &lt;/p&gt;\r\n\r\n&lt;p&gt;* Các sản phẩm cần được giặt ngay không ngâm tránh bị loang màu, phân biệt màu và loại vải để tránh trường hợp vải phai. Không nên giặt sản phẩm với xà phòng có chất tẩy mạnh, nên giặt cùng xà phòng pha loãng.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Các sản phẩm có thể giặt bằng máy thì chỉ nên để chế độ giặt nhẹ, vắt mức trung bình và nên phân các loại sản phẩm cùng màu và cùng loại vải khi giặt.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Nên phơi sản phẩm tại chỗ thoáng mát, tránh ánh nắng trực tiếp sẽ dễ bị phai bạc màu, nên làm khô quần áo bằng cách phơi ở những điểm gió sẽ giữ màu vải tốt hơn.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Những chất vải 100% cotton, không nên phơi sản phẩm bằng mắc áo mà nên vắt ngang sản phẩm lên dây phơi để tránh tình trạng rạn vải.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Khi ủi sản phẩm bằng bàn là và sử dụng chế độ hơi nước sẽ làm cho sản phẩm dễ ủi phẳng, mát và không bị cháy, giữ màu sản phẩm được đẹp và bền lâu hơn. Nhiệt độ của bàn là tùy theo từng loại vải. &lt;/p&gt;\r\n', '', 'SKU: 57M7762', '', 'ÁO THUN THÊU HỌA TIẾT', '', 600000, 2, 590000, 2, 'hienthi,noibat', 'san-pham', 1684583623, 1684583784, 0),
 (57, 3, 0, 5, 0, 8, '31-3901.jpeg', '', 'ao-thun-cest-pouvoir', '', '', '&lt;p&gt;Áo thun cổ tròn dáng slim fit. Chất liệu vải thun mềm mịn, thoáng mát. Họa tiết thêu lạ mắt, nổi bật trên nền màu tươi sáng giúp item này thu hút hơn bao giờ hết. Phối cùng jeans hay chân váy là nàng đã có 1 set đồ đi chơi trẻ trung, năng động!&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Thông tin mẫu:&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Chiều cao: &lt;/strong&gt;167 cm&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Cân nặng: &lt;/strong&gt;50 kg&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Số đo 3 vòng: &lt;/strong&gt;83-65-93 cm&lt;/p&gt;\r\n\r\n&lt;p&gt;Mẫu mặc size M&lt;/p&gt;\r\n\r\n&lt;p&gt;Lưu ý: Màu sắc sản phẩm thực tế sẽ có sự chênh lệch nhỏ so với ảnh do điều kiện ánh sáng khi chụp và màu sắc hiển thị qua màn hình máy tính/ điện thoại.&lt;/p&gt;\r\n\r\n&lt;table width=&quot;70%&quot;&gt;\r\n	&lt;tbody&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Dòng sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Ladies&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Nhóm sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Áo&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Cổ áo&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Cổ tròn&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Tay áo&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Tay ngắn&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Kiểu dáng&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Suông&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Độ dài&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Dài thường&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Họa tiết&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Trơn&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Chất liệu&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Thun&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n	&lt;/tbody&gt;\r\n&lt;/table&gt;\r\n\r\n&lt;p&gt; &lt;/p&gt;\r\n\r\n&lt;p&gt;Chi tiết bảo quản sản phẩm : &lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;* Các sản phẩm thuộc dòng cao cấp (Senora) và áo khoác (dạ, tweed, lông, phao) chỉ giặt khô, tuyệt đối không giặt ướt.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải dệt kim: sau khi giặt sản phẩm phải được phơi ngang tránh bai dãn.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải voan, lụa, chiffon nên giặt bằng tay.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải thô, tuytsi, kaki không có phối hay trang trí đá cườm thì có thể giặt máy.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải thô, tuytsi, kaki có phối màu tường phản hay trang trí voan, lụa, đá cườm thì cần giặt tay.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Đồ Jeans nên hạn chế giặt bằng máy giặt vì sẽ làm phai màu jeans. Nếu giặt thì nên lộn trái sản phẩm khi giặt, đóng khuy, kéo khóa, không nên giặt chung cùng đồ sáng màu, tránh dính màu vào các sản phẩm khác. &lt;/p&gt;\r\n\r\n&lt;p&gt;* Các sản phẩm cần được giặt ngay không ngâm tránh bị loang màu, phân biệt màu và loại vải để tránh trường hợp vải phai. Không nên giặt sản phẩm với xà phòng có chất tẩy mạnh, nên giặt cùng xà phòng pha loãng.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Các sản phẩm có thể giặt bằng máy thì chỉ nên để chế độ giặt nhẹ, vắt mức trung bình và nên phân các loại sản phẩm cùng màu và cùng loại vải khi giặt.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Nên phơi sản phẩm tại chỗ thoáng mát, tránh ánh nắng trực tiếp sẽ dễ bị phai bạc màu, nên làm khô quần áo bằng cách phơi ở những điểm gió sẽ giữ màu vải tốt hơn.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Những chất vải 100% cotton, không nên phơi sản phẩm bằng mắc áo mà nên vắt ngang sản phẩm lên dây phơi để tránh tình trạng rạn vải.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Khi ủi sản phẩm bằng bàn là và sử dụng chế độ hơi nước sẽ làm cho sản phẩm dễ ủi phẳng, mát và không bị cháy, giữ màu sản phẩm được đẹp và bền lâu hơn. Nhiệt độ của bàn là tùy theo từng loại vải. &lt;/p&gt;\r\n', '', 'SKU: 57M7608', '', 'ÁO THUN C\'EST POUVOIR', '', 600000, 2, 590000, 3, 'hienthi,noibat', 'san-pham', 1684583791, 1684583918, 0),
-(58, 3, 0, 6, 0, 8, '1-1-2694.jpeg', '', 'ao-2-day-dang-xoe', '', '', '&lt;p&gt;- Áo 2 dây 1 lớp dáng xòe rộng, độ dài qua mông.&lt;/p&gt;\r\n\r\n&lt;p&gt;- Phần ngực may quây phối đỉa, phía sau có chun co giãn.&lt;/p&gt;\r\n\r\n&lt;p&gt;- Chất liệu vải thô mềm mát, nhăn nhẹ.&lt;/p&gt;\r\n\r\n&lt;p&gt;- Áo có đai cùng màu đi kèm.&lt;/p&gt;\r\n\r\n&lt;p&gt;- Mix cùng quần sooc ngắn, phù hợp đi dạo phố, du lịch.&lt;/p&gt;\r\n\r\n&lt;p&gt;Lưu ý: Màu sắc sản phẩm thực tế sẽ có sự chênh lệch nhỏ so với ảnh do điều kiện ánh sáng khi chụp và màu sắc hiển thị qua mản hình máy tính/ điện thoại.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Thông tin mẫu:&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Chiều cao:&lt;/strong&gt; 168 cm&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Cân nặng:&lt;/strong&gt; 50 kg&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Số đo 3 vòng:&lt;/strong&gt;80-62-95 cm&lt;/p&gt;\r\n\r\n&lt;p&gt;Mẫu mặc size S&lt;/p&gt;\r\n\r\n&lt;table width=&quot;70%&quot;&gt;\r\n	&lt;tbody&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Dòng sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;You&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Nhóm sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Áo&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Cổ áo&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Cổ khác&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Tay áo&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;2dây&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Kiểu dáng&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Xòe&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Độ dài&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Dài thường&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Họa tiết&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Trơn&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Chất liệu&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Thô&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n	&lt;/tbody&gt;\r\n&lt;/table&gt;\r\n\r\n&lt;p&gt; &lt;/p&gt;\r\n\r\n&lt;p&gt;Chi tiết bảo quản sản phẩm : &lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;* Các sản phẩm thuộc dòng cao cấp (Senora) và áo khoác (dạ, tweed, lông, phao) chỉ giặt khô, tuyệt đối không giặt ướt.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải dệt kim: sau khi giặt sản phẩm phải được phơi ngang tránh bai dãn.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải voan, lụa, chiffon nên giặt bằng tay.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải thô, tuytsi, kaki không có phối hay trang trí đá cườm thì có thể giặt máy.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải thô, tuytsi, kaki có phối màu tường phản hay trang trí voan, lụa, đá cườm thì cần giặt tay.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Đồ Jeans nên hạn chế giặt bằng máy giặt vì sẽ làm phai màu jeans. Nếu giặt thì nên lộn trái sản phẩm khi giặt, đóng khuy, kéo khóa, không nên giặt chung cùng đồ sáng màu, tránh dính màu vào các sản phẩm khác. &lt;/p&gt;\r\n\r\n&lt;p&gt;* Các sản phẩm cần được giặt ngay không ngâm tránh bị loang màu, phân biệt màu và loại vải để tránh trường hợp vải phai. Không nên giặt sản phẩm với xà phòng có chất tẩy mạnh, nên giặt cùng xà phòng pha loãng.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Các sản phẩm có thể giặt bằng máy thì chỉ nên để chế độ giặt nhẹ, vắt mức trung bình và nên phân các loại sản phẩm cùng màu và cùng loại vải khi giặt.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Nên phơi sản phẩm tại chỗ thoáng mát, tránh ánh nắng trực tiếp sẽ dễ bị phai bạc màu, nên làm khô quần áo bằng cách phơi ở những điểm gió sẽ giữ màu vải tốt hơn.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Những chất vải 100% cotton, không nên phơi sản phẩm bằng mắc áo mà nên vắt ngang sản phẩm lên dây phơi để tránh tình trạng rạn vải.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Khi ủi sản phẩm bằng bàn là và sử dụng chế độ hơi nước sẽ làm cho sản phẩm dễ ủi phẳng, mát và không bị cháy, giữ màu sản phẩm được đẹp và bền lâu hơn. Nhiệt độ của bàn là tùy theo từng loại vải. &lt;/p&gt;\r\n', '', 'SKU: 16B9407', '', 'ÁO 2 DÂY DÁNG XÒE', '', 600000, 1, 595000, 0, 'noibat,hienthi', 'san-pham', 1684584153, 1684584241, 0);
+(58, 3, 0, 6, 0, 8, '1-1-2694.jpeg', '{\"p\":\"1-1-2694.jpeg\",\"w\":1400,\"h\":2100,\"m\":\"image\\/jpeg\"}', 'ao-2-day-dang-xoe', '', '', '&lt;p&gt;- Áo 2 dây 1 lớp dáng xòe rộng, độ dài qua mông.&lt;/p&gt;\r\n\r\n&lt;p&gt;- Phần ngực may quây phối đỉa, phía sau có chun co giãn.&lt;/p&gt;\r\n\r\n&lt;p&gt;- Chất liệu vải thô mềm mát, nhăn nhẹ.&lt;/p&gt;\r\n\r\n&lt;p&gt;- Áo có đai cùng màu đi kèm.&lt;/p&gt;\r\n\r\n&lt;p&gt;- Mix cùng quần sooc ngắn, phù hợp đi dạo phố, du lịch.&lt;/p&gt;\r\n\r\n&lt;p&gt;Lưu ý: Màu sắc sản phẩm thực tế sẽ có sự chênh lệch nhỏ so với ảnh do điều kiện ánh sáng khi chụp và màu sắc hiển thị qua mản hình máy tính/ điện thoại.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Thông tin mẫu:&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Chiều cao:&lt;/strong&gt; 168 cm&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Cân nặng:&lt;/strong&gt; 50 kg&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Số đo 3 vòng:&lt;/strong&gt;80-62-95 cm&lt;/p&gt;\r\n\r\n&lt;p&gt;Mẫu mặc size S&lt;/p&gt;\r\n\r\n&lt;table width=&quot;70%&quot;&gt;\r\n	&lt;tbody&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Dòng sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;You&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Nhóm sản phẩm&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Áo&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Cổ áo&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Cổ khác&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Tay áo&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;2dây&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Kiểu dáng&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Xòe&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Độ dài&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Dài thường&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Họa tiết&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Trơn&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n		&lt;tr&gt;\r\n			&lt;td&gt;&lt;b&gt;Chất liệu&lt;/b&gt;&lt;/td&gt;\r\n			&lt;td&gt;Thô&lt;/td&gt;\r\n		&lt;/tr&gt;\r\n	&lt;/tbody&gt;\r\n&lt;/table&gt;\r\n\r\n&lt;p&gt; &lt;/p&gt;\r\n\r\n&lt;p&gt;Chi tiết bảo quản sản phẩm : &lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;* Các sản phẩm thuộc dòng cao cấp (Senora) và áo khoác (dạ, tweed, lông, phao) chỉ giặt khô, tuyệt đối không giặt ướt.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải dệt kim: sau khi giặt sản phẩm phải được phơi ngang tránh bai dãn.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải voan, lụa, chiffon nên giặt bằng tay.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải thô, tuytsi, kaki không có phối hay trang trí đá cườm thì có thể giặt máy.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Vải thô, tuytsi, kaki có phối màu tường phản hay trang trí voan, lụa, đá cườm thì cần giặt tay.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Đồ Jeans nên hạn chế giặt bằng máy giặt vì sẽ làm phai màu jeans. Nếu giặt thì nên lộn trái sản phẩm khi giặt, đóng khuy, kéo khóa, không nên giặt chung cùng đồ sáng màu, tránh dính màu vào các sản phẩm khác. &lt;/p&gt;\r\n\r\n&lt;p&gt;* Các sản phẩm cần được giặt ngay không ngâm tránh bị loang màu, phân biệt màu và loại vải để tránh trường hợp vải phai. Không nên giặt sản phẩm với xà phòng có chất tẩy mạnh, nên giặt cùng xà phòng pha loãng.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Các sản phẩm có thể giặt bằng máy thì chỉ nên để chế độ giặt nhẹ, vắt mức trung bình và nên phân các loại sản phẩm cùng màu và cùng loại vải khi giặt.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Nên phơi sản phẩm tại chỗ thoáng mát, tránh ánh nắng trực tiếp sẽ dễ bị phai bạc màu, nên làm khô quần áo bằng cách phơi ở những điểm gió sẽ giữ màu vải tốt hơn.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Những chất vải 100% cotton, không nên phơi sản phẩm bằng mắc áo mà nên vắt ngang sản phẩm lên dây phơi để tránh tình trạng rạn vải.&lt;/p&gt;\r\n\r\n&lt;p&gt;* Khi ủi sản phẩm bằng bàn là và sử dụng chế độ hơi nước sẽ làm cho sản phẩm dễ ủi phẳng, mát và không bị cháy, giữ màu sản phẩm được đẹp và bền lâu hơn. Nhiệt độ của bàn là tùy theo từng loại vải. &lt;/p&gt;\r\n', '', 'SKU: 16B9407', '', 'ÁO 2 DÂY DÁNG XÒE', '', 600000, 1, 595000, 0, 'noibat,hienthi', 'san-pham', 1684584153, 1684584241, 1);
 
 -- --------------------------------------------------------
 
@@ -5713,7 +5692,7 @@ CREATE TABLE `table_product_brand` (
 --
 
 INSERT INTO `table_product_brand` (`id`, `slugvi`, `slugen`, `contenten`, `contentvi`, `descen`, `descvi`, `nameen`, `namevi`, `photo`, `options`, `numb`, `status`, `type`, `date_created`, `date_updated`) VALUES
-(8, '', '', '', '', '', '', '', 'ivymoda', '', '', 1, '', 'san-pham', 1682150350, 0);
+(8, 'ivymoda', '', '', '', '', '', '', 'ivymoda', 'logo-1-8707.png', '', 1, 'hienthi,noibat', 'san-pham', 1682150350, 1685111195);
 
 -- --------------------------------------------------------
 
@@ -5987,7 +5966,8 @@ INSERT INTO `table_seo` (`id`, `id_parent`, `com`, `act`, `type`, `titlevi`, `ke
 (253, 55, 'product', 'man', 'san-pham', 'ÁO LEN NGẮN TAY PHỐI KẺ NGANG', 'ÁO LEN NGẮN TAY PHỐI KẺ NGANG', 'SKU: 57M7846', '', '', ''),
 (254, 56, 'product', 'man', 'san-pham', 'ÁO THUN THÊU HỌA TIẾT', 'ÁO THUN THÊU HỌA TIẾT', 'SKU: 57M7762', '', '', ''),
 (255, 57, 'product', 'man', 'san-pham', 'ÁO THUN C\'EST POUVOIR', 'ÁO THUN C\'EST POUVOIR', 'SKU: 57M7608', '', '', ''),
-(257, 58, 'product', 'man', 'san-pham', 'ÁO 2 DÂY DÁNG XÒE', 'ÁO 2 DÂY DÁNG XÒE', 'SKU: 16B9407', '', '', '');
+(257, 58, 'product', 'man', 'san-pham', 'ÁO 2 DÂY DÁNG XÒE', 'ÁO 2 DÂY DÁNG XÒE', 'SKU: 16B9407', '', '', ''),
+(258, 8, 'product', 'man_brand', 'san-pham', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -6176,7 +6156,7 @@ CREATE TABLE `table_user` (
 --
 
 INSERT INTO `table_user` (`id`, `id_permission`, `username`, `password`, `confirm_code`, `avatar`, `fullname`, `phone`, `email`, `address`, `gender`, `login_session`, `user_token`, `lastlogin`, `status`, `role`, `secret_key`, `birthday`, `numb`) VALUES
-(1, 0, 'admin', '6cc6484ae704b9cc4d730abe66dfc556', '', '', 'Administrator', '0939513667', 'admin@gmail.com', '222 huỳnh thị na', 1, '671324a3340835e15035ac6463594165', '2c382fe36bccb57614e1afe00dff1056', '1684593171', 'hienthi', 3, '671324a3340835e15035ac6463594165', 1608051600, 0);
+(1, 0, 'admin', '6cc6484ae704b9cc4d730abe66dfc556', '', '', 'Administrator', '0939513667', 'admin@gmail.com', '222 huỳnh thị na', 1, '671324a3340835e15035ac6463594165', 'f3c5a8db42cd975f1369ca0e1ec62ef8', '1685112635', 'hienthi', 3, '671324a3340835e15035ac6463594165', 1608051600, 0);
 
 -- --------------------------------------------------------
 
@@ -6392,7 +6372,10 @@ INSERT INTO `table_user_log` (`id`, `id_user`, `ip`, `timelog`, `user_agent`) VA
 (172, 1, '::1', 1684403745, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36'),
 (173, 1, '::1', 1684580439, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36'),
 (174, 1, '::1', 1684586001, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36'),
-(175, 1, '::1', 1684586227, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36');
+(175, 1, '::1', 1684586227, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36'),
+(176, 1, '::1', 1685106613, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36'),
+(177, 1, '::1', 1685111068, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36'),
+(178, 1, '::1', 1685111462, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36');
 
 -- --------------------------------------------------------
 
@@ -6411,7 +6394,7 @@ CREATE TABLE `table_user_online` (
 --
 
 INSERT INTO `table_user_online` (`session`, `time`, `ip`) VALUES
-('894a404d5c20bf17cecbbb47f8183605', 1684737964, '::1');
+('13423d7dbeb3b024767d1b270f1c7e0b', 1685112729, '::1');
 
 -- --------------------------------------------------------
 
@@ -17915,7 +17898,7 @@ ALTER TABLE `table_contact`
 -- AUTO_INCREMENT cho bảng `table_counter`
 --
 ALTER TABLE `table_counter`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10529;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10533;
 
 --
 -- AUTO_INCREMENT cho bảng `table_district`
@@ -18023,7 +18006,7 @@ ALTER TABLE `table_permission_group`
 -- AUTO_INCREMENT cho bảng `table_photo`
 --
 ALTER TABLE `table_photo`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT cho bảng `table_product`
@@ -18083,7 +18066,7 @@ ALTER TABLE `table_pushonesignal`
 -- AUTO_INCREMENT cho bảng `table_seo`
 --
 ALTER TABLE `table_seo`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=258;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=259;
 
 --
 -- AUTO_INCREMENT cho bảng `table_seopage`
@@ -18131,7 +18114,7 @@ ALTER TABLE `table_user_limit`
 -- AUTO_INCREMENT cho bảng `table_user_log`
 --
 ALTER TABLE `table_user_log`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=176;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=179;
 
 --
 -- AUTO_INCREMENT cho bảng `table_ward`

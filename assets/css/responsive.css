@@ -1,4 +1,5 @@
 @media (max-width: 992px) {
+  .gioithieu-top-res{display: block;}
   .content-text img {
     height: auto !important;
   }

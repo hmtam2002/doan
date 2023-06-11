@@ -3737,8 +3737,8 @@ h3.m-0.text-center a:hover {
   width: 69%;
 }
 .name-gioithieu {
-  font-size: 19px;
-  font-family: FuturaBook;
+  font-size: 40px;
+  font-family: 'bootstrap-icons';
   padding-bottom: 10px;
 }
 .desc-gioithieu {
@@ -3978,4 +3978,236 @@ img.time_03_03 {
 }
 .menu {
   position: relative;
+}
+
+/* hai hinh */
+
+.gtimg-box {height: 485px;position: relative;}
+.gtimg-box img {border: 7px solid #fff;}
+.gtimg-first {max-width: 395px;max-height: 440px;float: left;position: absolute;top: 0px;left: 0px;	-webkit-animation: runnow 10s infinite;-moz-animation: runnow 10s infinite;-ms-animation: runnow 10s infinite;-o-animation: runnow 10s infinite;animation: runnow 10s infinite;-webkit-transition: all 2s;
+-moz-transition: all 2s;-o-transition: all 2s;transition: all 2s;}
+.gtimg-last {max-width: 395px;max-height: 440px;-webkit-animation: run 10s infinite;	-moz-animation: run 10s infinite;-ms-animation: run 10s infinite;-o-animation: run 10s infinite;
+animation: run 10s infinite;-webkit-transition: all 2s;-moz-transition: all 2s;-o-transition: all 2s;
+transition: all 2s;position: absolute;left: 0;}
+@-moz-keyframes run {
+	0% {
+		top: 100px;
+		left: calc(100% - 395px);
+		z-index: 3;
+	}
+
+	25% {
+		top: 0px;
+		left: calc(100% - 395px);
+		z-index: 3;
+	}
+
+	50% {
+		top: 0px;
+		left: 0px;
+		z-index: 3;
+	}
+
+	75% {
+		top: 100px;
+		left: 0px;
+		z-index: 3;
+	}
+
+	100% {
+		top: 100px;
+		left: calc(100% - 395px);
+		z-index: 3;
+	}
+}
+
+@-webkit-keyframes run {
+	0% {
+		top: 100px;
+		left: calc(100% - 395px);
+		z-index: 3;
+	}
+
+	25% {
+		top: 0px;
+		left: calc(100% - 395px);
+		z-index: 3;
+	}
+
+	50% {
+		top: 0px;
+		left: 0px;
+		z-index: 3;
+	}
+
+	75% {
+		top: 100px;
+		left: 0px;
+		z-index: 3;
+	}
+
+	100% {
+		top: 100px;
+		left: calc(100% - 395px);
+		z-index: 3;
+	}
+}
+
+@-o-keyframes run {
+	0% {
+		top: 100px;
+		left: calc(100% - 395px);
+		z-index: 3;
+	}
+
+	25% {
+		top: 0px;
+		left: calc(100% - 395px);
+		z-index: 3;
+	}
+
+	50% {
+		top: 0px;
+		left: 0px;
+		z-index: 3;
+	}
+
+	75% {
+		top: 100px;
+		left: 0px;
+		z-index: 3;
+	}
+
+	100% {
+		top: 100px;
+		left: calc(100% - 395px);
+		z-index: 3;
+	}
+}
+
+@-moz-keyframes runnow {
+	0% {
+		top: 0px;
+		left: 0px;
+		z-index: 1;
+	}
+
+	25% {
+		top: 100px;
+		left: 0;
+		z-index: 1;
+	}
+
+	50% {
+		top: 100px;
+		left: calc(100% - 395px);
+		z-index: 1;
+	}
+
+	75% {
+		top: 0px;
+		left: calc(100% - 395px);
+		z-index: 1;
+	}
+
+	100% {
+		top: 0px;
+		left: 0;
+		z-index: 1;
+	}
+}
+
+@-webkit-keyframes runnow {
+	0% {
+		top: 0px;
+		left: 0px;
+		z-index: 1;
+	}
+
+	25% {
+		top: 100px;
+		left: 0;
+		z-index: 1;
+	}
+
+	50% {
+		top: 100px;
+		left: calc(100% - 395px);
+		z-index: 1;
+	}
+
+	75% {
+		top: 0px;
+		left: calc(100% - 395px);
+		z-index: 1;
+	}
+
+	100% {
+		top: 0px;
+		left: 0;
+		z-index: 1;
+	}
+}
+
+@-o-keyframes runnow {
+	0% {
+		top: 0px;
+		left: 0px;
+		z-index: 1;
+	}
+
+	25% {
+		top: 100px;
+		left: 0;
+		z-index: 1;
+	}
+
+	50% {
+		top: 100px;
+		left: calc(100% - 395px);
+		z-index: 1;
+	}
+
+	75% {
+		top: 0px;
+		left: calc(100% - 395px);
+		z-index: 1;
+	}
+
+	100% {
+		top: 0px;
+		left: 0;
+		z-index: 1;
+	}
+}
+.gioithieu-top-res{
+  display: none;
+}
+
+p.nhap {
+    margin-bottom: -10px;
+    font-size: 20px;
+    font-family: 'BachDang';
+}
+
+.gioithieu-xemthem {
+    margin-top: 30px;
+}
+
+.iframe_chinhanh iframe {
+    width: 100%;
+    height: 500px;
+}
+
+.block-chi-nhanh {
+    position: relative;
+}
+
+.block-toa-do {
+    position: absolute;
+    background: #fff;
+    left: 30px;
+    top: 15px;
+    border-radius: 20px;
+    padding: 10px 20px;
 }

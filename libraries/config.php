@@ -23,7 +23,7 @@
 			'host' => 'localhost',
 			'username' => 'root',
 			'password' => '',
-			'dbname' => 'vutruonggiang_226423w',
+			'dbname' => 'doan',
 			'port' => 3306,
 			'prefix' => 'table_',
 			'charset' => 'utf8mb4'

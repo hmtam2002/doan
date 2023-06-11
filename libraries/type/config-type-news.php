@@ -17,38 +17,6 @@ $config['news'][$nametype]['check'] = array("noibat" => "Nổi bật", "hienthi"
 $config['news'][$nametype]['images'] = true;
 $config['news'][$nametype]['show_images'] = true;
 $config['news'][$nametype]['images2'] = false;
-// $config['news'][$nametype]['gallery'] = array(
-//     $nametype => array(
-//         "title_main_photo" => "Hình ảnh Tin tức",
-//         "title_sub_photo" => "Hình ảnh",
-//         "check_photo" => array("hienthi" => "Hiển thị"),
-//         "number_photo" => 3,
-//         "images_photo" => true,
-//         "avatar_photo" => true,
-//         "name_photo" => true,
-//         "width_photo" => 540,
-//         "height_photo" => 540,
-//         "thumb_photo" => '100x100x1',
-//         "img_type_photo" => '.jpg|.gif|.png|.jpeg|.gif'
-//     ),
-//     "video" => array(
-//         "title_main_photo" => "Video Tin tức",
-//         "title_sub_photo" => "Video",
-//         "check_photo" => array("hienthi" => "Hiển thị"),
-//         "number_photo" => 2,
-//         "video_photo" => true,
-//         "name_photo" => true
-//     ),
-//     "taptin" => array(
-//         "title_main_photo" => "Tập tin Tin tức",
-//         "title_sub_photo" => "Tập tin",
-//         "check_photo" => array("hienthi" => "Hiển thị"),
-//         "number_photo" => 2,
-//         "file_photo" => true,
-//         "name_photo" => true,
-//         "file_type_photo" => '.doc|.docx|.pdf|.rar|.zip|.ppt|.pptx|.xls|.xlsx|.jpg|.png|.gif'
-//     )
-// );
 $config['news'][$nametype]['desc'] = true;
 $config['news'][$nametype]['content'] = true;
 $config['news'][$nametype]['content_cke'] = true;
@@ -164,7 +132,7 @@ $config['news'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif';
 
 /* Dịch vụ */
 $nametype = "dich-vu";
-$config['news'][$nametype]['title_main'] = "Dịch Vụ In";
+$config['news'][$nametype]['title_main'] = "Dịch Vụ";
 $config['news'][$nametype]['dropdown'] = true;
 $config['news'][$nametype]['list'] = true;
 $config['news'][$nametype]['cat'] = true;
@@ -180,38 +148,6 @@ $config['news'][$nametype]['check'] = array("noibat" => "Nổi bật", "hienthi"
 $config['news'][$nametype]['images'] = true;
 $config['news'][$nametype]['show_images'] = true;
 $config['news'][$nametype]['images2'] = false;
-// $config['news'][$nametype]['gallery'] = array(
-//     $nametype => array(
-//         "title_main_photo" => "Hình ảnh Tin tức",
-//         "title_sub_photo" => "Hình ảnh",
-//         "check_photo" => array("hienthi" => "Hiển thị"),
-//         "number_photo" => 3,
-//         "images_photo" => true,
-//         "avatar_photo" => true,
-//         "name_photo" => true,
-//         "width_photo" => 540,
-//         "height_photo" => 540,
-//         "thumb_photo" => '100x100x1',
-//         "img_type_photo" => '.jpg|.gif|.png|.jpeg|.gif'
-//     ),
-//     "video" => array(
-//         "title_main_photo" => "Video Tin tức",
-//         "title_sub_photo" => "Video",
-//         "check_photo" => array("hienthi" => "Hiển thị"),
-//         "number_photo" => 2,
-//         "video_photo" => true,
-//         "name_photo" => true
-//     ),
-//     "taptin" => array(
-//         "title_main_photo" => "Tập tin Tin tức",
-//         "title_sub_photo" => "Tập tin",
-//         "check_photo" => array("hienthi" => "Hiển thị"),
-//         "number_photo" => 2,
-//         "file_photo" => true,
-//         "name_photo" => true,
-//         "file_type_photo" => '.doc|.docx|.pdf|.rar|.zip|.ppt|.pptx|.xls|.xlsx|.jpg|.png|.gif'
-//     )
-// );
 $config['news'][$nametype]['desc'] = true;
 $config['news'][$nametype]['desc_cke'] = false;
 $config['news'][$nametype]['content'] = true;
@@ -291,13 +227,26 @@ $config['news'][$nametype]['height'] = 90;
 $config['news'][$nametype]['thumb'] = '90x90x1';
 $config['news'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif';
 
+/* Chi nhánh */
+$nametype = "chi-nhanh";
+$config['news'][$nametype]['title_main'] = "Chi Nhánh";
+$config['news'][$nametype]['copy'] = true;
+$config['news'][$nametype]['slug'] = true;
+$config['news'][$nametype]['check'] = array("noibat" => "Nổi bật", "hienthi" => "Hiển thị");
+$config['news'][$nametype]['iframe'] = true;
+$config['news'][$nametype]['diachi'] = true;
+$config['news'][$nametype]['seo'] = true;
+$config['news'][$nametype]['width'] = 90;
+$config['news'][$nametype]['height'] = 90;
+$config['news'][$nametype]['thumb'] = '90x90x1';
+$config['news'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif';
 
 /* Hình thức thanh toán */
-// $nametype = "hinh-thuc-thanh-toan";
-// $config['news']['hinh-thuc-thanh-toan']['title_main'] = "Hình thức thanh toán";
-// $config['news']['hinh-thuc-thanh-toan']['check'] = array("hienthi" => "Hiển thị");
-// $config['news']['hinh-thuc-thanh-toan']['copy'] = true;
-// $config['news']['hinh-thuc-thanh-toan']['desc'] = true;
+$nametype = "hinh-thuc-thanh-toan";
+$config['news']['hinh-thuc-thanh-toan']['title_main'] = "Hình thức thanh toán";
+$config['news']['hinh-thuc-thanh-toan']['check'] = array("hienthi" => "Hiển thị");
+$config['news']['hinh-thuc-thanh-toan']['copy'] = true;
+$config['news']['hinh-thuc-thanh-toan']['desc'] = true;
 
 
 

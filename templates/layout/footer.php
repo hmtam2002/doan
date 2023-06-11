@@ -66,37 +66,19 @@
             </div>
         </div>
     </div>
-    <!-- <div class="footer-tags">
-        <div class="wrap-content">
-            <p class="footer-title">Tags sản phẩm:</p>
-            <ul class="footer-tags-lists w-clear mb-3">
-                <?php foreach ($tagsProduct as $v) { ?>
-                    <li class="mr-1 mb-1"><a class="btn btn-sm btn-danger rounded" href="<?= $v[$sluglang] ?>" target="_blank" title="<?= $v['name' . $lang] ?>"><?= $v['name' . $lang] ?></a></li>
-                <?php } ?>
-            </ul>
-            <p class="footer-title">Tags tin tức:</p>
-            <ul class="footer-tags-lists w-clear">
-                <?php foreach ($tagsNews as $v) { ?>
-                    <li class="mr-1 mb-1"><a class="btn btn-sm btn-danger rounded" href="<?= $v[$sluglang] ?>" target="_blank" title="<?= $v['name' . $lang] ?>"><?= $v['name' . $lang] ?></a></li>
-                <?php } ?>
-            </ul>
-        </div>
-    </div> -->
+ 
     <div class="footer-powered">
         <div class="wrap-content d-flex flex-wrap align-items-center justify-content-between">
             <div class="copyright">2023 Copyright <span><?= $copyright['name' . $lang] ?></span></div>
             <div class="statistic">
                 <span><?= dangonline ?>: <?= $online ?></span>
-                <!-- <span><?= homnay ?>: <?= $counter['today'] ?></span>  -->
-                <!-- <span><?= homqua ?>: <?= $counter['yesterday'] ?></span> -->
-                <!-- <span><?= trongtuan ?>: <?= $counter['week'] ?></span> -->
                 <span><?= trongthang ?>: <?= $counter['month'] ?></span>
                 <span><?= tongtruycap ?>: <?= $counter['total'] ?></span>
             </div>
         </div>
     </div>
-    <?= $addons->set('footer-map', 'footer-map', 2); ?>
-    <!-- <?= $addons->set('chi-nhanh', 'chi-nhanh', 1); ?> -->
+    
+    <?= $addons->set('chi-nhanh', 'chi-nhanh', 1); ?>
     <?= $addons->set('messages-facebook', 'messages-facebook', 2); ?>
 </div>
 <?php if ($com != 'gio-hang') { ?>
@@ -119,9 +101,8 @@
     <div class="animated infinite pulse kenit-alo-circle-fill"></div>
     <i><img data-src="assets/images/hl.png" alt="Hotline" class="lazy"></i>
 </a>
-<!-- <?php if ($deviceType != 'mobile') { ?>
+<?php if ($deviceType != 'mobile') { ?>
     <div class="hotline-fix">
         <a href="tel:<?= preg_replace('/[^0-9]/', '', $optsetting['hotline']); ?>" class="text-decoration-none">HOTLINE<span><?= $optsetting['hotline'] ?></span></a>
     </div>
-<?php } ?> -->
-<!-- <a href="javascript:void();" class="btn-datlich" data-toggle="modal" data-target=".booking"><i class="far fa-calendar-alt"></i></a> -->
+<?php } ?>
